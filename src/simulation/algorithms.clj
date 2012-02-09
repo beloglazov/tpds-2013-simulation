@@ -1,7 +1,7 @@
 (ns simulation.algorithms
   (:use simulation.core 
         clj-predicates.core
-        clojure.contrib.math)
+        clojure.math.numeric-tower)
   (:require [simulation.math :as math])
   (:import [flanagan.analysis Regression Stat]))
 

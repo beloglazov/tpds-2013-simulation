@@ -1,14 +1,15 @@
 (ns simulation.io
   (:use clj-predicates.core
         simulation.core)
-  (:require [clojure.contrib.io :as io]
-            [clojure.contrib.json :as json]))
+  (:require [clojure.java.io :as io]
+            [clojure.data.json :as json]))
 
 (defn read-file [file-path]
   {:pre [(string? file-path)]
    :post [(coll? %)]}
   (map #(Integer/parseInt %) 
-       (io/read-lines file-path)))
+       (with-open [rdr (io/reader file-path)] 
+         (doall (line-seq rdr)))))
 
 (defn read-random-file [dir-path]
   {:pre [(string? dir-path)]

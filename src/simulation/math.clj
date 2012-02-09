@@ -1,6 +1,6 @@
 (ns simulation.math
   (:use clj-predicates.core
-        clojure.contrib.math)
+        clojure.math.numeric-tower)
   (:import [flanagan.analysis Stat Regression]))
 
 (defn median [data]

@@ -1,6 +1,5 @@
 (ns simulation.algorithms.markov.l-2-states
-  (:use incanter.core
-        clj-predicates.core))
+  (:use clj-predicates.core))
 
 (defn l0 [[p0 p1] [[c00 c01]
                    [c10 c11]]

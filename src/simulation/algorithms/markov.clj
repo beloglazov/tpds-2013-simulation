@@ -1,11 +1,10 @@
 (ns simulation.algorithms.markov
   (:use simulation.core
         clj-predicates.core
-        clojure.contrib.math)
+        clojure.math.numeric-tower)
   (:require [simulation.algorithms.markov.l-2-states :as l2]
             [simulation.algorithms.markov.l-3-states :as l3] 
-            [simulation.math :as math]            
-            [clojure.contrib.seq :as contrib-seq]
+            [simulation.math :as math]
             [clj-genetic.core :as genetic]
             [clj-genetic.objective :as genetic-objective]
             [clj-genetic.selection :as genetic-selection]
