@@ -1,7 +1,7 @@
 (ns simulation.runners.universal
   (:use clj-predicates.core
         simulation.core
-        clojure.contrib.pprint)
+        clojure.pprint)
   (:require [simulation.algorithms :as algorithms]
             [simulation.algorithms.markov :as markov]
             [simulation.io :as io])

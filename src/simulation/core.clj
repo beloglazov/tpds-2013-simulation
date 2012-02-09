@@ -1,6 +1,6 @@
 (ns simulation.core
   (:use clj-predicates.core
-        clojure.contrib.pprint)
+        clojure.pprint)
   (:require [clojure.contrib.str-utils2 :as str-utils2]))
 
 (defn current-vm-utilization [vm]
