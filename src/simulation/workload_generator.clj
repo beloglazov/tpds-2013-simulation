@@ -1,6 +1,8 @@
 (ns simulation.workload-generator
   (:use clj-predicates.core))
 
+(def mips 1000)
+
 (defn get-workload [workloads current-time]
   {:pre [(coll? workloads)
          (not-negnum? current-time)]
@@ -29,3 +31,21 @@
           (recur (inc state)
                  (rest state-transitions)
                  accumulated-probability))))))
+
+(defn get-host []
+  {:mips mips})
+
+(defn get-vms [workloads state-config time-limit]
+  {:pre [(coll? workloads)
+         (not-negnum? time-limit)]
+   :post [(coll? %)]}
+  [{:mips mips
+    :utilization (map (partial get (conj state-config 1.0)) 
+                      (loop [current-time 0
+                             current-state 0
+                             states []]
+                        (if (>= current-time time-limit)
+                          states
+                          (recur (inc current-time)
+                                 (generate-state workloads current-time current-state)
+                                 (conj states current-state)))))}])

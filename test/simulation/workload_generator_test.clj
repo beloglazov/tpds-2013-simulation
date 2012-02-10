@@ -188,3 +188,30 @@
   (generate-state test-workloads-3-states 16 2) => 0
   (provided (rand) => 1.0))
 
+(fact
+  (get-host) => {:mips 1000})
+
+(fact 
+  (get-vms test-workloads [0.7] time-limit) => [{:mips 1000
+                                                 :utilization [0.7 0.7 0.7 0.7 0.7 0.7 0.7 0.7 0.7 0.7 
+                                                               0.7 0.7 0.7 0.7 0.7 0.7 0.7 0.7 0.7 0.7
+                                                               0.7 0.7 0.7 0.7 0.7 0.7 0.7 0.7 0.7 0.7]}]
+  (provided (rand) => 0.0)
+  
+  (get-vms test-workloads [0.7] time-limit) => [{:mips 1000
+                                                 :utilization [0.7 1.0 0.7 1.0 0.7 1.0 0.7 1.0 0.7 1.0 
+                                                               0.7 1.0 0.7 1.0 0.7 1.0 0.7 0.7 0.7 0.7
+                                                               0.7 0.7 0.7 0.7 0.7 0.7 0.7 0.7 0.7 0.7]}]
+  (provided (rand) => 0.3)
+  
+  (get-vms test-workloads-3-states [0.3 0.7] time-limit) => [{:mips 1000
+                                                              :utilization [0.3 0.3 0.3 0.3 0.3 0.3 0.3 0.3 0.3 0.3 
+                                                                            0.3 0.3 0.3 0.3 0.3 0.3 0.3 0.3 0.3 0.3
+                                                                            0.3 0.3 0.3 0.3 0.3 0.3 0.3 0.3 0.3 0.3]}]
+  (provided (rand) => 0.0)
+
+  (get-vms test-workloads-3-states [0.3 0.7] time-limit) => [{:mips 1000
+                                                              :utilization [0.3 0.7 1.0 0.3 0.7 1.0 0.3 0.7 1.0 0.3 
+                                                                            0.7 1.0 0.3 0.7 1.0 0.3 0.7 0.3 0.7 0.3
+                                                                            0.7 0.3 0.7 0.3 0.7 0.3 0.7 0.3 0.7 0.3]}]
+  (provided (rand) => 0.7))
