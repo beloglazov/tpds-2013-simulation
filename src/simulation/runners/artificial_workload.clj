@@ -1,4 +1,4 @@
-(ns simulation.runners.artificial_workload
+(ns simulation.runners.artificial-workload
   (:use clj-predicates.core
         simulation.core
         clojure.pprint)
@@ -12,7 +12,7 @@
 (def time-limit 288)
 (def migration-time 20)
 (def workloads [{:until 144
-                 :transitions [[0.2 0.8]
+                 :transitions [[0.8 0.2]
                                [1.0 0.0]]}
                 {:until 288
                  :transitions [[0.5 0.5]
