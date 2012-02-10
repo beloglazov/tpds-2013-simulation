@@ -6,7 +6,7 @@
   {:pre [(map? vm)]
    :post [(not-negnum? %)]}
   (if-let [utilization (last (vm :utilization))]
-    utilization 0))
+    utilization 0.0))
 
 (defn current-vm-mips [vm]
   {:pre [(map? vm)]

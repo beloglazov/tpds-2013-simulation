@@ -1,7 +1,8 @@
 (ns simulation.algorithms.markov-test
   (:use simulation.core
         simulation.algorithms.markov
-        midje.sweet)
+        midje.sweet
+        [clojure.walk :only [postwalk]])
   (:require [simulation.math :as math]))
 
 (def host {:mips 3000})
@@ -173,17 +174,19 @@ divided by the number of time steps"
 
 (fact
   "Building the rate matrix out of the host's utilization history"
-  (build-q state-config data3) => q)
+  (build-q state-config data3) => (just [-0.1 0.1 0.0]
+                                        (just 0.05 (roughly -0.1)   0.05)
+                                        (just 0.0 0.05 (roughly -0.05))))
 
 ;(fact
 ;  (build-p state-config data3) => p)
 
 (fact
   (let [result (substitute-m-in-q q m)] 
-    (get result 0) => (just (roughly -0.15) 0.1 0 0.05)
+    (get result 0) => (just (roughly -0.15) 0.1 0.0 0.05)
     (get result 1) => (just 0.05 (roughly -0.2) 0.05 0.1)
-    (get result 2) => (just 0 0.05 (roughly -0.55) 0.5)
-    (get result 3) => (just 0 0 0 0)))
+    (get result 2) => (just 0.0 0.05 (roughly -0.55) 0.5)
+    (get result 3) => (just 0.0 0.0 0.0 0.0)))
 
 (fact
   (max-abs-rate q)  => 0.1

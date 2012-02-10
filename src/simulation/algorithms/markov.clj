@@ -62,7 +62,7 @@
         state-count (inc (count state-config))
         transitions (partition 2 1 states)]
     (map (fn [i] (map 
-                   #(/ (count (filter #{[i %]} transitions)) steps) 
+                   #(double (/ (count (filter #{[i %]} transitions)) steps)) 
                    (range state-count))) 
          (range state-count))))
 

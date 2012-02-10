@@ -34,7 +34,7 @@
    :post [(coll? %)]}
   (loop [vms []         
          host-mips (* threshold (:mips host))]
-    (let [vm-utilization (vec (map #(/ % 100) (read-random-file dir-path)))
+    (let [vm-utilization (vec (map #(double (/ % 100)) (read-random-file dir-path)))
           vm-initial-utilization (first vm-utilization)
           vm-mips (rand-nth mips)
           vm-initial-mips (* vm-mips vm-initial-utilization)]

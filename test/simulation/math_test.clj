@@ -8,7 +8,7 @@
 
 (fact
   "Median Absolute Deviation (MAD)"
-  (mad data1) => 1)
+  (mad data1) => 1.0)
 
 (fact
   "Inter Quartile Range (IQR)"

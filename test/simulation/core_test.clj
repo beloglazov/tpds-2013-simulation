@@ -20,7 +20,7 @@ a set of VMs and migration time"
   (run-simulation algorithm time-step migration-time host vms) => 
   (just {:total-time (* time-step 3)
          :overloading-time (* time-step 1)
-         :overloading-time-fraction 1/3
+         :overloading-time-fraction (double 1/3)
          :execution-time number?})
   (provided
     (run-step algorithm time-step migration-time host 
@@ -108,14 +108,14 @@ a set of VMs and migration time"
 
 (fact 
   "A VM's current utilization is the last value in the list"
-  (current-vm-utilization {:utilization []}) => 0
+  (current-vm-utilization {:utilization []}) => 0.0
   (current-vm-utilization {:utilization [0.5]}) => 0.5
   (current-vm-utilization {:utilization [0.5 0.6]}) => 0.6
   (current-vm-utilization {:utilization [0.5 0.6 0.4]}) => 0.4)
 
 (fact 
   "A VM's current MIPS is the current utilization * MIPS"
-  (current-vm-mips {:mips 2000 :utilization []}) => 0
+  (current-vm-mips {:mips 2000 :utilization []}) => 0.0
   (current-vm-mips {:mips 2000 :utilization [0.5]}) => (* 2000 0.5)
   (current-vm-mips {:mips 2000 :utilization [0.5 0.6]}) => (* 2000 0.6)
   (current-vm-mips {:mips 2000 :utilization [0.5 0.6 0.4]}) => (* 2000 0.4))
@@ -125,25 +125,25 @@ a set of VMs and migration time"
   (current-vms-mips [{:mips 2000
                       :utilization []}
                      {:mips 2000
-                      :utilization []}]) => 0
+                      :utilization []}]) => 0.0
   (current-vms-mips [{:mips 2000
                       :utilization [0.0]}
                      {:mips 2000
-                      :utilization [0.0]}]) => 0
+                      :utilization [0.0]}]) => 0.0
   (current-vms-mips [{:mips 2000
                       :utilization [0.0 0.5]}
                      {:mips 2000
-                      :utilization [0.0 0.5]}]) => 2000
+                      :utilization [0.0 0.5]}]) => 2000.0
   (current-vms-mips [{:mips 2000
                       :utilization [0.0 0.5 1.0]}
                      {:mips 2000
-                      :utilization [0.0 0.5 0.2]}]) => 2400
+                      :utilization [0.0 0.5 0.2]}]) => 2400.0
   (current-vms-mips [{:mips 2000
                       :utilization [0.0 0.5 0.8]}
                      {:mips 2000
                       :utilization [0.0 0.5 0.3]}
                      {:mips 3000
-                      :utilization [0.0 0.5 0.6]}]) => (+ 1600 600 1800))
+                      :utilization [0.0 0.5 0.6]}]) => (+ 1600.0 600.0 1800.0))
 
 (fact 
   "Host utilization history is built by summing utilization of VMs"
