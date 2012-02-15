@@ -13,7 +13,12 @@
 (def vm2 {:mips 2000
           :utilization [0.2 0.3 0.6]})
 (def vms [vm1 vm2])
-
+(def workloads [{:until 15
+                 :transitions [[0.2 0.8]
+                               [1.0 0.0]]}
+                {:until 30
+                 :transitions [[0.5 0.5]
+                               [1.0 0.0]]}])
 
 (def otf 0.05)
 (def state-config [0.4 0.7])

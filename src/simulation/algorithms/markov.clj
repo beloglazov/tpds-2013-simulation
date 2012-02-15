@@ -1,5 +1,6 @@
 (ns simulation.algorithms.markov
   (:use simulation.core
+        simulation.workload-generator
         clj-predicates.core
         clojure.math.numeric-tower)
   (:require [simulation.algorithms.markov.l-2-states :as l2]
@@ -254,12 +255,12 @@
 (defn optimize
   "If the solution is infeasible, returns a command to migrate if the system is in state n, no migration otherwise.
    If the solution is feasible, returns the solution."
-  [otf max-generations migration-time ls c state-vector time-in-states time-in-state-n]
+  [otf max-generations migration-time ls p state-vector time-in-states time-in-state-n]
   {:pre [(not-negnum? otf)
          (posnum? max-generations)
          (not-negnum? migration-time)
          (coll? ls)
-         (coll? c)
+         (coll? p)
          (coll? state-vector)
          (not-negnum? time-in-states)
          (not-negnum? time-in-state-n)]
@@ -268,8 +269,8 @@
         limits (repeat vars {:min 0 :max 100})
         population-size (* 40 vars)
         solution (genetic/run
-                     (genetic-objective/maximize (build-fitness ls state-vector c) 
-                                                 (build-constraint otf migration-time ls state-vector c time-in-states time-in-state-n))
+                     (genetic-objective/maximize (build-fitness ls state-vector p) 
+                                                 (build-constraint otf migration-time ls state-vector p time-in-states time-in-state-n))
                      genetic-selection/binary-tournament-without-replacement
                      (partial genetic-recombination/crossover 
                               (partial genetic-crossover/simulated-binary-with-limits limits))
@@ -280,6 +281,31 @@
       (if (in-state-n? state-vector) 
         (map #(* 1000 %) state-vector) ; migration probability from state n is 1
         (repeat (count state-vector) 0))))) ; migration probability from other states is 0
+
+(defn markov-optimal [workloads otf state-config max-generations time-step migration-time host vms]
+  {:pre [(coll? workloads)
+         (posnum? otf)
+         (coll? state-config)
+         (posnum? max-generations)
+         (not-negnum? time-step)
+         (not-negnum? migration-time)
+         (map? host) 
+         (coll? vms)]
+   :post [(boolean? %)]}
+  (let [utilization (host-utilization-history host vms)
+        total-time (count utilization)]
+    (let [state-vector (build-state-vector state-config utilization)
+          state-history (utilization-to-states state-config utilization)
+          time-in-state-n (time-in-state-n state-config state-history)
+          p (:transitions (get-workload workloads total-time))
+          ls (if (= 1 (count state-config))
+               l2/ls
+               l3/ls)]
+      (if (every? #{0} (nth p (current-state state-vector)))
+        false
+        (let [policy (optimize otf max-generations (/ migration-time time-step) ls p state-vector total-time time-in-state-n)
+              command (issue-command policy state-vector)]
+          command)))))
 
 (defn markov [otf state-config max-generations time-step migration-time host vms]
   {:pre [(posnum? otf)
