@@ -2,7 +2,8 @@
   (:use simulation.core
         simulation.workload-generator
         clj-predicates.core
-        clojure.math.numeric-tower)
+        clojure.math.numeric-tower
+        clojure.pprint)
   (:require [simulation.algorithms.markov.l-2-states :as l2]
             [simulation.algorithms.markov.l-3-states :as l3] 
             [simulation.math :as math]
@@ -266,7 +267,7 @@
          (not-negnum? time-in-state-n)]
    :post [(coll? %)]}
   (let [vars (count state-vector)
-        limits (repeat vars {:min 0 :max 100})
+        limits (repeat vars {:min 0 :max 1})
         population-size (* 40 vars)
         solution (genetic/run
                      (genetic-objective/maximize (build-fitness ls state-vector p) 
@@ -305,7 +306,11 @@
         false
         (let [policy (optimize otf max-generations (/ migration-time time-step) ls p state-vector total-time time-in-state-n)
               command (issue-command policy state-vector)]
-          command)))))
+          (do 
+            (pprint p)
+            (pprint policy)
+            (pprint command)
+            command))))))
 
 (defn markov [otf state-config max-generations time-step migration-time host vms]
   {:pre [(posnum? otf)

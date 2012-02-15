@@ -20,7 +20,7 @@
 (def state-config [0.9])
 (def host (workload-generator/get-host))
 (def vms [(workload-generator/get-vms workloads state-config time-limit)])
-(def algorithm (partial markov/markov 0.3 state-config 200))
+(def algorithm (partial markov/markov-optimal workloads 0.3 state-config 200))
 
 (defn -main [& args]
   (let [results (map #(run-simulation 
