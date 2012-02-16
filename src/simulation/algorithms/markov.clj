@@ -7,6 +7,7 @@
   (:require [simulation.algorithms.markov.l-2-states :as l2]
             [simulation.algorithms.markov.l-3-states :as l3]
             [simulation.algorithms.markov.bruteforce :as bruteforce]
+            [simulation.algorithms.markov.multisize-estimation :as multisize-estimation]
             [simulation.math :as math])
   (:import [flanagan.analysis Regression Stat]))
 
@@ -251,6 +252,69 @@
             (pprint policy)
             (pprint command)
             command))))))
+
+(def state-previous-state (atom 0))
+(def state-request-windows (atom []))
+(def state-estimate-windows (atom []))
+(def state-variances (atom []))
+(def state-acceptable-variances (atom []))
+
+(defn reset-multisize-state [window-sizes number-of-states]
+  {:pre [(coll? window-sizes)
+         (posnum? number-of-states)]
+   :post [(map? %)]}
+  (do
+    (reset! state-previous-state 0)
+    (reset! state-request-windows (multisize-estimation/init-request-windows number-of-states))
+    (reset! state-estimate-windows (multisize-estimation/init-3-level-data window-sizes number-of-states))
+    (reset! state-variances (multisize-estimation/init-variances window-sizes number-of-states))
+    (reset! state-acceptable-variances (multisize-estimation/init-variances window-sizes number-of-states))))
+
+(defn markov-multisize [step otf window-sizes state-config time-step migration-time host vms]
+  {:pre [(posnum? step)
+         (posnum? otf)
+         (coll? window-sizes)
+         (coll? state-config)
+         (not-negnum? time-step)
+         (not-negnum? migration-time)
+         (map? host) 
+         (coll? vms)]
+   :post [(boolean? %)]}
+  (let [utilization (host-utilization-history host vms)
+        total-time (count utilization)
+        max-window-size (apply max window-sizes)
+        state-vector (build-state-vector state-config utilization)
+        state (current-state state-vector)]
+    (do 
+      (swap! state-request-windows multisize-estimation/update-request-windows
+             max-window-size @state-previous-state state)
+      (swap! state-estimate-windows multisize-estimation/update-estimate-windows 
+             @state-request-windows @state-previous-state)
+      (swap! state-variances multisize-estimation/update-variances 
+             @state-estimate-windows @state-previous-state)
+      (swap! state-acceptable-variances multisize-estimation/update-acceptable-variances
+             @state-estimate-windows @state-previous-state)
+      (reset! state-previous-state state)
+      
+      (let [selected-windows (multisize-estimation/select-window 
+                               @state-variances @state-acceptable-variances window-sizes)
+            p (multisize-estimation/select-best-estimates @state-estimate-windows selected-windows)
+            state-history (utilization-to-states state-config utilization)
+            time-in-state-n (time-in-state-n state-config state-history)
+            ls (if (= 1 (count state-config))
+                 l2/ls
+                 l3/ls)]
+        (if (every? #{0} (nth p state))
+          false
+          (let [policy (bruteforce/optimize step otf (/ migration-time time-step) ls p state-vector total-time time-in-state-n)
+                command (issue-command policy state-vector)]
+            (do 
+              (prn "---------")
+              (pprint total-time)
+              (pprint p)
+              (pprint policy)
+              (pprint command)
+              command)))))))
 
 (defn markov [step otf state-config time-step migration-time host vms]
   {:pre [(posnum? step)
