@@ -7,7 +7,6 @@
 
 (def host {:mips 3000})
 (def time-step 300) ;in seconds
-(def migration-time 20)
 (def vm1 {:mips 2000
           :utilization [0.5 0.6 0.4]})
 (def vm2 {:mips 2000
@@ -20,7 +19,6 @@
                  :transitions [[0.5 0.5]
                                [1.0 0.0]]}])
 
-(def otf 0.05)
 (def state-config [0.4 0.7])
 
 (def data3 [0.25 0.30 0.62 0.59 0.67 0.73 0.85 0.97 0.73 0.68 0.69 
@@ -237,18 +235,6 @@ divided by the number of time steps"
   (issue-command p [0 0 1]) => false
   (provided (rand) => 1.0))
 
-(defn l0 [q p m] 2)
-(defn l1 [q p m] 3)
-(def ls [l0 l1])
-(def qq [[-0.1 0.1]
-         [0.3 -0.3]])
-(def pp [1 0])
-
-(fact
-  (let [result (build-fitness ls pp qq)] 
-    result => fn?
-    (result pp qq .a.) => 5))
-
 (fact
   (time-in-state-n state-config states) => 4)
 
@@ -256,98 +242,6 @@ divided by the number of time steps"
   (in-state-n? [1 0 0]) => false
   (in-state-n? [0 1 0]) => false
   (in-state-n? [0 0 1]) => true)
-
-(fact
-  (let [result (first (build-constraint otf migration-time ls pp qq 0 0))]
-    (first result)  => fn?
-    (second result) => (exactly <=)
-    (last result)   => otf
-    ((first result) .a.) => (/ (+ migration-time 3)
-                               (+ migration-time 2 3))))
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

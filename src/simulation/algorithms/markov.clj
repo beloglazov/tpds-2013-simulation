@@ -5,15 +5,9 @@
         clojure.math.numeric-tower
         clojure.pprint)
   (:require [simulation.algorithms.markov.l-2-states :as l2]
-            [simulation.algorithms.markov.l-3-states :as l3] 
-            [simulation.math :as math]
-            [clj-genetic.core :as genetic]
-            [clj-genetic.objective :as genetic-objective]
-            [clj-genetic.selection :as genetic-selection]
-            [clj-genetic.recombination :as genetic-recombination]
-            [clj-genetic.mutation :as genetic-mutation]
-            [clj-genetic.crossover :as genetic-crossover]
-            [clj-genetic.random-generators :as genetic-random-generators])
+            [simulation.algorithms.markov.l-3-states :as l3]
+            [simulation.algorithms.markov.bruteforce :as bruteforce]
+            [simulation.math :as math])
   (:import [flanagan.analysis Regression Stat]))
 
 (defn utilization-to-state
@@ -204,17 +198,6 @@
     true
     false))
 
-(defn build-fitness
-  "Returns a fitness function, which is a sum of L functions"
-  [ls state-vector q]
-  {:pre [(coll? ls)
-         (coll? state-vector)
-         (coll? q)]
-   :post [(fn? %)]}
-  (fn [& m]
-    (apply + 
-           (map #(% state-vector q m) ls))))
-
 (defn time-in-state-n
   "Return the number of times the system stayed in the state n"
   [state-config state-history]
@@ -231,57 +214,6 @@
    :post [(boolean? %)]}
   (let [n (dec (count state-vector))] 
     (= 1 (nth state-vector n))))
-
-(defn build-constraint
-  "Returns a constraint for the optimization problem from the L functions
-   Probably need to use the times in the states over the whole history,
-   because otherwise, the system may prematurely migrate (the estimated otf
-   for the recent period is high, but low for the whole history)"
-  [otf migration-time ls state-vector c time-in-states time-in-state-n]
-  {:pre [(not-negnum? otf)
-         (not-negnum? migration-time)
-         (coll? ls)
-         (coll? state-vector)
-         (coll? c)
-         (not-negnum? time-in-states)
-         (not-negnum? time-in-state-n)]
-   :post [(coll? %)]}
-  [[(fn [& m]
-      (/ (+ migration-time time-in-state-n ((last ls) state-vector c m))
-         (+ migration-time time-in-states (apply + 
-                                                 (map #(% state-vector c m) ls)))))
-    <=
-    otf]])
-
-(defn optimize
-  "If the solution is infeasible, returns a command to migrate if the system is in state n, no migration otherwise.
-   If the solution is feasible, returns the solution."
-  [otf max-generations migration-time ls p state-vector time-in-states time-in-state-n]
-  {:pre [(not-negnum? otf)
-         (posnum? max-generations)
-         (not-negnum? migration-time)
-         (coll? ls)
-         (coll? p)
-         (coll? state-vector)
-         (not-negnum? time-in-states)
-         (not-negnum? time-in-state-n)]
-   :post [(coll? %)]}
-  (let [vars (count state-vector)
-        limits (repeat vars {:min 0 :max 1})
-        population-size (* 40 vars)
-        solution (genetic/run
-                     (genetic-objective/maximize (build-fitness ls state-vector p) 
-                                                 (build-constraint otf migration-time ls state-vector p time-in-states time-in-state-n))
-                     genetic-selection/binary-tournament-without-replacement
-                     (partial genetic-recombination/crossover 
-                              (partial genetic-crossover/simulated-binary-with-limits limits))
-                     (genetic/terminate-max-generations? max-generations)
-                     (genetic-random-generators/generate-population population-size limits))] 
-    (if (:feasible solution) 
-      (map #(if (< % 0) 0 %) (:solution solution))
-      (if (in-state-n? state-vector) 
-        (map #(* 1000 %) state-vector) ; migration probability from state n is 1
-        (repeat (count state-vector) 0))))) ; migration probability from other states is 0
 
 (defn markov-optimal [workloads otf state-config max-generations time-step migration-time host vms]
   {:pre [(coll? workloads)
@@ -304,7 +236,7 @@
                l3/ls)]
       (if (every? #{0} (nth p (current-state state-vector)))
         false
-        (let [policy (optimize otf max-generations (/ migration-time time-step) ls p state-vector total-time time-in-state-n)
+        (let [policy (bruteforce/optimize otf max-generations (/ migration-time time-step) ls p state-vector total-time time-in-state-n)
               command (issue-command policy state-vector)]
           (do 
             (pprint p)
@@ -333,7 +265,7 @@
                  l3/ls)]
         (if (every? #{0} (nth c (current-state state-vector)))
           false
-          (let [solution (optimize otf max-generations (/ migration-time time-step) ls c state-vector time-in-states time-in-state-n)
+          (let [solution (bruteforce/optimize otf max-generations (/ migration-time time-step) ls c state-vector time-in-states time-in-state-n)
                 p (c-to-p c solution)
                 policy (p-to-policy p)
                 command (issue-command policy state-vector)]
