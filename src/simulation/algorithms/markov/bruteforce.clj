@@ -1,5 +1,6 @@
 (ns simulation.algorithms.markov.bruteforce
-  (:use clj-predicates.core)
+  (:use clj-predicates.core
+        clojure.pprint)
   (:require [simulation.algorithms.markov.nlp :as nlp]
             [simulation.algorithms.markov.l-2-states :as l2]
             [simulation.algorithms.markov.l-3-states :as l3]))
@@ -90,8 +91,8 @@
       (solve-3 objective constraint step))))
 
 
-(def p2 [[0.4 0.6]
-         [0.9 0.1]])
+(def p2 [[0.2 0.8]
+         [0.4 0.6]])
 (def p3 [[0.4 0.2 0.2]
          [0.2 0.5 0.3]
          [0.2 0.6 0.2]])
@@ -100,8 +101,11 @@
 (def state-vector3 [1 0 0])
 
 (defn -main [& args]
-  ;(time (prn (optimize 0.01 0.9 20 l2/ls p2 state-vector2 0 0)))
-  (time (prn (optimize 0.05 0.9 20 l3/ls p3 state-vector3 0 0))))
+  (do
+    (pprint p2) 
+    (time (prn (optimize 0.001 0.3 (/ 20.0 300.0) l2/ls p2 state-vector2 0 0))))
+  ;(time (prn (optimize 0.05 0.9 (/ 20.0 300.0) l3/ls p3 state-vector3 0 0)))
+  )
 
 
 

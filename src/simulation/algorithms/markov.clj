@@ -194,7 +194,13 @@
          (coll? state-vector)]
    :post [(boolean? %)]}
   (if (< (rand) 
-         (get (vec p) (current-state state-vector)))
+         (do
+           (prn "++")
+           (pprint p) 
+           (pprint state-vector)
+           (pprint (current-state state-vector))
+           (prn "--")
+           (get (vec p) (current-state state-vector))))
     true
     false))
 
@@ -215,11 +221,11 @@
   (let [n (dec (count state-vector))] 
     (= 1 (nth state-vector n))))
 
-(defn markov-optimal [workloads otf state-config max-generations time-step migration-time host vms]
+(defn markov-optimal [workloads step otf state-config time-step migration-time host vms]
   {:pre [(coll? workloads)
+         (posnum? step)
          (posnum? otf)
          (coll? state-config)
-         (posnum? max-generations)
          (not-negnum? time-step)
          (not-negnum? migration-time)
          (map? host) 
@@ -236,18 +242,20 @@
                l3/ls)]
       (if (every? #{0} (nth p (current-state state-vector)))
         false
-        (let [policy (bruteforce/optimize otf max-generations (/ migration-time time-step) ls p state-vector total-time time-in-state-n)
+        (let [policy (bruteforce/optimize step otf (/ migration-time time-step) ls p state-vector total-time time-in-state-n)
               command (issue-command policy state-vector)]
           (do 
+            (prn "---------")
+            (pprint total-time)
             (pprint p)
             (pprint policy)
             (pprint command)
             command))))))
 
-(defn markov [otf state-config max-generations time-step migration-time host vms]
-  {:pre [(posnum? otf)
+(defn markov [step otf state-config time-step migration-time host vms]
+  {:pre [(posnum? step)
+         (posnum? otf)
          (coll? state-config)
-         (posnum? max-generations)
          (not-negnum? time-step)
          (not-negnum? migration-time)
          (map? host) 
@@ -265,7 +273,7 @@
                  l3/ls)]
         (if (every? #{0} (nth c (current-state state-vector)))
           false
-          (let [solution (bruteforce/optimize otf max-generations (/ migration-time time-step) ls c state-vector time-in-states time-in-state-n)
+          (let [solution (bruteforce/optimize step otf (/ migration-time time-step) ls c state-vector time-in-states time-in-state-n)
                 p (c-to-p c solution)
                 policy (p-to-policy p)
                 command (issue-command policy state-vector)]
