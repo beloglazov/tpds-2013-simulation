@@ -1,6 +1,7 @@
 (ns simulation.io-test
   (:use simulation.io
         clj-predicates.core
+        clojure.java.io
         midje.sweet))
 
 (fact 
@@ -53,3 +54,5 @@
                                        "test/resources/rand/"
                                        "test/resources/pregenerated_workload")]
     (read-pregenerated-workload "test/resources/pregenerated_workload") => workload))
+
+(delete-file "test/resources/pregenerated_workload")
