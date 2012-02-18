@@ -96,47 +96,4 @@
                                                                  (* new-overloading-steps) 
                                                                  (* step)))
                             :execution-time (/ (double (- (. System nanoTime) start-time)) 1000000.0)}]
-                result))
-            ))))))
-
-(defn run-simulation-multisize-estimation
-  
-  ([algorithm time-step migration-time host vms]
-    {:pre [(fn? algorithm)
-           (not-negnum? time-step)
-           (not-negnum? migration-time)
-           (map? host)
-           (coll? vms)]
-     :post [(map? %)]}
-    (run-simulation algorithm time-step migration-time host vms (fn [step step-vms overloading-steps])))
-  
-  ([algorithm time-step migration-time host vms reporting]
-    {:pre [(fn? algorithm)
-           (not-negnum? time-step)
-           (not-negnum? migration-time)
-           (map? host)
-           (coll? vms)
-           (fn? reporting)]
-     :post [(map? %)]}
-    (let [start-time (. System nanoTime)
-          max-steps (get-max-vm-steps vms)] 
-      (loop [step 1
-             overloading-steps 0]  
-        (let [step-vms (get-step-vms step vms)
-              new-overloading-steps (if (overloaded? host step-vms)
-                                      (inc overloading-steps)
-                                      overloading-steps)]
-          (do
-            (reporting step step-vms new-overloading-steps)             
-            (if (and (run-step algorithm time-step migration-time host step-vms)
-                     (> max-steps step))
-              (recur (inc step)
-                     new-overloading-steps)
-              (let [result {:total-time (* step time-step)
-                            :overloading-time (* new-overloading-steps time-step)
-                            :overloading-time-fraction (double (/ 
-                                                                 (* new-overloading-steps) 
-                                                                 (* step)))
-                            :execution-time (/ (double (- (. System nanoTime) start-time)) 1000000.0)}]
-                result))
-            ))))))
+                result))))))))
