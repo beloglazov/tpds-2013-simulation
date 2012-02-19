@@ -4,9 +4,12 @@
         clj-predicates.core
         clojure.math.numeric-tower
         clojure.pprint)
-  (:require [simulation.algorithms.markov.l-2-states :as l2]
-            [simulation.algorithms.markov.l-3-states :as l3]
+  (:require [simulation.algorithms.markov.l-counts.l-2-states :as l-counts-2]
+            [simulation.algorithms.markov.l-counts.l-3-states :as l-counts-3]
+            [simulation.algorithms.markov.l-probabilities.l-2-states :as l-probabilities-2]
+            [simulation.algorithms.markov.l-probabilities.l-3-states :as l-probabilities-3]
             [simulation.algorithms.markov.bruteforce :as bruteforce]
+            [simulation.algorithms.markov.genetic :as genetic]
             [simulation.algorithms.markov.multisize-estimation :as multisize-estimation]
             [simulation.math :as math])
   (:import [flanagan.analysis Regression Stat]))
@@ -194,16 +197,10 @@
   {:pre [(coll? p)
          (coll? state-vector)]
    :post [(boolean? %)]}
-  (if (< (rand) 
-         (do
-           (prn "++")
-           (pprint p) 
-           (pprint state-vector)
-           (pprint (current-state state-vector))
-           (prn "--")
-           (get (vec p) (current-state state-vector))))
-    true
-    false))
+  (< (rand) 
+     (if (not-empty p) 
+       (get (vec p) (current-state state-vector))
+       1.0)))
 
 (defn time-in-state-n
   "Return the number of times the system stayed in the state n"
@@ -213,14 +210,6 @@
    :post [(not-negnum? %)]}
   (let [n (count state-config)]
     (count (filter #{n} state-history))))
-
-(defn in-state-n?
-  "Returns true of the system is currently in the state n, false otherwise"
-  [state-vector]
-  {:pre [(coll? state-vector)]
-   :post [(boolean? %)]}
-  (let [n (dec (count state-vector))] 
-    (= 1 (nth state-vector n))))
 
 (defn markov-optimal [workloads step otf state-config time-step migration-time host vms]
   {:pre [(coll? workloads)
@@ -239,8 +228,8 @@
           time-in-state-n (time-in-state-n state-config state-history)
           p (:transitions (get-workload workloads total-time))
           ls (if (= 1 (count state-config))
-               l2/ls
-               l3/ls)]
+               l-probabilities-2/ls
+               l-probabilities-3/ls)]
       (if (every? #{0} (nth p (current-state state-vector)))
         false
         (let [policy (bruteforce/optimize step otf (/ migration-time time-step) ls p state-vector total-time time-in-state-n)
@@ -261,8 +250,7 @@
 
 (defn reset-multisize-state [window-sizes number-of-states]
   {:pre [(coll? window-sizes)
-         (posnum? number-of-states)]
-   :post [(map? %)]}
+         (posnum? number-of-states)]}
   (do
     (reset! state-previous-state 0)
     (reset! state-request-windows (multisize-estimation/init-request-windows number-of-states))
@@ -285,7 +273,7 @@
         max-window-size (apply max window-sizes)
         state-vector (build-state-vector state-config utilization)
         state (current-state state-vector)]
-    (do 
+    (do
       (swap! state-request-windows multisize-estimation/update-request-windows
              max-window-size @state-previous-state state)
       (swap! state-estimate-windows multisize-estimation/update-estimate-windows 
@@ -302,24 +290,24 @@
             state-history (utilization-to-states state-config utilization)
             time-in-state-n (time-in-state-n state-config state-history)
             ls (if (= 1 (count state-config))
-                 l2/ls
-                 l3/ls)]
+                 l-probabilities-2/ls
+                 l-probabilities-3/ls)]
         (if (every? #{0} (nth p state))
           false
           (let [policy (bruteforce/optimize step otf (/ migration-time time-step) ls p state-vector total-time time-in-state-n)
                 command (issue-command policy state-vector)]
             (do 
-              (prn "---------")
-              (pprint total-time)
-              (pprint p)
-              (pprint policy)
-              (pprint command)
+;              (prn "---------")
+;              (pprint total-time)
+;              (pprint p)
+;              (pprint policy)
+;              (pprint command)
               command)))))))
 
-(defn markov [step otf state-config time-step migration-time host vms]
-  {:pre [(posnum? step)
-         (posnum? otf)
+(defn markov-single-window-genetic [otf state-config max-generations time-step migration-time host vms]
+  {:pre [(posnum? otf)
          (coll? state-config)
+         (posnum? max-generations)
          (not-negnum? time-step)
          (not-negnum? migration-time)
          (map? host) 
@@ -333,11 +321,11 @@
             time-in-state-n (time-in-state-n state-config state-history)
             c (transition-counts state-config (take-last 30 state-history))
             ls (if (= 1 (count state-config))
-                 l2/ls
-                 l3/ls)]
+                 l-counts-2/ls
+                 l-counts-3/ls)]
         (if (every? #{0} (nth c (current-state state-vector)))
           false
-          (let [solution (bruteforce/optimize step otf (/ migration-time time-step) ls c state-vector time-in-states time-in-state-n)
+          (let [solution (genetic/optimize-counts otf max-generations (/ migration-time time-step) ls c state-vector time-in-states time-in-state-n)
                 p (c-to-p c solution)
                 policy (p-to-policy p)
                 command (issue-command policy state-vector)]

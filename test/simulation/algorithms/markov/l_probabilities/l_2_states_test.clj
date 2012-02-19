@@ -1,5 +1,5 @@
-(ns simulation.algorithms.markov.l-2-states-test
-  (:use simulation.algorithms.markov.l-2-states
+(ns simulation.algorithms.markov.l-probabilities.l-2-states-test
+  (:use simulation.algorithms.markov.l-probabilities.l-2-states
         midje.sweet))
 
 (def p [[0.4 0.6]

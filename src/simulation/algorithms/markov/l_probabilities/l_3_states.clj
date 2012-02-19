@@ -1,4 +1,4 @@
-(ns simulation.algorithms.markov.l-3-states
+(ns simulation.algorithms.markov.l-probabilities.l-3-states
   (:use clj-predicates.core))
 
 (defn l0 [[p0 p1 p2] [[p00 p01 p02]

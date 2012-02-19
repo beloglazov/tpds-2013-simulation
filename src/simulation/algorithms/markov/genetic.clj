@@ -1,6 +1,5 @@
 (ns simulation.algorithms.markov.genetic
-  (:use simulation.algorithms.markov
-        clj-predicates.core)
+  (:use clj-predicates.core)
   (:require [simulation.algorithms.markov.nlp :as nlp]
             [clj-genetic.core :as genetic]
             [clj-genetic.objective :as genetic-objective]
@@ -10,7 +9,15 @@
             [clj-genetic.crossover :as genetic-crossover]
             [clj-genetic.random-generators :as genetic-random-generators]))
 
-(defn optimize
+(defn in-state-n?
+  "Returns true of the system is currently in the state n, false otherwise"
+  [state-vector]
+  {:pre [(coll? state-vector)]
+   :post [(boolean? %)]}
+  (let [n (dec (count state-vector))] 
+    (= 1 (nth state-vector n))))
+
+(defn optimize-probabilities
   "If the solution is infeasible, returns a command to migrate if the system is in state n, no migration otherwise.
    If the solution is feasible, returns the solution."
   [otf max-generations migration-time ls p state-vector time-in-states time-in-state-n]
@@ -39,3 +46,33 @@
       (if (in-state-n? state-vector) 
         (map #(* 1000 %) state-vector) ; migration probability from state n is 1
         (repeat (count state-vector) 0))))) ; migration probability from other states is 0
+
+(defn optimize-counts
+  "If the solution is infeasible, returns a command to migrate if the system is in state n, no migration otherwise.
+   If the solution is feasible, returns the solution."
+  [otf max-generations migration-time ls c state-vector time-in-states time-in-state-n]
+  {:pre [(not-negnum? otf)
+         (posnum? max-generations)
+         (not-negnum? migration-time)
+         (coll? ls)
+         (coll? c)
+         (coll? state-vector)
+         (not-negnum? time-in-states)
+         (not-negnum? time-in-state-n)]
+   :post [(coll? %)]}
+  (let [vars (count state-vector)
+        limits (repeat vars {:min 0 :max 100})
+        population-size (* 40 vars)
+        solution (genetic/run
+                     (genetic-objective/maximize (nlp/build-fitness ls state-vector c) 
+                                                 (nlp/build-constraint otf migration-time ls state-vector c time-in-states time-in-state-n))
+                     genetic-selection/binary-tournament-without-replacement
+                     (partial genetic-recombination/crossover 
+                              (partial genetic-crossover/simulated-binary-with-limits limits))
+                     (genetic/terminate-max-generations? max-generations)
+                     (genetic-random-generators/generate-population population-size limits))] 
+    (if (:feasible solution) 
+      (map #(if (< % 0) 0 %) (:solution solution))
+      (if (in-state-n? state-vector) 
+        (map #(* 1000 %) state-vector) ; migration probability from state n is 1
+        (repeat (count state-vector) 0)))))  ; migration probability from other states is 0

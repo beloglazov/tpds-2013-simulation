@@ -1,4 +1,4 @@
-(ns simulation.algorithms.markov.l-2-states
+(ns simulation.algorithms.markov.l-probabilities.l-2-states
   (:use clj-predicates.core
         clojure.pprint))
 

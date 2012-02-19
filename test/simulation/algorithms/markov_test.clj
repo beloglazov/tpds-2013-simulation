@@ -238,10 +238,6 @@ divided by the number of time steps"
 (fact
   (time-in-state-n state-config states) => 4)
 
-(fact
-  (in-state-n? [1 0 0]) => false
-  (in-state-n? [0 1 0]) => false
-  (in-state-n? [0 0 1]) => true)
 
 
 
