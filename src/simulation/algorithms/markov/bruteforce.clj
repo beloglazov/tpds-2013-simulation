@@ -5,20 +5,21 @@
             [simulation.algorithms.markov.l-2-states :as l2]
             [simulation.algorithms.markov.l-3-states :as l3]))
 
-(defn solve-2 [objective constraint step]
+(defn solve-2 [objective constraint step limit]
   {:pre [(fn? objective) 
          (coll? constraint) 
-         (posnum? step)]
+         (posnum? step)
+         (posnum? limit)]
    :post [(vector? %)]}
   (loop [state1 {:objective 0
                  :solution []}
          x 0.0]
-    (if (> x 1)
+    (if (> x limit)
       (:solution state1)
       (recur 
         (loop [state2 state1
                y 0.0]
-          (if (> y 1)
+          (if (> y limit)
             state2
             (recur 
               (try
@@ -36,25 +37,26 @@
               (+ y step))))
         (+ x step)))))
 
-(defn solve-3 [objective constraint step]
+(defn solve-3 [objective constraint step limit]
   {:pre [(fn? objective) 
          (coll? constraint) 
-         (posnum? step)]
+         (posnum? step)
+         (posnum? limit)]
    :post [(vector? %)]}
   (loop [state1 {:objective 0
                 :solution []}
          x 0.0]
-    (if (> x 1)
+    (if (> x limit)
       (:solution state1)
       (recur 
         (loop [state2 state1
                y 0.0]
-          (if (> y 1)
+          (if (> y limit)
             state2
             (recur
               (loop [state3 state2
                      z 0.0]
-                (if (> z 1)
+                (if (> z limit)
                   state3
                   (recur
                     (try 
@@ -73,8 +75,9 @@
               (+ y step))))
         (+ x step)))))
 
-(defn optimize [step otf migration-time ls p state-vector time-in-states time-in-state-n]
+(defn optimize [step limit otf migration-time ls p state-vector time-in-states time-in-state-n]
   {:pre [(posnum? step)
+         (posnum? limit)
          (not-negnum? otf)         
          (not-negnum? migration-time)
          (coll? ls)
@@ -87,8 +90,8 @@
         objective (nlp/build-fitness ls state-vector p)
         constraint (first (nlp/build-constraint otf migration-time ls state-vector p time-in-states time-in-state-n))] 
     (if (= number-of-states 2)
-      (solve-2 objective constraint step)
-      (solve-3 objective constraint step))))
+      (solve-2 objective constraint step limit)
+      (solve-3 objective constraint step limit))))
 
 
 (def p2 [[0.2 0.8]

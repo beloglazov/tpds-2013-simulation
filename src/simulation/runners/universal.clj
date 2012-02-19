@@ -20,7 +20,7 @@
         state-config (if (> (count args) 4)
                        (read-string (nth args 4))
                        nil)
-        step (if (> (count args) 4)
+        step (if (> (count args) 5)
                (Double/valueOf (nth args 5))
                nil)
         window-sizes (if (> (count args) 6)
@@ -37,7 +37,10 @@
                     (= algorithm-name "otf") (partial algorithms/otf param)
                     (= algorithm-name "markov-single-window-genetic") 
                     (partial markov/markov-single-window-genetic param state-config 200)
-                    (= algorithm-name "markov-multisize") (partial markov/markov-multisize step param window-sizes state-config))] 
+                    (= algorithm-name "markov-single-window-bruteforce") 
+                    (partial markov/markov-single-window-bruteforce param state-config 1)
+                    (= algorithm-name "markov-multisize") 
+                    (partial markov/markov-multisize step param window-sizes state-config))] 
     (do 
       (println workload)
       (println algorithm-name)

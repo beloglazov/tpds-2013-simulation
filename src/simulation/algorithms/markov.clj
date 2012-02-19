@@ -294,7 +294,7 @@
                  l-probabilities-3/ls)]
         (if (every? #{0} (nth p state))
           false
-          (let [policy (bruteforce/optimize step otf (/ migration-time time-step) ls p state-vector total-time time-in-state-n)
+          (let [policy (bruteforce/optimize step 1.0 otf (/ migration-time time-step) ls p state-vector total-time time-in-state-n)
                 command (issue-command policy state-vector)]
             (do 
 ;              (prn "---------")
@@ -331,6 +331,36 @@
                 command (issue-command policy state-vector)]
             command)))
       false)))
+
+(defn markov-single-window-bruteforce [otf state-config step time-step migration-time host vms]
+  {:pre [(posnum? otf)
+         (coll? state-config)
+         (posnum? step)
+         (not-negnum? time-step)
+         (not-negnum? migration-time)
+         (map? host) 
+         (coll? vms)]
+   :post [(boolean? %)]}
+  (let [utilization (host-utilization-history host vms)
+        time-in-states (count utilization)]
+    (if (> time-in-states 29)
+      (let [state-vector (build-state-vector state-config utilization)
+            state-history (utilization-to-states state-config utilization)
+            time-in-state-n (time-in-state-n state-config state-history)
+            c (transition-counts state-config (take-last 30 state-history))
+            ls (if (= 1 (count state-config))
+                 l-counts-2/ls
+                 l-counts-3/ls)]
+        (if (every? #{0} (nth c (current-state state-vector)))
+          false
+          (let [solution (bruteforce/optimize step 100.0 otf (/ migration-time time-step) ls c state-vector time-in-states time-in-state-n)
+                p (c-to-p c solution)
+                policy (p-to-policy p)
+                command (issue-command policy state-vector)]
+            command)))
+      false)))
+
+
 
 
 

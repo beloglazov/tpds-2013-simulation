@@ -44,7 +44,7 @@
     (if (:feasible solution) 
       (map #(if (< % 0) 0 %) (:solution solution))
       (if (in-state-n? state-vector) 
-        (map #(* 1000 %) state-vector) ; migration probability from state n is 1
+        state-vector ; migration probability from state n is 1
         (repeat (count state-vector) 0))))) ; migration probability from other states is 0
 
 (defn optimize-counts
