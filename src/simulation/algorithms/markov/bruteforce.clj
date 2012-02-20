@@ -1,9 +1,7 @@
 (ns simulation.algorithms.markov.bruteforce
   (:use clj-predicates.core
         clojure.pprint)
-  (:require [simulation.algorithms.markov.nlp :as nlp]
-            [simulation.algorithms.markov.l-2-states :as l2]
-            [simulation.algorithms.markov.l-3-states :as l3]))
+  (:require [simulation.algorithms.markov.nlp :as nlp]))
 
 (defn solve-2 [objective constraint step limit]
   {:pre [(fn? objective) 
@@ -23,15 +21,22 @@
             state2
             (recur 
               (try
-                (let [objective-result (objective x y)] 
+                (do 
+;                  (println x y)
+;                  (println (objective x y))
+;                  (println ((first constraint) x y))
+                  (let [objective-result (objective x y)] 
                   (if (and 
                         (> objective-result (:objective state2))
                         ((second constraint) 
                           ((first constraint) x y)
                           (last constraint)))
-                    {:objective objective-result
-                     :solution [x y]}
-                    state2))
+                    (do 
+;                      (pprint {:objective objective-result
+;                               :solution [x y]})
+                      {:objective objective-result
+                       :solution [x y]})
+                    state2)))
                 (catch ArithmeticException e
                   state2))
               (+ y step))))
@@ -92,23 +97,6 @@
     (if (= number-of-states 2)
       (solve-2 objective constraint step limit)
       (solve-3 objective constraint step limit))))
-
-
-(def p2 [[0.2 0.8]
-         [0.0 1.0]])
-(def p3 [[0.4 0.2 0.2]
-         [0.2 0.5 0.3]
-         [0.2 0.6 0.2]])
-
-(def state-vector2 [1 0])
-(def state-vector3 [1 0 0])
-
-(defn -main [& args]
-  (do
-    (pprint p2) 
-    (time (prn (optimize 0.001 0.3 (/ 20.0 300.0) l2/ls p2 state-vector2 0 0))))
-  ;(time (prn (optimize 0.05 0.9 (/ 20.0 300.0) l3/ls p3 state-vector3 0 0)))
-  )
 
 
 
