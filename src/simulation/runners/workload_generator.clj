@@ -2,6 +2,10 @@
   (:use simulation.io)
   (:gen-class))
 
+; Amazon EC2 instance types: 1700, 2000, 2400, 3000
+; Amazon EC2 server types: 2x2400, 4x3000, 8x3000, 16x3000
+; K. Mills, J. Filliben and C. Dabrowsk, Comparing VM-Placement Algorithms for On-Demand Clouds
+
 (def vm-mips [1000 2000 2500])
 (def host {:mips 3000})
 (def thresholds [0.8 0.85 0.9 0.95 1.0])

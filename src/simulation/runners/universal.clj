@@ -66,7 +66,7 @@
                               ;  (println "utilization:" (double (/ (current-vms-mips step-vms) (:mips host))))
                               ;  (println "otf:" (double (/ overloading-steps step))))
                               ))
-                         [(first (io/read-pregenerated-workload workload))])
+                         (io/read-pregenerated-workload workload))
             avg-otf (double (/ 
                               (apply + (map #(:overloading-time-fraction %) results))
                               (count results)))

@@ -1,1 +1,0 @@
-[{:state-config [1.0], :param 0.3, :algorithm "markov-single-window-bruteforce", :total-time 22800, :overloading-time 6300, :overloading-time-fraction 0.2763157894736842, :execution-time 3821.937083}]
