@@ -197,13 +197,6 @@
   {:pre [(coll? p)
          (coll? state-vector)]
    :post [(boolean? %)]}
-;  (if (not-empty p)
-;    (let [prob (get (vec p) (current-state state-vector))]
-;;      (and
-;;        (>= prob 0.9) ; should be greater than the step size
-;;        (< (rand) prob))
-;      (= prob 1.0))
-;    true)
     (empty? p))
 
 (defn time-in-state-n

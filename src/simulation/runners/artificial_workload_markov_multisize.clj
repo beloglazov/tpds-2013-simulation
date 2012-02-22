@@ -17,10 +17,10 @@
         state-config (read-string (nth args 1))
         window-sizes (read-string (nth args 2))
         otf (read-string (nth args 3))
-        n (read-string (nth args 4))
+        step (read-string (nth args 4))
         number-of-states (inc (count state-config))
-        vms (repeat n (first (io/read-pregenerated-workload input)))
-        algorithm (partial markov/markov-multisize 0.5 otf window-sizes state-config)          
+        vms (io/read-pregenerated-workload input)
+        algorithm (partial markov/markov-multisize step otf window-sizes state-config)          
         results (map #(do
                         (markov/reset-multisize-state window-sizes number-of-states)
                         (run-simulation 
@@ -36,26 +36,12 @@
                           ;  (println "utilization:" (double (/ (current-vms-mips step-vms) (:mips host))))
                           ;  (println "otf:" (double (/ overloading-steps step))))
                           ))
-                     vms)
-        avg-otf (double (/ 
-                          (apply + (map #(:overloading-time-fraction %) results))
-                          (count results)))
-        avg-time (double (/ 
-                           (apply + (map #(:total-time %) results))
-                           (count results)))
-        time-otf (/ (/ avg-time avg-otf) 1000)] 
+                     vms)] 
     (do
-      (pprint results)
-      (println "avg-otf" avg-otf)
-      (println "avg-time" avg-time)
-      (println "time-otf" time-otf))))
+      (pprint results))))
 
-; lein run -m simulation.runners.artificial-workload-markov-multisize workload/artificial "[1.0]" "[30 60 90]" 0.3 100
-; avg-otf 0.28235793235373574
-; avg-time 51627.0
-; lein run -m simulation.runners.artificial-workload-markov-multisize workload/artificial "[1.0]" "[30 60 90]" 0.2 100
-; avg-otf 0.18421052631578963
-; avg-time 11400.0
-; lein run -m simulation.runners.artificial-workload-markov-multisize workload/artificial "[1.0]" "[30 60 90]" 0.1 100
-; avg-otf 0.133333333333333
-; avg-time 9000.0
+;lein run -m simulation.runners.artificial-workload-markov-multisize workload/artificial2 "[1.0]" "[30 40 50 60 70 80 90 100]" 0.3 0.5
+;({:total-time 75600.0,
+;  :overloading-time 22500.0,
+;  :overloading-time-fraction 0.2976190476190476,
+;  :execution-time 756.232366})

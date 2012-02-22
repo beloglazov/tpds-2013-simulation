@@ -23,12 +23,6 @@
         (println (optimal/calculate-otf state-history number-of-states))
         (pprint (optimal/solve otf state-history number-of-states))))))
 
-; lein run -m simulation.runners.artificial-workload-optimal workload/artificial "[1.0]" 0.3
-; otf 0.2987012987012987
-; time 69300
-; lein run -m simulation.runners.artificial-workload-optimal workload/artificial "[1.0]" 0.2
-; otf 0.2
-; time 21000
-; lein run -m simulation.runners.artificial-workload-optimal workload/artificial "[1.0]" 0.1
-; otf 0.1
-; time 6000
+;lein run -m simulation.runners.artificial-workload-optimal workload/artificial2 "[1.0]" 0.3                                         
+;0.3633217993079585
+;{:otf 0.2980392156862745, :time 76500}

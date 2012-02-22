@@ -84,17 +84,18 @@
                                          :state-config state-config) 
                                  results))))))))
 
-; lein run -m simulation.runners.universal workload/planetlab_30_100_20_100 markov-multisize 0.3 output.txt "[1.0]" 0.01 "[30 60 90]"
-; avg-otf 0.28781603927007743
-; avg-time 31230.0
-; lein run -m simulation.runners.universal workload/planetlab_30_100_20_100 markov-multisize 0.2 output.txt "[1.0]" 0.01 "[30 60 90]"
-; avg-otf 0.1924098075621259
-; avg-time 16911.0
-; lein run -m simulation.runners.universal workload/planetlab_30_100_20_100 markov-multisize 0.1 output.txt "[1.0]" 0.01 "[30 60 90]"
-; avg-otf 0.14484958355875663
-; avg-time 9987.0 
-
-
+;lein run -m simulation.runners.universal workload/planetlab_30_100_20_100 markov-multisize 0.3 output.txt "[1.0]" 0.5 "[30 40 50 60 70 80 90 100]"                                                                   
+;avg-otf 0.29463017041449613
+;avg-time 32691.0
+;time-otf 110.95605027146115
+;lein run -m simulation.runners.universal workload/planetlab_30_100_20_100 markov-multisize 0.2 output.txt "[1.0]" 0.5 "[30 40 50 60 70 80 90 100]"                                           
+;avg-otf 0.19258546938944876
+;avg-time 16920.0
+;time-otf 87.8570956243026
+;lein run -m simulation.runners.universal workload/planetlab_30_100_20_100 markov-multisize 0.1 output.txt "[1.0]" 0.5 "[30 40 50 60 70 80 90 100]"                                           
+;avg-otf 0.14484958355875663
+;avg-time 9987.0
+;time-otf 68.94738496744718
 
 
 
