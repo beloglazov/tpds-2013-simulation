@@ -197,10 +197,12 @@
   {:pre [(coll? p)
          (coll? state-vector)]
    :post [(boolean? %)]}
-  (< (rand) 
-     (if (not-empty p) 
-       (get (vec p) (current-state state-vector))
-       1.0)))
+  (if (not-empty p)
+    (and
+      (let [prob (get (vec p) (current-state state-vector))] 
+        (> prob 0.01) ; should be greater than the step size
+        (< (rand) prob)))
+    true))
 
 (defn time-in-state-n
   "Return the number of times the system stayed in the state n"
@@ -236,11 +238,11 @@
         (let [policy (bruteforce/optimize step 1.0 otf (/ migration-time time-step) ls p state-vector total-time time-in-state-n)
               command (issue-command policy state-vector)]
           (do 
-            (println "--------")
-            (println "State vector: " state-vector)
-            (println "Time: " time-in-state-n " / " total-time)
-            (println "Probabilities: " p)
-            (println "Policy: " policy)
+;            (println "--------")
+;            (println "State vector: " state-vector)
+;            (println "Time: " time-in-state-n " / " total-time)
+;            (println "Probabilities: " p)
+;            (println "Policy: " policy)
             command))))
       false)))
 
@@ -301,13 +303,13 @@
             (let [policy (bruteforce/optimize step 1.0 otf (/ migration-time time-step) ls p state-vector total-time time-in-state-n)
                   command (issue-command policy state-vector)]
               (do
-                (println "--------")
+;                (println "--------")
 ;                (println @state-request-windows)
 ;                (println selected-windows)
-                (println "State vector: " state-vector)
-                (println "Time: " time-in-state-n " / " total-time)
-                (println "Best estimates: " p)
-                (println "Policy: " policy)
+;                (println "State vector: " state-vector)
+;                (println "Time: " time-in-state-n " / " total-time)
+;                (println "Best estimates: " p)
+;                (println "Policy: " policy)
                 command))))
         false))))
 
