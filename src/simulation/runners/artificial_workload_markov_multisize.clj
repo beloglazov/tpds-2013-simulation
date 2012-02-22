@@ -20,7 +20,7 @@
         n (read-string (nth args 4))
         number-of-states (inc (count state-config))
         vms (repeat n (first (io/read-pregenerated-workload input)))
-        algorithm (partial markov/markov-multisize 0.05 otf window-sizes state-config)          
+        algorithm (partial markov/markov-multisize 0.5 otf window-sizes state-config)          
         results (map #(do
                         (markov/reset-multisize-state window-sizes number-of-states)
                         (run-simulation 

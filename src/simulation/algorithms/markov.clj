@@ -199,9 +199,10 @@
    :post [(boolean? %)]}
   (if (not-empty p)
     (let [prob (get (vec p) (current-state state-vector))]
-      (and
-        (> prob 0.1) ; should be greater than the step size
-        (< (rand) prob)))
+;      (and
+;        (>= prob 0.9) ; should be greater than the step size
+;        (< (rand) prob))
+      (= prob 1.0))
     true))
 
 (defn time-in-state-n
