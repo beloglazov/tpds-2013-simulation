@@ -40,7 +40,9 @@
          (not-negnum? time-limit)]
    :post [(coll? %)]}
   [{:mips mips
-    :utilization (map (partial get (conj state-config 1.0)) 
+    :utilization (map (partial get (if (= state-config [1.0]) 
+                                     [0.5 1.0]
+                                     (conj state-config 1.0))) 
                       (loop [current-time 0
                              current-state 0
                              states []]

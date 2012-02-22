@@ -6,8 +6,8 @@
 ; Amazon EC2 server types: 2x2400, 4x3000, 8x3000, 16x3000
 ; K. Mills, J. Filliben and C. Dabrowsk, Comparing VM-Placement Algorithms for On-Demand Clouds
 
-(def vm-mips [1000 2000 2500])
-(def host {:mips 3000})
+(def vm-mips [1700, 2000, 2400, 3000])
+(def host {:mips 12000}) ;4x3000
 (def thresholds [0.8 0.85 0.9 0.95 1.0])
 
 (defn -main [& args]
@@ -22,3 +22,4 @@
       (pregenerate-workload-filter-otf vm-mips host thresholds otf-min otf-max otf-max-at-30 n input-path output-path)
       (println "Done"))))
 
+; lein run -m simulation.runners.workload-generator 0.3 1.0 0.2 100 "../data" "workload/planetlab_30_100_20_100"
