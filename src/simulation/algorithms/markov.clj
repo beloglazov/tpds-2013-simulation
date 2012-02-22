@@ -25,7 +25,7 @@
          state 0
          prev -1]
     (if (or (nil? x) 
-            (and (> utilization prev) (<= utilization x)))
+            (and (>= utilization prev) (< utilization x)))
       state
       (recur (first xs) (rest xs) (inc state) x))))
 

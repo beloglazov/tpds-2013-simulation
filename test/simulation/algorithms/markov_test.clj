@@ -23,10 +23,10 @@
 
 (def data3 [0.25 0.30 0.62 0.59 0.67 0.73 0.85 0.97 0.73 0.68 0.69 
             0.52 0.51 0.25 0.38 0.46 0.52 0.55 0.58 0.65 0.70])
-(def states [0 0 0 1 1 1 2 2 2 2 1 1 1 1 0 0 1 1 1 1 1 1])
-(def transition-counts-matrix [[3 2  0]
-                               [1 10 1]
-                               [0 1  3]])
+(def states [0 0 0 1 1 1 2 2 2 2 1 1 1 1 0 0 1 1 1 1 1 2])
+(def transition-counts-matrix [[3 2 0]
+                               [1 9 2]
+                               [0 1 3]])
 
 (def p [[3/5  2/5   0]
         [1/12 10/12 1/12]
@@ -58,10 +58,10 @@
 ; [0 1/3 1/3 1/3]
 ; [0 0 1/2 1/2];
 ;q:
-[[-2/5 2/5 0 0]
- [1/12 -2/12 1/12 0]
- [0 1/3 -2/3 1/3]
- [0 0 1/2 -1/2]]
+;[[-2/5 2/5 0 0]
+; [1/12 -2/12 1/12 0]
+; [0 1/3 -2/3 1/3]
+; [0 0 1/2 -1/2]]
 
 
 ;(def pqp [[-1  1   0]
@@ -89,7 +89,7 @@
 ;1/3 5/36 = 0.333 0.138
 
 (def transition-rate-matrix [[0.15 0.1  0.0]
-                             [0.05 0.5  0.05]
+                             [0.05 0.45 0.1]
                              [0.0  0.05 0.15]])
 (def q [[-0.1   0.1   0.0]
         [ 0.05 -0.1   0.05]
@@ -142,18 +142,33 @@
   (utilization-to-state state-config 0.1) => 0
   (utilization-to-state state-config 0.2) => 0
   (utilization-to-state state-config 0.3) => 0
-  (utilization-to-state state-config 0.4) => 0
+  (utilization-to-state state-config 0.4) => 1
   (utilization-to-state state-config 0.5) => 1
   (utilization-to-state state-config 0.6) => 1
-  (utilization-to-state state-config 0.7) => 1
+  (utilization-to-state state-config 0.7) => 2
   (utilization-to-state state-config 0.8) => 2
   (utilization-to-state state-config 0.9) => 2
   (utilization-to-state state-config 1.0) => 2
-  (utilization-to-state state-config 1.1) => 2)
+  (utilization-to-state state-config 1.1) => 2
+  
+  (utilization-to-state [1.0] 0.0) => 0
+  (utilization-to-state [1.0] 0.1) => 0
+  (utilization-to-state [1.0] 0.2) => 0
+  (utilization-to-state [1.0] 0.2) => 0
+  (utilization-to-state [1.0] 0.3) => 0
+  (utilization-to-state [1.0] 0.4) => 0
+  (utilization-to-state [1.0] 0.5) => 0
+  (utilization-to-state [1.0] 0.6) => 0
+  (utilization-to-state [1.0] 0.7) => 0
+  (utilization-to-state [1.0] 0.8) => 0
+  (utilization-to-state [1.0] 0.9) => 0
+  (utilization-to-state [1.0] 1.0) => 1
+  (utilization-to-state [1.0] 1.1) => 1)
 
 (fact
   "Transforming the utilization history into state history"
-  (utilization-to-states state-config data3) => states)
+  (utilization-to-states state-config data3) => states
+  (utilization-to-states [1.0] [0.5 0.5 1.0 1.0 0.5]) => [0 0 0 1 1 0])
 
 (fact
   (transition-counts state-config states) => transition-counts-matrix)
@@ -167,10 +182,10 @@ divided by the number of time steps"
   (build-state-vector state-config [0.0 0.1]) => [1 0 0]
   (build-state-vector state-config [0.0 0.2]) => [1 0 0]
   (build-state-vector state-config [0.0 0.3]) => [1 0 0]
-  (build-state-vector state-config [0.0 0.4]) => [1 0 0]
+  (build-state-vector state-config [0.0 0.4]) => [0 1 0]
   (build-state-vector state-config [0.0 0.5]) => [0 1 0]
   (build-state-vector state-config [0.0 0.6]) => [0 1 0]
-  (build-state-vector state-config [0.0 0.7]) => [0 1 0]
+  (build-state-vector state-config [0.0 0.7]) => [0 0 1]
   (build-state-vector state-config [0.0 0.8]) => [0 0 1]
   (build-state-vector state-config [0.0 0.9]) => [0 0 1]
   (build-state-vector state-config [0.0 1.0]) => [0 0 1])
@@ -178,7 +193,7 @@ divided by the number of time steps"
 (fact
   "Building the rate matrix out of the host's utilization history"
   (build-q state-config data3) => (just [-0.1 0.1 0.0]
-                                        (just 0.05 (roughly -0.1)   0.05)
+                                        (just 0.05 (roughly -0.149 0.01) 0.1)
                                         (just 0.0 0.05 (roughly -0.05))))
 
 ;(fact
@@ -236,7 +251,7 @@ divided by the number of time steps"
   (provided (rand) => 1.0))
 
 (fact
-  (time-in-state-n state-config states) => 4)
+  (time-in-state-n state-config states) => 5)
 
 
 
