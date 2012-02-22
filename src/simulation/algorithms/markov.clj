@@ -232,14 +232,14 @@
                l-probabilities-3/ls)]
       (if (every? #{0} (nth p (current-state state-vector)))
         false
-        (let [policy (bruteforce/optimize step otf (/ migration-time time-step) ls p state-vector total-time time-in-state-n)
+        (let [policy (bruteforce/optimize step 1.0 otf (/ migration-time time-step) ls p state-vector total-time time-in-state-n)
               command (issue-command policy state-vector)]
           (do 
-            (prn "---------")
-            (pprint total-time)
-            (pprint p)
-            (pprint policy)
-            (pprint command)
+;            (prn "---------")
+;            (pprint total-time)
+;            (pprint p)
+;            (pprint policy)
+;            (pprint command)
             command))))))
 
 (def state-previous-state (atom 0))

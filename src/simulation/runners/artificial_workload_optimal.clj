@@ -19,8 +19,8 @@
           utilization (host-utilization-history host vms)
           state-history (markov/utilization-to-states state-config utilization)] 
       (do
-        (println state-config)
-        (println utilization)
         (println state-history)
         (println (optimal/calculate-otf state-history number-of-states))
         (pprint (optimal/solve otf state-history number-of-states))))))
+
+; lein run -m simulation.runners.artificial-workload-optimal workload/artificial "[1.0]" 0.3
