@@ -220,8 +220,7 @@
    :post [(boolean? %)]}
   (let [utilization (host-utilization-history host vms)
         total-time (count utilization)]
-    (if (>= total-time 30) 
-      (let [state-vector (build-state-vector state-config utilization)
+    (let [state-vector (build-state-vector state-config utilization)
           state-history (utilization-to-states state-config utilization)
           time-in-state-n (time-in-state-n state-config state-history)
           p (:transitions (get-workload workloads total-time))
@@ -238,8 +237,7 @@
 ;            (println "Time: " time-in-state-n " / " total-time)
 ;            (println "Probabilities: " p)
 ;            (println "Policy: " policy)
-            command))))
-      false)))
+            command))))))
 
 (def state-previous-state (atom 0))
 (def state-request-windows (atom []))
