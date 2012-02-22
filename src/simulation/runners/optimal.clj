@@ -6,7 +6,7 @@
             [simulation.algorithms.markov :as markov]))
 
 (def time-step 300)
-(def host {:mips 3000})
+(def host {:mips 12000}) ;4x3000
 
 (defn calculate-otf [state-history number-of-states]
   {:pre [(coll? state-history)
@@ -47,6 +47,18 @@
                              (count results)))
           time-otf (/ (/ avg-time avg-otf) 1000)] 
       (do
+        (pprint results)
         (println "avg-otf" avg-otf)
         (println "avg-time" avg-time)
         (println "time-otf" time-otf)))))
+
+; lein run -m simulation.runners.optimal workload/planetlab_30_100_20_100 "[1.0]" 0.3
+; avg-otf 0.29786608532826003
+; avg-time 38433.0
+; lein run -m simulation.runners.optimal workload/planetlab_30_100_20_100 "[1.0]" 0.2
+; avg-otf 0.19519639249345766
+; avg-time 21504.0
+; lein run -m simulation.runners.optimal workload/planetlab_30_100_20_100 "[1.0]" 0.1
+; avg-otf 0.06431711129946716
+; avg-time 8631.0
+

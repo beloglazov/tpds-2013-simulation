@@ -46,4 +46,14 @@
       (println "avg-time" avg-time)
       (println "time-otf" time-otf))))
 
+; TODO: need to understand why markov-optimal is so conservative in terms of the resulting OTF
+
 ; lein run -m simulation.runners.artificial-workload-markov-optimal workload/artificial "[1.0]" 0.3 100
+; avg-otf 0.24669333132314228
+; avg-time 34860.0
+; lein run -m simulation.runners.artificial-workload-markov-optimal workload/artificial "[1.0]" 0.2 100
+; avg-otf 0.1673347666782451
+; avg-time 10839.0
+; lein run -m simulation.runners.artificial-workload-markov-optimal workload/artificial "[1.0]" 0.1 100
+; avg-otf 0.012307692307692304
+; avg-time 1365.0

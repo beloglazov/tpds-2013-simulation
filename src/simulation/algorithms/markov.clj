@@ -223,7 +223,8 @@
    :post [(boolean? %)]}
   (let [utilization (host-utilization-history host vms)
         total-time (count utilization)]
-    (let [state-vector (build-state-vector state-config utilization)
+    (if (>= total-time 30) 
+      (let [state-vector (build-state-vector state-config utilization)
           state-history (utilization-to-states state-config utilization)
           time-in-state-n (time-in-state-n state-config state-history)
           p (:transitions (get-workload workloads total-time))
@@ -235,12 +236,13 @@
         (let [policy (bruteforce/optimize step 1.0 otf (/ migration-time time-step) ls p state-vector total-time time-in-state-n)
               command (issue-command policy state-vector)]
           (do 
-;            (prn "---------")
-;            (pprint total-time)
-;            (pprint p)
-;            (pprint policy)
-;            (pprint command)
-            command))))))
+            (println "--------")
+            (println "State vector: " state-vector)
+            (println "Time: " time-in-state-n " / " total-time)
+            (println "Probabilities: " p)
+            (println "Policy: " policy)
+            command))))
+      false)))
 
 (def state-previous-state (atom 0))
 (def state-request-windows (atom []))
@@ -299,15 +301,13 @@
             (let [policy (bruteforce/optimize step 1.0 otf (/ migration-time time-step) ls p state-vector total-time time-in-state-n)
                   command (issue-command policy state-vector)]
               (do
-;                (println "++++++++")
+                (println "--------")
 ;                (println @state-request-windows)
 ;                (println selected-windows)
-;                (println "State vector: " state-vector)
-;                (println "Total time: " total-time)
-;                (println "Time in n: " time-in-state-n)
-;                (println "Best estimates: " p)
-;                (println "Policy: " policy)
-;                (println "--------")
+                (println "State vector: " state-vector)
+                (println "Time: " time-in-state-n " / " total-time)
+                (println "Best estimates: " p)
+                (println "Policy: " policy)
                 command))))
         false))))
 

@@ -10,7 +10,7 @@
 
 (def time-step 300)
 (def migration-time 20)
-(def host {:mips 3000})
+(def host {:mips 12000}) ;4x3000
 
 (defn -main [& args]
   (let [workload (nth args 0)
@@ -83,3 +83,18 @@
                                          :param param
                                          :state-config state-config) 
                                  results))))))))
+
+; lein run -m simulation.runners.universal workload/planetlab_30_100_20_100 markov-multisize 0.3 output.txt "[1.0]" 0.01 "[30 60 90]"
+; avg-otf 0.28781603927007743
+; avg-time 31230.0
+; lein run -m simulation.runners.universal workload/planetlab_30_100_20_100 markov-multisize 0.2 output.txt "[1.0]" 0.01 "[30 60 90]"
+; avg-otf 0.1924098075621259
+; avg-time 16911.0
+; lein run -m simulation.runners.universal workload/planetlab_30_100_20_100 markov-multisize 0.1 output.txt "[1.0]" 0.01 "[30 60 90]"
+; avg-otf 0.14484958355875663
+; avg-time 9987.0 
+
+
+
+
+
