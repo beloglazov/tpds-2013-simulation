@@ -18,7 +18,7 @@
         otf (read-string (nth args 2))
         n (read-string (nth args 3))
         vms (repeat n (first (io/read-pregenerated-workload input)))
-        algorithm (partial markov/markov-optimal workload-generator/workloads 0.01 otf state-config)          
+        algorithm (partial markov/markov-optimal workload-generator/workloads 0.05 otf state-config)          
         results (map #(run-simulation 
                         algorithm 
                         time-step

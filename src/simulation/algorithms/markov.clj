@@ -198,9 +198,9 @@
          (coll? state-vector)]
    :post [(boolean? %)]}
   (if (not-empty p)
-    (and
-      (let [prob (get (vec p) (current-state state-vector))] 
-        (> prob 0.01) ; should be greater than the step size
+    (let [prob (get (vec p) (current-state state-vector))]
+      (and
+        (> prob 0.1) ; should be greater than the step size
         (< (rand) prob)))
     true))
 
