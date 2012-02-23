@@ -12,7 +12,7 @@
 (def workloads [{:until 200
                  :transitions [[1.0 0.0]
                                [1.0 0.0]]}
-                {:until 285
+                {:until 280
                  :transitions [[0.0 1.0]
                                [0.0 1.0]]}
                 {:until 1000

@@ -9,7 +9,7 @@
 
 (def time-step 300.0)
 (def time-limit 288)
-(def migration-time 20.0)
+(def migration-time (* time-step 5))
 (def host {:mips 1000})
 
 (defn -main [& args]

@@ -90,10 +90,12 @@
                      (> max-steps step))
               (recur (inc step)
                      new-overloading-steps)
-              (let [result {:total-time (* step time-step)
-                            :overloading-time (* new-overloading-steps time-step)
+              (let [result {:total-time (+ (* step time-step) migration-time)
+                            :overloading-time (+ (* new-overloading-steps time-step) migration-time)
                             :overloading-time-fraction (double (/ 
-                                                                 (* new-overloading-steps) 
-                                                                 (* step)))
+                                                                 (+ (* new-overloading-steps time-step) 
+                                                                    migration-time) 
+                                                                 (+ (* step time-step) 
+                                                                    migration-time)))
                             :execution-time (/ (double (- (. System nanoTime) start-time)) 1000000.0)}]
                 result))))))))
