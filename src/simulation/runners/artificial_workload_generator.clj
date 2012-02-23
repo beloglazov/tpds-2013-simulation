@@ -6,18 +6,28 @@
   (:gen-class))
 
 (def time-step 300.0)
-(def time-limit 400)
+(def time-limit 150)
 (def migration-time 20.0)
 
-(def workloads [{:until 200
+(def workloads [{:until 60
                  :transitions [[1.0 0.0]
                                [1.0 0.0]]}
-                {:until 280
+                {:until 80
                  :transitions [[0.0 1.0]
                                [0.0 1.0]]}
-                {:until 1000
+                {:until 200
                  :transitions [[1.0 0.0]
                                [1.0 0.0]]}])
+
+;(def workloads [{:until 200
+;                 :transitions [[1.0 0.0]
+;                               [1.0 0.0]]}
+;                {:until 280
+;                 :transitions [[0.0 1.0]
+;                               [0.0 1.0]]}
+;                {:until 1000
+;                 :transitions [[1.0 0.0]
+;                               [1.0 0.0]]}])
 
 ;(def workloads [{:until 60
 ;                 :transitions [[0.8 0.2]

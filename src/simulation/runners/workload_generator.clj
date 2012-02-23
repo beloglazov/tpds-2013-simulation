@@ -23,3 +23,4 @@
       (println "Done"))))
 
 ; lein run -m simulation.runners.workload-generator 0.3 1.0 0.2 100 "../data" "workload/planetlab_30_100_20_100"
+; lein run -m simulation.runners.workload-generator 0.3 1.0 0.1 100 "../data" "workload/planetlab_30_100_10_100"

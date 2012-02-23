@@ -73,7 +73,9 @@
       (do 
         (spit output-path (json/json-str workload))
         workload)
-      (let [vms (load-vms mips host (rand-nth thresholds) input-path)
+      (do
+        (prn (count workload))
+        (let [vms (load-vms mips host (rand-nth thresholds) input-path)
             host-utilization (host-utilization-history host vms)
             host-utilization-30 (take 30 host-utilization)
             otf (double (/ (count (filter #(>= % 1) host-utilization)) (count host-utilization)))
@@ -86,7 +88,7 @@
             (prn "otf" otf)
             (prn "otf-at-30" otf-at-30)
             (recur (conj workload vms)))
-          (recur workload))))))
+          (recur workload)))))))
 
 (defn read-pregenerated-workload [input-path]
   {:pre [(string? input-path)]
