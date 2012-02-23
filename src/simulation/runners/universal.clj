@@ -9,7 +9,8 @@
   (:gen-class))
 
 (def time-step 300)
-(def migration-time 20)
+(def migration-time (* time-step 1))
+;(def migration-time 20)
 (def host {:mips 12000}) ;4x3000
 
 (defn -main [& args]
@@ -35,6 +36,9 @@
                     (= algorithm-name "lr") (partial algorithms/loess param)
                     (= algorithm-name "lrr") (partial algorithms/loess-robust param)
                     (= algorithm-name "otf") (partial algorithms/otf param)
+                    (= algorithm-name "otf-limit") (partial algorithms/otf-limit param)
+                    (= algorithm-name "otf-migration-time") (partial algorithms/otf-migration-time param)
+                    (= algorithm-name "otf-limit-migration-time") (partial algorithms/otf-limit-migration-time param)
                     (= algorithm-name "markov-single-window-genetic") 
                     (partial markov/markov-single-window-genetic param state-config 200)
                     (= algorithm-name "markov-single-window-bruteforce") 
@@ -67,6 +71,8 @@
                               ;  (println "otf:" (double (/ overloading-steps step))))
                               ))
                          (io/read-pregenerated-workload workload))
+            violations (count (filter #(> % param)
+                                      (map #(:overloading-time-fraction %) results)))
             avg-otf (double (/ 
                               (apply + (map #(:overloading-time-fraction %) results))
                               (count results)))
@@ -76,6 +82,7 @@
             time-otf (/ (/ avg-time avg-otf) 1000)] 
         (do
 ;          (pprint results)
+          (println "violations" violations)
           (println "avg-otf" avg-otf)
           (println "avg-time" avg-time)
           (println "time-otf" time-otf)

@@ -16,6 +16,20 @@
         overloading-steps (count (filter #(>= % 1) utilization-history))]
     (> (/ overloading-steps (count utilization-history)) param)))
 
+(defn otf-limit [param time-step migration-time host vms]
+  {:pre [(not-negnum? param)
+         (not-negnum? time-step)
+         (not-negnum? migration-time)
+         (map? host)
+         (coll? vms)]
+   :post [(boolean? %)]}
+  (let [utilization-history (host-utilization-history host vms)
+        cnt (count utilization-history) 
+        overloading-steps (count (filter #(>= % 1) utilization-history))]
+    (and
+      (>= cnt 30)
+      (> (/ overloading-steps cnt) param))))
+
 (defn otf-migration-time [param time-step migration-time host vms]
   {:pre [(not-negnum? param)
          (not-negnum? time-step)
@@ -32,6 +46,25 @@
              (* time-step 
                 (count utilization-history)))) 
        param)))
+
+(defn otf-limit-migration-time [param time-step migration-time host vms]
+  {:pre [(not-negnum? param)
+         (not-negnum? time-step)
+         (not-negnum? migration-time)
+         (map? host)
+         (coll? vms)]
+   :post [(boolean? %)]}
+  (let [utilization-history (host-utilization-history host vms)
+        cnt (count utilization-history)
+        overloading-steps (count (filter #(>= % 1) utilization-history))]
+    (and (>= cnt 30) 
+         (> (/ (+ migration-time 
+                  (* time-step 
+                     overloading-steps)) 
+               (+ migration-time 
+                  (* time-step 
+                     cnt))) 
+            param))))
 
 (defn no-migrations [time-step migration-time host vms]
   {:pre [(not-negnum? time-step)

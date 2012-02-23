@@ -75,8 +75,8 @@
    :post [(coll? %)]}
   (do
     
-    (prn (last utilization))
-    (prn (utilization-to-state state-config (last utilization)))
+;    (prn (last utilization))
+;    (prn (utilization-to-state state-config (last utilization)))
     (let [state (utilization-to-state state-config (last utilization))]
     (map #(if (= state %) 1 0) 
          (range (inc (count state-config)))))))
@@ -237,14 +237,14 @@
          (coll? vms)]
    :post [(boolean? %)]}
   (let [utilization (host-utilization-history host vms)
-        total-time (dec (count utilization))]
+        total-time (count utilization)]
     (if (>= total-time 30) 
       (let [state-vector (build-state-vector state-config utilization)
             state-history (utilization-to-states state-config utilization)
             time-in-states total-time
             time-in-state-n (time-in-state-n state-config state-history)
             ;time-in-state-n (time-in-state-n state-config (take time-in-states (reverse state-history)))
-            p (:transitions (get-workload workloads total-time))
+            p (:transitions (get-workload workloads (dec total-time)))
             ls (if (= 1 (count state-config))
                  l-probabilities-2/ls
                  l-probabilities-3/ls)]
@@ -256,11 +256,11 @@
                 command (issue-command-deterministic policy)
                 ]
             (do 
-              (println "--------")
-              (println "State vector: " state-vector)
-              (println "Time: " time-in-state-n " / " total-time)
-              (println "Probabilities: " p)
-              (println "Policy: " policy)
+;              (println "--------")
+;              (println "State vector: " state-vector)
+;              (println "Time: " time-in-state-n " / " total-time)
+;              (println "Probabilities: " p)
+;              (println "Policy: " policy)
               command))))
       false)))
 
@@ -291,7 +291,7 @@
          (coll? vms)]
    :post [(boolean? %)]}
   (let [utilization (host-utilization-history host vms)
-        total-time (dec (count utilization))
+        total-time (count utilization)
         min-window-size (apply min window-sizes)
         max-window-size (apply max window-sizes)
         state-vector (build-state-vector state-config utilization)
@@ -307,7 +307,8 @@
              @state-estimate-windows @state-previous-state)
       (reset! state-previous-state state)
         
-      (if (>= total-time min-window-size)
+      (;if (>= total-time min-window-size)
+        if (>= total-time 30)
         (let [selected-windows (multisize-estimation/select-window 
                                  @state-variances @state-acceptable-variances window-sizes)
               p (multisize-estimation/select-best-estimates @state-estimate-windows selected-windows)
@@ -327,13 +328,13 @@
                   command (issue-command-deterministic policy)
                   ]
               (do
-                (println "--------")
+;                (println "--------")
 ;                (println @state-request-windows)
 ;                (println selected-windows)
-                (println "State vector: " state-vector)
-                (println "Time: " time-in-state-n " / " total-time)
-                (println "Best estimates: " p)
-                (println "Policy: " policy)
+;                (println "State vector: " state-vector)
+;                (println "Time: " time-in-state-n " / " total-time)
+;                (println "Best estimates: " p)
+;                (println "Policy: " policy)
                 command))))
         false))))
 
