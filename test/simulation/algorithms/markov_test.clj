@@ -253,6 +253,10 @@ divided by the number of time steps"
   
   (issue-command [] [] 0.1) => true)
 
+(fact  
+  (issue-command-deterministic [1]) => false
+  (issue-command-deterministic []) => true)
+
 (fact
   (time-in-state-n state-config states) => 5)
 

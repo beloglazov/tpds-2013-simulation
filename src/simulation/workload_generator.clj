@@ -8,7 +8,7 @@
          (not-negnum? current-time)]
    :post [(map? %)]}
   (first (drop-while 
-           #(> current-time (:until %)) 
+           #(>= current-time (:until %)) 
            workloads)))
 
 (defn generate-state [workloads current-time current-state]
@@ -47,7 +47,9 @@
                              current-state 0
                              states []]
                         (if (>= current-time time-limit)
-                          states
+                          (do
+                            (prn states) 
+                            states)
                           (recur (inc current-time)
                                  (generate-state workloads current-time current-state)
                                  (conj states current-state)))))}])
