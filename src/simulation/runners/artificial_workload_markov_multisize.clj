@@ -18,8 +18,9 @@
         window-sizes (read-string (nth args 2))
         otf (read-string (nth args 3))
         step (read-string (nth args 4))
+        n (read-string (nth args 5))
         number-of-states (inc (count state-config))
-        vms (io/read-pregenerated-workload input)
+        vms (repeat n (first (io/read-pregenerated-workload input)))
         algorithm (partial markov/markov-multisize step otf window-sizes state-config)          
         results (map #(do
                         (markov/reset-multisize-state window-sizes number-of-states)
@@ -36,12 +37,16 @@
                           ;  (println "utilization:" (double (/ (current-vms-mips step-vms) (:mips host))))
                           ;  (println "otf:" (double (/ overloading-steps step))))
                           ))
-                     vms)] 
+                     vms)
+        avg-otf (double (/ 
+                          (apply + (map #(:overloading-time-fraction %) results))
+                          (count results)))
+        avg-time (double (/ 
+                           (apply + (map #(:total-time %) results))
+                           (count results)))
+        time-otf (/ (/ avg-time avg-otf) 1000)] 
     (do
-      (pprint results))))
-
-;lein run -m simulation.runners.artificial-workload-markov-multisize workload/artificial2 "[1.0]" "[30 40 50 60 70 80 90 100]" 0.3 0.5
-;({:total-time 75600.0,
-;  :overloading-time 22500.0,
-;  :overloading-time-fraction 0.2976190476190476,
-;  :execution-time 756.232366})
+      (pprint results)
+      (println "avg-otf" avg-otf)
+      (println "avg-time" avg-time)
+      (println "time-otf" time-otf))))

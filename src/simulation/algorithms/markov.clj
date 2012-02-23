@@ -193,11 +193,17 @@
 
 (defn issue-command
   "Issues a migration command according to the policy PMF p and state probability vector"
-  [p state-vector]
+  [p state-vector min-probability]
   {:pre [(coll? p)
-         (coll? state-vector)]
+         (coll? state-vector)
+         (posnum? min-probability)]
    :post [(boolean? %)]}
-    (empty? p))
+  (if (not-empty p)
+    (let [probability (get (vec p) (current-state state-vector))]
+      (and
+        (> probability min-probability)
+        (< (rand) probability)))
+    true))
 
 (defn time-in-state-n
   "Return the number of times the system stayed in the state n"
@@ -220,24 +226,29 @@
    :post [(boolean? %)]}
   (let [utilization (host-utilization-history host vms)
         total-time (count utilization)]
-    (let [state-vector (build-state-vector state-config utilization)
-          state-history (utilization-to-states state-config utilization)
-          time-in-state-n (time-in-state-n state-config state-history)
-          p (:transitions (get-workload workloads total-time))
-          ls (if (= 1 (count state-config))
-               l-probabilities-2/ls
-               l-probabilities-3/ls)]
-      (if (every? #{0} (nth p (current-state state-vector)))
-        false
-        (let [policy (bruteforce/optimize step 1.0 otf (/ migration-time time-step) ls p state-vector total-time time-in-state-n)
-              command (issue-command policy state-vector)]
-          (do 
-;            (println "--------")
-;            (println "State vector: " state-vector)
-;            (println "Time: " time-in-state-n " / " total-time)
-;            (println "Probabilities: " p)
-;            (println "Policy: " policy)
-            command))))))
+    (if (>= total-time 30) 
+      (let [state-vector (build-state-vector state-config utilization)
+            state-history (utilization-to-states state-config utilization)
+            time-in-states total-time
+            time-in-state-n (time-in-state-n state-config state-history)
+            ;time-in-state-n (time-in-state-n state-config (take time-in-states (reverse state-history)))
+            p (:transitions (get-workload workloads total-time))
+            ls (if (= 1 (count state-config))
+                 l-probabilities-2/ls
+                 l-probabilities-3/ls)]
+        (if (every? #{0} (nth p (current-state state-vector)))
+          false
+          (let [policy (bruteforce/optimize step 1.0 otf (/ migration-time time-step) ls p state-vector
+                                            time-in-states time-in-state-n)
+                command (issue-command policy state-vector step)]
+            (do 
+              ;            (println "--------")
+              ;            (println "State vector: " state-vector)
+              ;            (println "Time: " time-in-state-n " / " total-time)
+              ;            (println "Probabilities: " p)
+              ;            (println "Policy: " policy)
+              command))))
+      false)))
 
 (def state-previous-state (atom 0))
 (def state-request-windows (atom []))
@@ -287,14 +298,18 @@
                                  @state-variances @state-acceptable-variances window-sizes)
               p (multisize-estimation/select-best-estimates @state-estimate-windows selected-windows)
               state-history (utilization-to-states state-config utilization)
+              time-in-states total-time
               time-in-state-n (time-in-state-n state-config state-history)
+              ;time-in-state-n (time-in-state-n state-config (take time-in-states (reverse state-history)))
+              
               ls (if (= 1 (count state-config))
                    l-probabilities-2/ls
                    l-probabilities-3/ls)]
           (if (every? #{0} (nth p state))
             false
-            (let [policy (bruteforce/optimize step 1.0 otf (/ migration-time time-step) ls p state-vector total-time time-in-state-n)
-                  command (issue-command policy state-vector)]
+            (let [policy (bruteforce/optimize step 1.0 otf (/ migration-time time-step) ls p state-vector 
+                                              time-in-states time-in-state-n)
+                  command (issue-command policy state-vector step)]
               (do
 ;                (println "--------")
 ;                (println @state-request-windows)
@@ -336,7 +351,7 @@
           (let [solution (bruteforce/optimize step 100.0 otf (/ migration-time time-step) ls c state-vector time-in-states time-in-state-n)
                 p (c-to-p c solution)
                 policy (p-to-policy p)
-                command (issue-command policy state-vector)]
+                command (issue-command policy state-vector step)]
             (do
 ;              (println "++++++++")
 ;              (pprint time-in-states)
@@ -372,7 +387,7 @@
           (let [solution (genetic/optimize-counts otf max-generations (/ migration-time time-step) ls c state-vector time-in-states time-in-state-n)
                 p (c-to-p c solution)
                 policy (p-to-policy p)
-                command (issue-command policy state-vector)]
+                command (issue-command policy state-vector 0.1)]
             command)))
       false)))
 

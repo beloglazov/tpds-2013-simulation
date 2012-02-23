@@ -237,9 +237,21 @@ divided by the number of time steps"
 (def p [0.3 0.6 0.8])
 
 (fact 
-  (issue-command [0 1] []) => false
-  (issue-command [0 0] []) => false
-  (issue-command [] []) => true)
+  (issue-command p [1 0 0] 0.1) => true
+  (provided (rand) => 0.1)
+  (issue-command p [1 0 0] 0.1) => false
+  (provided (rand) => 0.3)
+  (issue-command p [1 0 0] 0.5) => false
+  (issue-command p [0 1 0] 0.1) => true
+  (provided (rand) => 0.2)
+  (issue-command p [0 1 0] 0.1) => false
+  (provided (rand) => 0.8)
+  (issue-command p [0 0 1] 0.1) => true
+  (provided (rand) => 0.1)
+  (issue-command p [0 0 1] 0.1) => false
+  (provided (rand) => 1.0)
+  
+  (issue-command [] [] 0.1) => true)
 
 (fact
   (time-in-state-n state-config states) => 5)

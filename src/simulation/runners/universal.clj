@@ -75,6 +75,7 @@
                                (count results)))
             time-otf (/ (/ avg-time avg-otf) 1000)] 
         (do
+;          (pprint results)
           (println "avg-otf" avg-otf)
           (println "avg-time" avg-time)
           (println "time-otf" time-otf)
