@@ -9,8 +9,8 @@
   (:gen-class))
 
 (def time-step 300)
-(def migration-time (* time-step 1))
-;(def migration-time 20)
+;(def migration-time (* time-step 1))
+(def migration-time 30)
 (def host {:mips 12000}) ;4x3000
 
 (defn -main [& args]
@@ -91,6 +91,8 @@
                                          :param param
                                          :state-config state-config) 
                                  results))))))))
+
+; OTFT fails (violates) because it does not contain a prediction part compared to the markov algorithm
 
 ;lein run -m simulation.runners.universal workload/planetlab_30_100_20_100 markov-multisize 0.3 output.txt "[1.0]" 0.5 "[30 40 50 60 70 80 90 100]"                                                                   
 ;avg-otf 0.29463017041449613

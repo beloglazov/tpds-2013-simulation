@@ -25,10 +25,9 @@
   (:until (get-workload test-workloads 0))  => 15
   (:until (get-workload test-workloads 1))  => 15
   (:until (get-workload test-workloads 14)) => 15
-  (:until (get-workload test-workloads 15)) => 15
+  (:until (get-workload test-workloads 15)) => 30
   (:until (get-workload test-workloads 16)) => 30
-  (:until (get-workload test-workloads 30)) => 30
-  (:until (get-workload test-workloads 31)) => (throws AssertionError))
+  (:until (get-workload test-workloads 30)) => (throws AssertionError))
 
 (fact
   (generate-state test-workloads 1 0) => 0

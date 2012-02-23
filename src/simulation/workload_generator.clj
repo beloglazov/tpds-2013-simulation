@@ -47,9 +47,7 @@
                              current-state 0
                              states []]
                         (if (>= current-time time-limit)
-                          (do
-                            (prn states) 
-                            states)
+                          states
                           (recur (inc current-time)
                                  (generate-state workloads current-time current-state)
                                  (conj states current-state)))))}])

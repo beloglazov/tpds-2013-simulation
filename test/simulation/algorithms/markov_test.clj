@@ -88,7 +88,7 @@
 ;1/5 1/12 = 0.2 0.083
 ;1/3 5/36 = 0.333 0.138
 
-(def transition-rate-matrix [[0.15 0.1  0.0]
+(def transition-rate-matrix [[0.1  0.1  0.0]
                              [0.05 0.45 0.1]
                              [0.0  0.05 0.15]])
 (def q [[-0.1   0.1   0.0]
@@ -167,8 +167,8 @@
 
 (fact
   "Transforming the utilization history into state history"
-  (utilization-to-states state-config data3) => states
-  (utilization-to-states [1.0] [0.5 0.5 1.0 1.0 0.5]) => [0 0 0 1 1 0])
+  (utilization-to-states state-config data3) => (rest states)
+  (utilization-to-states [1.0] [0.5 0.5 1.0 1.0 0.5]) => [0 0 1 1 0])
 
 (fact
   (transition-counts state-config states) => transition-counts-matrix)

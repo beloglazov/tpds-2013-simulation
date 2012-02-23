@@ -7,21 +7,24 @@
 
 (def time-step 300)
 (def host {:mips 12000}) ;4x3000
+(def migration-time 30)
 
-(defn calculate-otf [state-history number-of-states]
+(defn calculate-otf [state-history number-of-states migration-time]
   {:pre [(coll? state-history)
-         (posnum? number-of-states)]
+         (posnum? number-of-states)
+         (not-negnum? migration-time)]
    :post [(not-negnum? %)]}
-  (double (/ (count (filter #{(dec number-of-states)} state-history))
-             (count state-history))))
+  (double (/ (+ migration-time (count (filter #{(dec number-of-states)} state-history)))
+             (+ migration-time (count state-history)))))
 
-(defn solve [otf-constraint state-history number-of-states]
+(defn solve [otf-constraint state-history number-of-states migration-time]
   {:pre [(posnum? otf-constraint)
          (coll? state-history)
-         (posnum? number-of-states)]
+         (posnum? number-of-states)
+         (not-negnum? migration-time)]
    :post [(map? %)]}
   (loop [states (reverse state-history)]
-    (let [otf (calculate-otf states number-of-states)] 
+    (let [otf (calculate-otf states number-of-states migration-time)] 
       (if (<= otf otf-constraint)
         {:otf otf
          :time (* time-step (count states))}
@@ -37,7 +40,7 @@
           results (map #(solve otf 
                                (markov/utilization-to-states state-config 
                                                              (host-utilization-history host %)) 
-                               number-of-states) 
+                               number-of-states (/ migration-time time-step)) 
                        workload)
           avg-otf (double (/ 
                             (apply + (map #(:otf %) results))
@@ -47,7 +50,7 @@
                              (count results)))
           time-otf (/ (/ avg-time avg-otf) 1000)] 
       (do
-        (pprint results)
+;        (pprint results)
         (println "avg-otf" avg-otf)
         (println "avg-time" avg-time)
         (println "time-otf" time-otf)))))
