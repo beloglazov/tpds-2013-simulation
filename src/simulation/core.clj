@@ -59,17 +59,19 @@
 
 (defn run-simulation
   
-  ([algorithm time-step migration-time host vms]
+  ([algorithm otf time-step migration-time host vms]
     {:pre [(fn? algorithm)
+           (not-negnum? otf)
            (not-negnum? time-step)
            (not-negnum? migration-time)
            (map? host)
            (coll? vms)]
      :post [(map? %)]}
-    (run-simulation algorithm time-step migration-time host vms (fn [step step-vms overloading-steps])))
+    (run-simulation algorithm otf time-step migration-time host vms (fn [step step-vms overloading-steps])))
   
-  ([algorithm time-step migration-time host vms reporting]
+  ([algorithm otf time-step migration-time host vms reporting]
     {:pre [(fn? algorithm)
+           (not-negnum? otf)
            (not-negnum? time-step)
            (not-negnum? migration-time)
            (map? host)
@@ -90,12 +92,14 @@
                      (> max-steps step))
               (recur (inc step)
                      new-overloading-steps)
-              (let [result {:total-time (+ (* step time-step) migration-time)
-                            :overloading-time (+ (* new-overloading-steps time-step) migration-time)
-                            :overloading-time-fraction (double (/ 
-                                                                 (+ (* new-overloading-steps time-step) 
-                                                                    migration-time) 
-                                                                 (+ (* step time-step) 
-                                                                    migration-time)))
+              (let [result-time (+ (* step time-step) migration-time)
+                    result-otf (double (/ 
+                                         (+ (* new-overloading-steps time-step) 
+                                            migration-time) 
+                                         result-time))
+                    result {:time result-time
+                            ;:overloading-time (+ (* new-overloading-steps time-step) migration-time)
+                            :otf result-otf
+                            :violation (if (> result-otf otf) 1 0)
                             :execution-time (/ (double (- (. System nanoTime) start-time)) 1000000.0)}]
                 result))))))))

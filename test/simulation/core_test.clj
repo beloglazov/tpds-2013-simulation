@@ -17,11 +17,11 @@
 (fact 
   "each simulation is run for an algorithm, a host, 
 a set of VMs and migration time"
-  (run-simulation algorithm time-step migration-time host vms) => 
-  (just {:total-time (+ migration-time (* time-step 3))
-         :overloading-time (+ migration-time (* time-step 1))
-         :overloading-time-fraction (double (/ (+ migration-time (* time-step 1))
-                                               (+ migration-time (* time-step 3))))
+  (run-simulation algorithm 0 time-step migration-time host vms) => 
+  (just {:time (+ migration-time (* time-step 3))
+         :otf (double (/ (+ migration-time (* time-step 1))
+                         (+ migration-time (* time-step 3))))
+         :violation number?
          :execution-time number?})
   (provided
     (run-step algorithm time-step migration-time host 

@@ -44,21 +44,20 @@
                     (= algorithm-name "markov-single-window-bruteforce") 
                     (partial markov/markov-single-window-bruteforce param state-config 1)
                     (= algorithm-name "markov-multisize") 
-                    (partial markov/markov-multisize step param window-sizes state-config))] 
+                    (partial markov/markov-multisize step param window-sizes state-config))
+        otf (if (> (count args) 4)
+              param
+              0.0)] 
     (do 
       (println workload)
       (println algorithm-name)
       (println param)
-      (println output)
-      (println state-config)
-      (println step)
-      (println window-sizes)
-      (println number-of-states)
       (let [results (map #(do
                             (when (= algorithm-name "markov-multisize")
                               (markov/reset-multisize-state window-sizes number-of-states)) 
                             (run-simulation 
-                              algorithm 
+                              algorithm
+                              otf
                               time-step
                               migration-time
                               host
@@ -71,13 +70,13 @@
                               ;  (println "otf:" (double (/ overloading-steps step))))
                               ))
                          (io/read-pregenerated-workload workload))
-            violations (count (filter #(> % param)
-                                      (map #(:overloading-time-fraction %) results)))
+            violations (count (filter #{1}
+                                      (map #(:violation %) results)))
             avg-otf (double (/ 
-                              (apply + (map #(:overloading-time-fraction %) results))
+                              (apply + (map #(:otf %) results))
                               (count results)))
             avg-time (double (/ 
-                               (apply + (map #(:total-time %) results))
+                               (apply + (map #(:time %) results))
                                (count results)))
             time-otf (/ (/ avg-time avg-otf) 1000)] 
         (do
@@ -86,11 +85,13 @@
           (println "avg-otf" avg-otf)
           (println "avg-time" avg-time)
           (println "time-otf" time-otf)
-          (spit output (vec (map #(assoc % 
-                                         :algorithm algorithm-name
-                                         :param param
-                                         :state-config state-config) 
-                                 results))))))))
+          (map (fn [item] 
+                 (spit output item :append true))
+               (map #(assoc % 
+                       :algorithm algorithm-name
+                       :param param
+                       :state-config state-config) 
+                    results)))))))
 
 ; OTFT fails (violates) because it does not contain a prediction part compared to the markov algorithm
 
