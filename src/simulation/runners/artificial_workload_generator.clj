@@ -6,78 +6,18 @@
   (:gen-class))
 
 (def time-step 300.0)
-(def time-limit 150)
-(def migration-time 20.0)
+(def time-limit 160)
+(def migration-time 30.0)
 
 (def workloads [{:until 60
                  :transitions [[1.0 0.0]
                                [1.0 0.0]]}
-                {:until 80
+                {:until 86
                  :transitions [[0.0 1.0]
                                [0.0 1.0]]}
                 {:until 200
                  :transitions [[1.0 0.0]
                                [1.0 0.0]]}])
-
-;(def workloads [{:until 200
-;                 :transitions [[1.0 0.0]
-;                               [1.0 0.0]]}
-;                {:until 280
-;                 :transitions [[0.0 1.0]
-;                               [0.0 1.0]]}
-;                {:until 1000
-;                 :transitions [[1.0 0.0]
-;                               [1.0 0.0]]}])
-
-;(def workloads [{:until 60
-;                 :transitions [[0.8 0.2]
-;                               [1.0 0.0]]}
-;                {:until 110
-;                 :transitions [[0.5 0.5]
-;                               [1.0 0.0]]}
-;                {:until 130
-;                 :transitions [[0.2 0.8]
-;                               [1.0 0.0]]}
-;                {:until 180
-;                 :transitions [[0.8 0.2]
-;                               [0.6 0.4]]}
-;                {:until 190
-;                 :transitions [[0.8 0.2]
-;                               [0.3 0.7]]}
-;                {:until 210
-;                 :transitions [[0.8 0.2]
-;                               [0.8 0.2]]}
-;                {:until 250
-;                 :transitions [[0.2 0.8]
-;                               [0.8 0.2]]}
-;                {:until 288
-;                 :transitions [[0.2 0.8]
-;                               [0.2 0.8]]}])
-
-;(def workloads [{:until 30
-;                 :transitions [[0.8 0.2]
-;                               [1.0 0.0]]}
-;                {:until 80
-;                 :transitions [[0.5 0.5]
-;                               [1.0 0.0]]}
-;                {:until 100
-;                 :transitions [[0.2 0.8]
-;                               [1.0 0.0]]}
-;                {:until 150
-;                 :transitions [[0.8 0.2]
-;                               [0.6 0.4]]}
-;                {:until 160
-;                 :transitions [[0.8 0.2]
-;                               [0.3 0.7]]}
-;                {:until 180
-;                 :transitions [[0.8 0.2]
-;                               [0.8 0.2]]}
-;                {:until 220
-;                 :transitions [[0.2 0.8]
-;                               [0.8 0.2]]}
-;                {:until 288
-;                 :transitions [[0.2 0.8]
-;                               [0.2 0.8]]}])
 (def state-config [1.0])
 
 (defn -main [& args]
@@ -87,6 +27,3 @@
     (do
       (println "OTF: " (double (/ (count (filter #(>= % 1) utilization)) (count utilization))))
       (spit output-path (json/json-str vms)))))
-
-;lein run -m simulation.runners.artificial-workload-markov-optimal workload/artificial3 "[1.0]" 0.3 0.5 1
-;lein run -m simulation.runners.artificial-workload-markov-multisize workload/artificial3 "[1.0]" "[30 40 50 60 70 80 90 100]" 0.3 0.5 1

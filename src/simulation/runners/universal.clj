@@ -85,28 +85,13 @@
           (println "avg-otf" avg-otf)
           (println "avg-time" avg-time)
           (println "time-otf" time-otf)
-          (map (fn [item] 
-                 (spit output item :append true))
-               (map #(assoc % 
-                       :algorithm algorithm-name
-                       :param param
-                       :state-config state-config) 
-                    results)))))))
+          (io/spit-results output 
+                           (map #(assoc % 
+                                        :algorithm algorithm-name
+                                        :param param
+                                        :state-config state-config) 
+                                results))
+          (prn))))))
 
 ; OTFT fails (violates) because it does not contain a prediction part compared to the markov algorithm
-
-;lein run -m simulation.runners.universal workload/planetlab_30_100_20_100 markov-multisize 0.3 output.txt "[1.0]" 0.5 "[30 40 50 60 70 80 90 100]"                                                                   
-;avg-otf 0.29463017041449613
-;avg-time 32691.0
-;time-otf 110.95605027146115
-;lein run -m simulation.runners.universal workload/planetlab_30_100_20_100 markov-multisize 0.2 output.txt "[1.0]" 0.5 "[30 40 50 60 70 80 90 100]"                                           
-;avg-otf 0.19258546938944876
-;avg-time 16920.0
-;time-otf 87.8570956243026
-;lein run -m simulation.runners.universal workload/planetlab_30_100_20_100 markov-multisize 0.1 output.txt "[1.0]" 0.5 "[30 40 50 60 70 80 90 100]"                                           
-;avg-otf 0.14484958355875663
-;avg-time 9987.0
-;time-otf 68.94738496744718
-
-
 

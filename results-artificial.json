@@ -1,0 +1,2 @@
+[
+{"execution-time":0.0,"violation":0,"state-config":[1.0],"param":0.3,"algorithm":"optimal","otf":0.16302311055590257,"time":48030.0}{"state-config":[1.0],"param":0.3,"algorithm":"markov-optimal","time":48030.0,"otf":0.16302311055590257,"violation":0,"execution-time":955.09531}{"state-config":[1.0],"param":0.3,"algorithm":"markov-multisize","time":26130.0,"otf":0.29965556831228474,"violation":0,"execution-time":724.069551}]

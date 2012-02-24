@@ -25,17 +25,20 @@
    :post [(map? %)]}
   (loop [states (reverse state-history)]
     (let [otf (calculate-otf states number-of-states migration-time)] 
-      (if (<= otf otf-constraint)
+      (if (or (<= otf otf-constraint)
+              (empty? states))
         {:otf otf
-         :time (* time-step (count states))}
+         :time (* time-step (+ migration-time (count states)))}
         (recur (rest states))))))
 
 (defn -main [& args]
   (do
+    (println "optimal")
     (pprint args) 
     (let [workload (io/read-pregenerated-workload (nth args 0))
           state-config (read-string (nth args 1))
           otf (read-string (nth args 2))
+          output (nth args 3)
           number-of-states (inc (count state-config))
           results (map #(solve otf 
                                (markov/utilization-to-states state-config 
@@ -53,15 +56,13 @@
 ;        (pprint results)
         (println "avg-otf" avg-otf)
         (println "avg-time" avg-time)
-        (println "time-otf" time-otf)))))
-
-; lein run -m simulation.runners.optimal workload/planetlab_30_100_20_100 "[1.0]" 0.3
-; avg-otf 0.29786608532826003
-; avg-time 38433.0
-; lein run -m simulation.runners.optimal workload/planetlab_30_100_20_100 "[1.0]" 0.2
-; avg-otf 0.19519639249345766
-; avg-time 21504.0
-; lein run -m simulation.runners.optimal workload/planetlab_30_100_20_100 "[1.0]" 0.1
-; avg-otf 0.06431711129946716
-; avg-time 8631.0
-
+        (println "time-otf" time-otf)
+        (io/spit-results output
+                         (map #(assoc % 
+                                      :algorithm "optimal"
+                                      :param otf
+                                      :state-config state-config
+                                      :violation (if (> (:otf %) otf) 1 0)
+                                      :execution-time 0.0) 
+                              results))
+        (prn)))))

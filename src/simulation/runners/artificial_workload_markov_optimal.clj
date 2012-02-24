@@ -9,19 +9,21 @@
 
 (def time-step 300.0)
 (def time-limit 288)
-(def migration-time (* time-step 5))
+(def migration-time 30.0)
 (def host {:mips 1000})
 
 (defn -main [& args]
   (let [input (nth args 0)
-        state-config (read-string (nth args 1))
-        otf (read-string (nth args 2))
-        step (read-string (nth args 3))
-        n (read-string (nth args 4))
+        output (nth args 1)
+        state-config (read-string (nth args 2))
+        otf (read-string (nth args 3))
+        step (read-string (nth args 4))
+        n (read-string (nth args 5))
         vms (repeat n (first (io/read-pregenerated-workload input)))
         algorithm (partial markov/markov-optimal workload-generator/workloads step otf state-config)          
         results (map #(run-simulation 
                         algorithm 
+                        otf
                         time-step
                         migration-time
                         host
@@ -35,14 +37,20 @@
                         )
                      vms)
         avg-otf (double (/ 
-                          (apply + (map #(:overloading-time-fraction %) results))
+                          (apply + (map #(:otf %) results))
                           (count results)))
         avg-time (double (/ 
-                           (apply + (map #(:total-time %) results))
+                           (apply + (map #(:time %) results))
                            (count results)))
         time-otf (/ (/ avg-time avg-otf) 1000)] 
     (do
-      (pprint results)
       (println "avg-otf" avg-otf)
       (println "avg-time" avg-time)
-      (println "time-otf" time-otf))))
+      (println "time-otf" time-otf)
+      (io/spit-results output 
+                       (map #(assoc % 
+                                    :algorithm "markov-optimal"
+                                    :param otf
+                                    :state-config state-config) 
+                            results))
+      (prn))))

@@ -9,16 +9,17 @@
 
 (def time-step 300.0)
 (def time-limit 288)
-(def migration-time (* time-step 5))
+(def migration-time 30.0)
 (def host {:mips 1000})
 
 (defn -main [& args]
   (let [input (nth args 0)
-        state-config (read-string (nth args 1))
-        window-sizes (read-string (nth args 2))
-        otf (read-string (nth args 3))
-        step (read-string (nth args 4))
-        n (read-string (nth args 5))
+        output (nth args 1)
+        state-config (read-string (nth args 2))
+        window-sizes (read-string (nth args 3))
+        otf (read-string (nth args 4))
+        step (read-string (nth args 5))
+        n (read-string (nth args 6))
         number-of-states (inc (count state-config))
         vms (repeat n (first (io/read-pregenerated-workload input)))
         algorithm (partial markov/markov-multisize step otf window-sizes state-config)          
@@ -26,6 +27,7 @@
                         (markov/reset-multisize-state window-sizes number-of-states)
                         (run-simulation 
                           algorithm 
+                          otf
                           time-step
                           migration-time
                           host
@@ -39,14 +41,20 @@
                           ))
                      vms)
         avg-otf (double (/ 
-                          (apply + (map #(:overloading-time-fraction %) results))
+                          (apply + (map #(:otf %) results))
                           (count results)))
         avg-time (double (/ 
-                           (apply + (map #(:total-time %) results))
+                           (apply + (map #(:time %) results))
                            (count results)))
         time-otf (/ (/ avg-time avg-otf) 1000)] 
     (do
-      (pprint results)
       (println "avg-otf" avg-otf)
       (println "avg-time" avg-time)
-      (println "time-otf" time-otf))))
+      (println "time-otf" time-otf)
+      (io/spit-results output 
+                       (map #(assoc % 
+                                    :algorithm "markov-multisize"
+                                    :param otf
+                                    :state-config state-config) 
+                            results))
+      (prn))))

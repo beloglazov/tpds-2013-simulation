@@ -95,3 +95,9 @@
    :post [(coll? %)]}
   (json/read-json (slurp input-path)))
 
+(defn spit-json [output-path data] 
+  (spit output-path (json/json-str data) :append true))
+
+(defn spit-results [output-path data] 
+  (doall (map (partial spit-json output-path) data)))
+
