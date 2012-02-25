@@ -15,11 +15,12 @@
 (defn -main [& args]
   (let [input (nth args 0)
         output (nth args 1)
-        state-config (read-string (nth args 2))
-        window-sizes (read-string (nth args 3))
-        otf (read-string (nth args 4))
-        step (read-string (nth args 5))
-        n (read-string (nth args 6))
+        output2 (nth args 2)
+        state-config (read-string (nth args 3))
+        window-sizes (read-string (nth args 4))
+        otf (read-string (nth args 5))
+        step (read-string (nth args 6))
+        n (read-string (nth args 7))
         number-of-states (inc (count state-config))
         vms (repeat n (first (io/read-pregenerated-workload input)))
         algorithm (partial markov/markov-multisize step otf window-sizes state-config)          
@@ -57,4 +58,8 @@
                                     :param otf
                                     :state-config state-config) 
                             results))
+      (io/spit-results output2 
+                       [{:time @markov/state-time-history
+                         :selected-windows @markov/state-selected-window-history
+                         :best-estimates @markov/state-best-estimate-history}])
       (prn))))

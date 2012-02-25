@@ -269,6 +269,9 @@
 (def state-estimate-windows (atom []))
 (def state-variances (atom []))
 (def state-acceptable-variances (atom []))
+(def state-selected-window-history (atom []))
+(def state-best-estimate-history (atom []))
+(def state-time-history (atom (list)))
 
 (defn reset-multisize-state [window-sizes number-of-states]
   {:pre [(coll? window-sizes)
@@ -278,7 +281,10 @@
     (reset! state-request-windows (multisize-estimation/init-request-windows number-of-states))
     (reset! state-estimate-windows (multisize-estimation/init-3-level-data window-sizes number-of-states))
     (reset! state-variances (multisize-estimation/init-variances window-sizes number-of-states))
-    (reset! state-acceptable-variances (multisize-estimation/init-variances window-sizes number-of-states))))
+    (reset! state-acceptable-variances (multisize-estimation/init-variances window-sizes number-of-states))
+    (reset! state-selected-window-history (multisize-estimation/init-2-level-history number-of-states))
+    (reset! state-best-estimate-history (multisize-estimation/init-2-level-history number-of-states))
+    (reset! state-time-history (list))))
 
 (defn markov-multisize [step otf window-sizes state-config time-step migration-time host vms]
   {:pre [(posnum? step)
@@ -295,7 +301,10 @@
         min-window-size (apply min window-sizes)
         max-window-size (apply max window-sizes)
         state-vector (build-state-vector state-config utilization)
-        state (current-state state-vector)]
+        state (current-state state-vector)
+        selected-windows (multisize-estimation/select-window 
+                           @state-variances @state-acceptable-variances window-sizes)
+        p (multisize-estimation/select-best-estimates @state-estimate-windows selected-windows)]
     (do
       (swap! state-request-windows multisize-estimation/update-request-windows
              max-window-size @state-previous-state state)
@@ -306,12 +315,15 @@
       (swap! state-acceptable-variances multisize-estimation/update-acceptable-variances
              @state-estimate-windows @state-previous-state)
       (reset! state-previous-state state)
+      
+      (swap! state-selected-window-history multisize-estimation/update-selected-window-history 
+             selected-windows)
+      (swap! state-best-estimate-history multisize-estimation/update-best-estimate-history p)
+      (swap! state-time-history conj total-time)
         
       (;if (>= total-time min-window-size)
         if (>= total-time 30)
-        (let [selected-windows (multisize-estimation/select-window 
-                                 @state-variances @state-acceptable-variances window-sizes)
-              p (multisize-estimation/select-best-estimates @state-estimate-windows selected-windows)
+        (let [
               state-history (utilization-to-states state-config utilization)
               time-in-states total-time
               time-in-state-n (time-in-state-n state-config state-history)
@@ -328,13 +340,13 @@
                   command (issue-command-deterministic policy)
                   ]
               (do
-;                (println "--------")
-;                (println @state-request-windows)
-;                (println selected-windows)
-;                (println "State vector: " state-vector)
-;                (println "Time: " time-in-state-n " / " total-time)
-;                (println "Best estimates: " p)
-;                (println "Policy: " policy)
+                ;                (println "--------")
+                ;                (println @state-request-windows)
+                ;                (println selected-windows)
+                ;                (println "State vector: " state-vector)
+                ;                (println "Time: " time-in-state-n " / " total-time)
+                ;                (println "Best estimates: " p)
+                ;                (println "Policy: " policy)
                 command))))
         false))))
 
