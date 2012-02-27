@@ -45,7 +45,10 @@
                     (partial markov/markov-single-window-bruteforce param state-config 1)
                     (= algorithm-name "markov-multisize") 
                     (partial markov/markov-multisize step param window-sizes state-config))
-        otf (if (> (count args) 4)
+        otf (if (contains-val? ["otf" "otf-limit" "otf-migration-time" "otf-limit-migration-time"
+                                "markov-single-window-genetic" "markov-single-window-bruteforce"
+                                "markov-multisize"]
+                               algorithm-name)
               param
               0.0)] 
     (do 

@@ -4,11 +4,12 @@
 (defn -main [input output]
   (let [data (json/read-json (slurp input))]
     (do 
-      (spit output "Time\tOTF\tAlgorithm\tParam\tStates\tStateConfig\tOtfStateConfig\tAlgorithmParam\tAlgorithmStateConfig\tAlgorithmParamStateConfig\tExecutionTime\tExecutionTimeNormalized\n")
+      (spit output "Time\tOTF\tViolation\tAlgorithm\tParam\tStates\tStateConfig\tOtfStateConfig\tAlgorithmParam\tAlgorithmStateConfig\tAlgorithmParamStateConfig\tExecutionTime\tExecutionTimeNormalized\n")
       (doall
         (map #(spit output (str 
                              (:time %) "\t"
                              (:otf %) "\t"
+                             (:violation %) "\t"
                              (:algorithm %) "\t"
                              (:param %) "\t"
                              (count (:state-config %)) "\t"
