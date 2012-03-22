@@ -1,0 +1,4 @@
+Time	OTF	Algorithm	Param	States	StateConfig	OtfStateConfig	AlgorithmParam	AlgorithmStateConfig	AlgorithmParamStateConfig	ExecutionTime	ExecutionTimeNormalized
+48030.0	0.16302311055590257	optimal	0.3	1	1.0	0.3-1.0	optimal-0.3	optimal-1.0	optimal-0.3-1.0	0.0	0.0
+48030.0	0.16302311055590257	markov-optimal	0.3	1	1.0	0.3-1.0	markov-optimal-0.3	markov-optimal-1.0	markov-optimal-0.3-1.0	935.343225	5.84224375390381
+26130.0	0.29965556831228474	markov-multisize	0.3	1	1.0	0.3-1.0	markov-multisize-0.3	markov-multisize-1.0	markov-multisize-0.3-1.0	1049.897039	12.053926969001148

@@ -1,0 +1,901 @@
+Time	OTF	Violation	Algorithm	Param	States	StateConfig	OtfStateConfig	AlgorithmParam	AlgorithmStateConfig	AlgorithmParamStateConfig	ExecutionTime	ExecutionTimeNormalized
+9330	0.09967845659163987	0	markov-multisize	0.1	1	1.0	0.1-1.0	markov-multisize-0.1	markov-multisize-1.0	markov-multisize-0.1-1.0	174.132544	5.599117170418006
+11430	0.08136482939632546	0	markov-multisize	0.1	1	1.0	0.1-1.0	markov-multisize-0.1	markov-multisize-1.0	markov-multisize-0.1-1.0	119.038966	3.124382309711286
+10530	0.08831908831908832	0	markov-multisize	0.1	1	1.0	0.1-1.0	markov-multisize-0.1	markov-multisize-1.0	markov-multisize-0.1-1.0	76.386126	2.176242905982906
+19230	0.09516380655226209	0	markov-multisize	0.1	1	1.0	0.1-1.0	markov-multisize-0.1	markov-multisize-1.0	markov-multisize-0.1-1.0	255.544376	3.986651731669267
+22830	0.0932982917214192	0	markov-multisize	0.1	1	1.0	0.1-1.0	markov-multisize-0.1	markov-multisize-1.0	markov-multisize-0.1-1.0	366.185962	4.811904888304863
+10530	0.08831908831908832	0	markov-multisize	0.1	1	1.0	0.1-1.0	markov-multisize-0.1	markov-multisize-1.0	markov-multisize-0.1-1.0	56.746611	1.6167125641025641
+20130	0.09090909090909091	0	markov-multisize	0.1	1	1.0	0.1-1.0	markov-multisize-0.1	markov-multisize-1.0	markov-multisize-0.1-1.0	162.761063	2.425649225037258
+10530	0.08831908831908832	0	markov-multisize	0.1	1	1.0	0.1-1.0	markov-multisize-0.1	markov-multisize-1.0	markov-multisize-0.1-1.0	53.994378	1.5383013675213675
+11130	0.08355795148247978	0	markov-multisize	0.1	1	1.0	0.1-1.0	markov-multisize-0.1	markov-multisize-1.0	markov-multisize-0.1-1.0	57.292107	1.5442616442048518
+10230	0.09090909090909091	0	markov-multisize	0.1	1	1.0	0.1-1.0	markov-multisize-0.1	markov-multisize-1.0	markov-multisize-0.1-1.0	63.975759	1.876121964809384
+13230	0.09297052154195011	0	markov-multisize	0.1	1	1.0	0.1-1.0	markov-multisize-0.1	markov-multisize-1.0	markov-multisize-0.1-1.0	90.45062	2.0510344671201812
+11130	0.08355795148247978	0	markov-multisize	0.1	1	1.0	0.1-1.0	markov-multisize-0.1	markov-multisize-1.0	markov-multisize-0.1-1.0	38.102745	1.027028167115903
+9630	0.09657320872274143	0	markov-multisize	0.1	1	1.0	0.1-1.0	markov-multisize-0.1	markov-multisize-1.0	markov-multisize-0.1-1.0	37.574169	1.170534859813084
+11430	0.08136482939632546	0	markov-multisize	0.1	1	1.0	0.1-1.0	markov-multisize-0.1	markov-multisize-1.0	markov-multisize-0.1-1.0	44.00566	1.1550041994750655
+11130	0.08355795148247978	0	markov-multisize	0.1	1	1.0	0.1-1.0	markov-multisize-0.1	markov-multisize-1.0	markov-multisize-0.1-1.0	46.089476	1.242303935309973
+13830	0.08893709327548807	0	markov-multisize	0.1	1	1.0	0.1-1.0	markov-multisize-0.1	markov-multisize-1.0	markov-multisize-0.1-1.0	82.896624	1.798191409978308
+36930	0.0982940698619009	0	markov-multisize	0.1	1	1.0	0.1-1.0	markov-multisize-0.1	markov-multisize-1.0	markov-multisize-0.1-1.0	282.556534	2.295341462225833
+9630	0.09657320872274143	0	markov-multisize	0.1	1	1.0	0.1-1.0	markov-multisize-0.1	markov-multisize-1.0	markov-multisize-0.1-1.0	22.313578	0.6951270404984423
+11730	0.0792838874680307	0	markov-multisize	0.1	1	1.0	0.1-1.0	markov-multisize-0.1	markov-multisize-1.0	markov-multisize-0.1-1.0	36.73433	0.9394969309462915
+11130	0.08355795148247978	0	markov-multisize	0.1	1	1.0	0.1-1.0	markov-multisize-0.1	markov-multisize-1.0	markov-multisize-0.1-1.0	32.644875	0.87991576819407
+23730	0.08975979772439949	0	markov-multisize	0.1	1	1.0	0.1-1.0	markov-multisize-0.1	markov-multisize-1.0	markov-multisize-0.1-1.0	129.680685	1.6394524020227563
+21330	0.09985935302391	0	markov-multisize	0.1	1	1.0	0.1-1.0	markov-multisize-0.1	markov-multisize-1.0	markov-multisize-0.1-1.0	95.940122	1.3493688045007033
+9330	0.09967845659163987	0	markov-multisize	0.1	1	1.0	0.1-1.0	markov-multisize-0.1	markov-multisize-1.0	markov-multisize-0.1-1.0	20.679096	0.6649227009646302
+15930	0.09604519774011298	0	markov-multisize	0.1	1	1.0	0.1-1.0	markov-multisize-0.1	markov-multisize-1.0	markov-multisize-0.1-1.0	48.840803	0.9197891337099812
+15930	0.09604519774011298	0	markov-multisize	0.1	1	1.0	0.1-1.0	markov-multisize-0.1	markov-multisize-1.0	markov-multisize-0.1-1.0	57.983284	1.0919639171374764
+19230	0.09516380655226209	0	markov-multisize	0.1	1	1.0	0.1-1.0	markov-multisize-0.1	markov-multisize-1.0	markov-multisize-0.1-1.0	100.592047	1.569298705148206
+35130	0.09479077711357814	0	markov-multisize	0.1	1	1.0	0.1-1.0	markov-multisize-0.1	markov-multisize-1.0	markov-multisize-0.1-1.0	238.636289	2.0378846199829206
+11730	0.0792838874680307	0	markov-multisize	0.1	1	1.0	0.1-1.0	markov-multisize-0.1	markov-multisize-1.0	markov-multisize-0.1-1.0	30.545003	0.7812021227621483
+17730	0.08629441624365482	0	markov-multisize	0.1	1	1.0	0.1-1.0	markov-multisize-0.1	markov-multisize-1.0	markov-multisize-0.1-1.0	78.590361	1.3297861421319797
+11730	0.0792838874680307	0	markov-multisize	0.1	1	1.0	0.1-1.0	markov-multisize-0.1	markov-multisize-1.0	markov-multisize-0.1-1.0	35.719041	0.9135304603580562
+10230	0.09090909090909091	0	markov-multisize	0.1	1	1.0	0.1-1.0	markov-multisize-0.1	markov-multisize-1.0	markov-multisize-0.1-1.0	23.948336	0.7022972434017596
+12330	0.09975669099756691	0	markov-multisize	0.1	1	1.0	0.1-1.0	markov-multisize-0.1	markov-multisize-1.0	markov-multisize-0.1-1.0	35.778783	0.8705299999999999
+10230	0.09090909090909091	0	markov-multisize	0.1	1	1.0	0.1-1.0	markov-multisize-0.1	markov-multisize-1.0	markov-multisize-0.1-1.0	25.884272	0.759069560117302
+9630	0.09657320872274143	0	markov-multisize	0.1	1	1.0	0.1-1.0	markov-multisize-0.1	markov-multisize-1.0	markov-multisize-0.1-1.0	21.667185	0.6749901869158879
+10830	0.08587257617728532	0	markov-multisize	0.1	1	1.0	0.1-1.0	markov-multisize-0.1	markov-multisize-1.0	markov-multisize-0.1-1.0	28.603861	0.7923507202216066
+9630	0.09657320872274143	0	markov-multisize	0.1	1	1.0	0.1-1.0	markov-multisize-0.1	markov-multisize-1.0	markov-multisize-0.1-1.0	23.732805	0.7393397196261682
+10230	0.09090909090909091	0	markov-multisize	0.1	1	1.0	0.1-1.0	markov-multisize-0.1	markov-multisize-1.0	markov-multisize-0.1-1.0	30.271419	0.8877248973607038
+13830	0.08893709327548807	0	markov-multisize	0.1	1	1.0	0.1-1.0	markov-multisize-0.1	markov-multisize-1.0	markov-multisize-0.1-1.0	55.522499	1.2043926030368763
+11430	0.08136482939632546	0	markov-multisize	0.1	1	1.0	0.1-1.0	markov-multisize-0.1	markov-multisize-1.0	markov-multisize-0.1-1.0	48.270434	1.2669405249343832
+26130	0.09299655568312284	0	markov-multisize	0.1	1	1.0	0.1-1.0	markov-multisize-0.1	markov-multisize-1.0	markov-multisize-0.1-1.0	169.112685	1.9415922502870264
+15930	0.09604519774011298	0	markov-multisize	0.1	1	1.0	0.1-1.0	markov-multisize-0.1	markov-multisize-1.0	markov-multisize-0.1-1.0	58.14525	1.0950141242937852
+20730	0.08827785817655572	0	markov-multisize	0.1	1	1.0	0.1-1.0	markov-multisize-0.1	markov-multisize-1.0	markov-multisize-0.1-1.0	99.130292	1.4345917800289436
+12930	0.09512761020881672	0	markov-multisize	0.1	1	1.0	0.1-1.0	markov-multisize-0.1	markov-multisize-1.0	markov-multisize-0.1-1.0	39.917996	0.9261716009280743
+14130	0.08704883227176222	0	markov-multisize	0.1	1	1.0	0.1-1.0	markov-multisize-0.1	markov-multisize-1.0	markov-multisize-0.1-1.0	43.695986	0.9277279405520169
+28230	0.09670563230605739	0	markov-multisize	0.1	1	1.0	0.1-1.0	markov-multisize-0.1	markov-multisize-1.0	markov-multisize-0.1-1.0	173.028968	1.838777555791711
+10530	0.08831908831908832	0	markov-multisize	0.1	1	1.0	0.1-1.0	markov-multisize-0.1	markov-multisize-1.0	markov-multisize-0.1-1.0	21.946981	0.625270113960114
+11130	0.08355795148247978	0	markov-multisize	0.1	1	1.0	0.1-1.0	markov-multisize-0.1	markov-multisize-1.0	markov-multisize-0.1-1.0	26.200033	0.7062003504043127
+10530	0.08831908831908832	0	markov-multisize	0.1	1	1.0	0.1-1.0	markov-multisize-0.1	markov-multisize-1.0	markov-multisize-0.1-1.0	24.63939	0.701976923076923
+23430	0.09090909090909091	0	markov-multisize	0.1	1	1.0	0.1-1.0	markov-multisize-0.1	markov-multisize-1.0	markov-multisize-0.1-1.0	117.469057	1.5040852368758004
+30630	0.09892262487757102	0	markov-multisize	0.1	1	1.0	0.1-1.0	markov-multisize-0.1	markov-multisize-1.0	markov-multisize-0.1-1.0	159.937343	1.5664774045053869
+25830	0.09407665505226481	0	markov-multisize	0.1	1	1.0	0.1-1.0	markov-multisize-0.1	markov-multisize-1.0	markov-multisize-0.1-1.0	139.825012	1.6239838792102206
+11730	0.0792838874680307	0	markov-multisize	0.1	1	1.0	0.1-1.0	markov-multisize-0.1	markov-multisize-1.0	markov-multisize-0.1-1.0	30.953462	0.7916486445012787
+14130	0.08704883227176222	0	markov-multisize	0.1	1	1.0	0.1-1.0	markov-multisize-0.1	markov-multisize-1.0	markov-multisize-0.1-1.0	42.660051	0.9057335668789809
+9630	0.09657320872274143	0	markov-multisize	0.1	1	1.0	0.1-1.0	markov-multisize-0.1	markov-multisize-1.0	markov-multisize-0.1-1.0	21.403331	0.6667704361370717
+17130	0.0893169877408056	0	markov-multisize	0.1	1	1.0	0.1-1.0	markov-multisize-0.1	markov-multisize-1.0	markov-multisize-0.1-1.0	65.880729	1.1537780910683013
+30930	0.0979631425800194	0	markov-multisize	0.1	1	1.0	0.1-1.0	markov-multisize-0.1	markov-multisize-1.0	markov-multisize-0.1-1.0	186.357961	1.8075456935014549
+34530	0.09643788010425718	0	markov-multisize	0.1	1	1.0	0.1-1.0	markov-multisize-0.1	markov-multisize-1.0	markov-multisize-0.1-1.0	215.270241	1.8702888010425718
+19830	0.09228441754916793	0	markov-multisize	0.1	1	1.0	0.1-1.0	markov-multisize-0.1	markov-multisize-1.0	markov-multisize-0.1-1.0	89.893046	1.3599553101361574
+9630	0.09657320872274143	0	markov-multisize	0.1	1	1.0	0.1-1.0	markov-multisize-0.1	markov-multisize-1.0	markov-multisize-0.1-1.0	24.73038	0.7704168224299065
+9930	0.09365558912386707	0	markov-multisize	0.1	1	1.0	0.1-1.0	markov-multisize-0.1	markov-multisize-1.0	markov-multisize-0.1-1.0	23.827713	0.7198704833836858
+27930	0.09774436090225563	0	markov-multisize	0.1	1	1.0	0.1-1.0	markov-multisize-0.1	markov-multisize-1.0	markov-multisize-0.1-1.0	152.919228	1.6425266165413535
+31830	0.09519321394910461	0	markov-multisize	0.1	1	1.0	0.1-1.0	markov-multisize-0.1	markov-multisize-1.0	markov-multisize-0.1-1.0	187.799796	1.7700263524976436
+11130	0.08355795148247978	0	markov-multisize	0.1	1	1.0	0.1-1.0	markov-multisize-0.1	markov-multisize-1.0	markov-multisize-0.1-1.0	34.449079	0.9285466037735848
+11430	0.08136482939632546	0	markov-multisize	0.1	1	1.0	0.1-1.0	markov-multisize-0.1	markov-multisize-1.0	markov-multisize-0.1-1.0	26.261406	0.689275748031496
+15930	0.09604519774011298	0	markov-multisize	0.1	1	1.0	0.1-1.0	markov-multisize-0.1	markov-multisize-1.0	markov-multisize-0.1-1.0	69.282858	1.304761920903955
+15930	0.09604519774011298	0	markov-multisize	0.1	1	1.0	0.1-1.0	markov-multisize-0.1	markov-multisize-1.0	markov-multisize-0.1-1.0	58.248776	1.0969637664783427
+10830	0.08587257617728532	0	markov-multisize	0.1	1	1.0	0.1-1.0	markov-multisize-0.1	markov-multisize-1.0	markov-multisize-0.1-1.0	31.570409	0.8745265650969529
+20730	0.08827785817655572	0	markov-multisize	0.1	1	1.0	0.1-1.0	markov-multisize-0.1	markov-multisize-1.0	markov-multisize-0.1-1.0	90.049977	1.303183458755427
+20430	0.08957415565345081	0	markov-multisize	0.1	1	1.0	0.1-1.0	markov-multisize-0.1	markov-multisize-1.0	markov-multisize-0.1-1.0	84.940152	1.2472856387665199
+30930	0.0979631425800194	0	markov-multisize	0.1	1	1.0	0.1-1.0	markov-multisize-0.1	markov-multisize-1.0	markov-multisize-0.1-1.0	176.074261	1.707800785645005
+9330	0.09967845659163987	0	markov-multisize	0.1	1	1.0	0.1-1.0	markov-multisize-0.1	markov-multisize-1.0	markov-multisize-0.1-1.0	21.347054	0.6864004501607717
+11130	0.08355795148247978	0	markov-multisize	0.1	1	1.0	0.1-1.0	markov-multisize-0.1	markov-multisize-1.0	markov-multisize-0.1-1.0	32.980205	0.8889543126684635
+9630	0.09657320872274143	0	markov-multisize	0.1	1	1.0	0.1-1.0	markov-multisize-0.1	markov-multisize-1.0	markov-multisize-0.1-1.0	22.310479	0.6950304984423676
+11430	0.08136482939632546	0	markov-multisize	0.1	1	1.0	0.1-1.0	markov-multisize-0.1	markov-multisize-1.0	markov-multisize-0.1-1.0	33.243936	0.8725442519685038
+10530	0.08831908831908832	0	markov-multisize	0.1	1	1.0	0.1-1.0	markov-multisize-0.1	markov-multisize-1.0	markov-multisize-0.1-1.0	23.139443	0.6592433903133903
+12930	0.09512761020881672	0	markov-multisize	0.1	1	1.0	0.1-1.0	markov-multisize-0.1	markov-multisize-1.0	markov-multisize-0.1-1.0	34.315063	0.7961731554524362
+10530	0.08831908831908832	0	markov-multisize	0.1	1	1.0	0.1-1.0	markov-multisize-0.1	markov-multisize-1.0	markov-multisize-0.1-1.0	24.31336	0.6926883190883191
+10830	0.08587257617728532	0	markov-multisize	0.1	1	1.0	0.1-1.0	markov-multisize-0.1	markov-multisize-1.0	markov-multisize-0.1-1.0	22.844201	0.632803351800554
+13530	0.09090909090909091	0	markov-multisize	0.1	1	1.0	0.1-1.0	markov-multisize-0.1	markov-multisize-1.0	markov-multisize-0.1-1.0	44.144333	0.978810044345898
+19230	0.09516380655226209	0	markov-multisize	0.1	1	1.0	0.1-1.0	markov-multisize-0.1	markov-multisize-1.0	markov-multisize-0.1-1.0	91.143698	1.42189856474259
+9930	0.09365558912386707	0	markov-multisize	0.1	1	1.0	0.1-1.0	markov-multisize-0.1	markov-multisize-1.0	markov-multisize-0.1-1.0	20.030931	0.6051640785498489
+9330	0.09967845659163987	0	markov-multisize	0.1	1	1.0	0.1-1.0	markov-multisize-0.1	markov-multisize-1.0	markov-multisize-0.1-1.0	22.805866	0.7333075884244373
+14430	0.08523908523908524	0	markov-multisize	0.1	1	1.0	0.1-1.0	markov-multisize-0.1	markov-multisize-1.0	markov-multisize-0.1-1.0	50.388162	1.0475709355509355
+10530	0.08831908831908832	0	markov-multisize	0.1	1	1.0	0.1-1.0	markov-multisize-0.1	markov-multisize-1.0	markov-multisize-0.1-1.0	29.214519	0.8323224786324785
+11730	0.0792838874680307	0	markov-multisize	0.1	1	1.0	0.1-1.0	markov-multisize-0.1	markov-multisize-1.0	markov-multisize-0.1-1.0	29.685015	0.7592075447570332
+22830	0.0932982917214192	0	markov-multisize	0.1	1	1.0	0.1-1.0	markov-multisize-0.1	markov-multisize-1.0	markov-multisize-0.1-1.0	114.261386	1.501463679369251
+10830	0.08587257617728532	0	markov-multisize	0.1	1	1.0	0.1-1.0	markov-multisize-0.1	markov-multisize-1.0	markov-multisize-0.1-1.0	26.861684	0.7440909695290858
+23430	0.09090909090909091	0	markov-multisize	0.1	1	1.0	0.1-1.0	markov-multisize-0.1	markov-multisize-1.0	markov-multisize-0.1-1.0	114.447575	1.4653978873239437
+17430	0.08777969018932874	0	markov-multisize	0.1	1	1.0	0.1-1.0	markov-multisize-0.1	markov-multisize-1.0	markov-multisize-0.1-1.0	79.308939	1.3650419793459552
+10230	0.09090909090909091	0	markov-multisize	0.1	1	1.0	0.1-1.0	markov-multisize-0.1	markov-multisize-1.0	markov-multisize-0.1-1.0	22.910439	0.6718603812316716
+36930	0.0982940698619009	0	markov-multisize	0.1	1	1.0	0.1-1.0	markov-multisize-0.1	markov-multisize-1.0	markov-multisize-0.1-1.0	288.826359	2.346274240454915
+16530	0.0925589836660617	0	markov-multisize	0.1	1	1.0	0.1-1.0	markov-multisize-0.1	markov-multisize-1.0	markov-multisize-0.1-1.0	55.279513	1.0032579491833031
+13530	0.09090909090909091	0	markov-multisize	0.1	1	1.0	0.1-1.0	markov-multisize-0.1	markov-multisize-1.0	markov-multisize-0.1-1.0	45.03426	0.9985423503325943
+13530	0.09090909090909091	0	markov-multisize	0.1	1	1.0	0.1-1.0	markov-multisize-0.1	markov-multisize-1.0	markov-multisize-0.1-1.0	43.070752	0.9550055875831485
+11730	0.0792838874680307	0	markov-multisize	0.1	1	1.0	0.1-1.0	markov-multisize-0.1	markov-multisize-1.0	markov-multisize-0.1-1.0	29.387354	0.7515947314578004
+9930	0.09365558912386707	0	markov-multisize	0.1	1	1.0	0.1-1.0	markov-multisize-0.1	markov-multisize-1.0	markov-multisize-0.1-1.0	20.514246	0.6197657401812688
+10530	0.08831908831908832	0	markov-multisize	0.1	1	1.0	0.1-1.0	markov-multisize-0.1	markov-multisize-1.0	markov-multisize-0.1-1.0	36.046726	1.0269722507122507
+11730	0.0792838874680307	0	markov-multisize	0.1	1	1.0	0.1-1.0	markov-multisize-0.1	markov-multisize-1.0	markov-multisize-0.1-1.0	25.507618	0.652368746803069
+23730	0.08975979772439949	0	markov-multisize	0.1	1	1.0	0.1-1.0	markov-multisize-0.1	markov-multisize-1.0	markov-multisize-0.1-1.0	152.62464	1.9295150442477877
+40230	0.0976882923191648	0	markov-multisize	0.1	1	1.0	0.1-1.0	markov-multisize-0.1	markov-multisize-1.0	markov-multisize-0.1-1.0	329.726213	2.458808448918717
+13230	0.1836734693877551	0	markov-multisize	0.2	1	1.0	0.2-1.0	markov-multisize-0.2	markov-multisize-1.0	markov-multisize-0.2-1.0	222.981864	5.0562780952380955
+52230	0.1958644457208501	0	markov-multisize	0.2	1	1.0	0.2-1.0	markov-multisize-0.2	markov-multisize-1.0	markov-multisize-0.2-1.0	1061.897436	6.099353452039058
+17430	0.1910499139414802	0	markov-multisize	0.2	1	1.0	0.2-1.0	markov-multisize-0.2	markov-multisize-1.0	markov-multisize-0.2-1.0	202.813867	3.490772237521514
+31830	0.1988689915174364	0	markov-multisize	0.2	1	1.0	0.2-1.0	markov-multisize-0.2	markov-multisize-1.0	markov-multisize-0.2-1.0	389.377644	3.6699118190386426
+50430	0.1969066032123736	0	markov-multisize	0.2	1	1.0	0.2-1.0	markov-multisize-0.2	markov-multisize-1.0	markov-multisize-0.2-1.0	751.338635	4.4695933075550265
+37230	0.1941982272360999	0	markov-multisize	0.2	1	1.0	0.2-1.0	markov-multisize-0.2	markov-multisize-1.0	markov-multisize-0.2-1.0	461.588526	3.719488525382756
+47130	0.1979630808402292	0	markov-multisize	0.2	1	1.0	0.2-1.0	markov-multisize-0.2	markov-multisize-1.0	markov-multisize-0.2-1.0	448.435224	2.8544571865054107
+60930	0.1974396848842935	0	markov-multisize	0.2	1	1.0	0.2-1.0	markov-multisize-0.2	markov-multisize-1.0	markov-multisize-0.2-1.0	698.522137	3.439301511570655
+49230	0.1956124314442413	0	markov-multisize	0.2	1	1.0	0.2-1.0	markov-multisize-0.2	markov-multisize-1.0	markov-multisize-0.2-1.0	452.184518	2.7555424619134676
+54630	0.1982427237781439	0	markov-multisize	0.2	1	1.0	0.2-1.0	markov-multisize-0.2	markov-multisize-1.0	markov-multisize-0.2-1.0	520.920529	2.8606289346512903
+55830	0.199355185384202	0	markov-multisize	0.2	1	1.0	0.2-1.0	markov-multisize-0.2	markov-multisize-1.0	markov-multisize-0.2-1.0	554.001119	2.976900155830199
+20130	0.195230998509687	0	markov-multisize	0.2	1	1.0	0.2-1.0	markov-multisize-0.2	markov-multisize-1.0	markov-multisize-0.2-1.0	123.222364	1.836398867362146
+35730	0.1939546599496222	0	markov-multisize	0.2	1	1.0	0.2-1.0	markov-multisize-0.2	markov-multisize-1.0	markov-multisize-0.2-1.0	323.072583	2.712616146095718
+18330	0.1980360065466448	0	markov-multisize	0.2	1	1.0	0.2-1.0	markov-multisize-0.2	markov-multisize-1.0	markov-multisize-0.2-1.0	98.558896	1.6130752209492636
+35430	0.1955969517358171	0	markov-multisize	0.2	1	1.0	0.2-1.0	markov-multisize-0.2	markov-multisize-1.0	markov-multisize-0.2-1.0	294.452979	2.4932513039796786
+25830	0.1986062717770035	0	markov-multisize	0.2	1	1.0	0.2-1.0	markov-multisize-0.2	markov-multisize-1.0	markov-multisize-0.2-1.0	134.595202	1.5632427642276423
+51330	0.1992986557568673	0	markov-multisize	0.2	1	1.0	0.2-1.0	markov-multisize-0.2	markov-multisize-1.0	markov-multisize-0.2-1.0	512.245587	2.993837445938048
+38130	0.1974822974036192	0	markov-multisize	0.2	1	1.0	0.2-1.0	markov-multisize-0.2	markov-multisize-1.0	markov-multisize-0.2-1.0	235.816165	1.8553592840283244
+15330	0.1976516634050881	0	markov-multisize	0.2	1	1.0	0.2-1.0	markov-multisize-0.2	markov-multisize-1.0	markov-multisize-0.2-1.0	52.411778	1.0256708023483365
+37230	0.1941982272360999	0	markov-multisize	0.2	1	1.0	0.2-1.0	markov-multisize-0.2	markov-multisize-1.0	markov-multisize-0.2-1.0	267.674092	2.156922578565673
+39930	0.1960931630353118	0	markov-multisize	0.2	1	1.0	0.2-1.0	markov-multisize-0.2	markov-multisize-1.0	markov-multisize-0.2-1.0	318.998516	2.3966830653643876
+33330	0.1989198919891989	0	markov-multisize	0.2	1	1.0	0.2-1.0	markov-multisize-0.2	markov-multisize-1.0	markov-multisize-0.2-1.0	221.546059	1.9941139423942396
+18330	0.1980360065466448	0	markov-multisize	0.2	1	1.0	0.2-1.0	markov-multisize-0.2	markov-multisize-1.0	markov-multisize-0.2-1.0	67.774595	1.1092405073649756
+29730	0.1927346115035318	0	markov-multisize	0.2	1	1.0	0.2-1.0	markov-multisize-0.2	markov-multisize-1.0	markov-multisize-0.2-1.0	133.668691	1.348826347124117
+52230	0.1958644457208501	0	markov-multisize	0.2	1	1.0	0.2-1.0	markov-multisize-0.2	markov-multisize-1.0	markov-multisize-0.2-1.0	449.005993	2.5790120218265367
+35130	0.197267292912041	0	markov-multisize	0.2	1	1.0	0.2-1.0	markov-multisize-0.2	markov-multisize-1.0	markov-multisize-0.2-1.0	308.04689	2.6306309991460295
+42330	0.1991495393338058	0	markov-multisize	0.2	1	1.0	0.2-1.0	markov-multisize-0.2	markov-multisize-1.0	markov-multisize-0.2-1.0	313.381142	2.2209861233167967
+26130	0.1963260619977038	0	markov-multisize	0.2	1	1.0	0.2-1.0	markov-multisize-0.2	markov-multisize-1.0	markov-multisize-0.2-1.0	127.655172	1.465616211251435
+25230	0.1914387633769322	0	markov-multisize	0.2	1	1.0	0.2-1.0	markov-multisize-0.2	markov-multisize-1.0	markov-multisize-0.2-1.0	156.691368	1.863155386444709
+26130	0.1963260619977038	0	markov-multisize	0.2	1	1.0	0.2-1.0	markov-multisize-0.2	markov-multisize-1.0	markov-multisize-0.2-1.0	158.077369	1.814895166475316
+47430	0.1967109424414927	0	markov-multisize	0.2	1	1.0	0.2-1.0	markov-multisize-0.2	markov-multisize-1.0	markov-multisize-0.2-1.0	403.554696	2.5525281214421254
+29730	0.1927346115035318	0	markov-multisize	0.2	1	1.0	0.2-1.0	markov-multisize-0.2	markov-multisize-1.0	markov-multisize-0.2-1.0	203.433361	2.0528088900100907
+15930	0.1902071563088512	0	markov-multisize	0.2	1	1.0	0.2-1.0	markov-multisize-0.2	markov-multisize-1.0	markov-multisize-0.2-1.0	73.52692	1.384687758945386
+49230	0.1956124314442413	0	markov-multisize	0.2	1	1.0	0.2-1.0	markov-multisize-0.2	markov-multisize-1.0	markov-multisize-0.2-1.0	442.318326	2.6954194149908592
+39930	0.1960931630353118	0	markov-multisize	0.2	1	1.0	0.2-1.0	markov-multisize-0.2	markov-multisize-1.0	markov-multisize-0.2-1.0	292.180421	2.1951947483095418
+15630	0.1938579654510557	0	markov-multisize	0.2	1	1.0	0.2-1.0	markov-multisize-0.2	markov-multisize-1.0	markov-multisize-0.2-1.0	57.012068	1.0942815355086373
+62730	0.1965566714490674	0	markov-multisize	0.2	1	1.0	0.2-1.0	markov-multisize-0.2	markov-multisize-1.0	markov-multisize-0.2-1.0	739.45868	3.536387757054041
+16230	0.1866913123844732	0	markov-multisize	0.2	1	1.0	0.2-1.0	markov-multisize-0.2	markov-multisize-1.0	markov-multisize-0.2-1.0	50.034404	0.9248503512014787
+21330	0.1983122362869198	0	markov-multisize	0.2	1	1.0	0.2-1.0	markov-multisize-0.2	markov-multisize-1.0	markov-multisize-0.2-1.0	118.510111	1.6668088748241914
+41730	0.194823867721064	0	markov-multisize	0.2	1	1.0	0.2-1.0	markov-multisize-0.2	markov-multisize-1.0	markov-multisize-0.2-1.0	283.271972	2.0364627749820277
+26430	0.1940976163450624	0	markov-multisize	0.2	1	1.0	0.2-1.0	markov-multisize-0.2	markov-multisize-1.0	markov-multisize-0.2-1.0	140.288608	1.5923792054483543
+46830	0.1992312620115311	0	markov-multisize	0.2	1	1.0	0.2-1.0	markov-multisize-0.2	markov-multisize-1.0	markov-multisize-0.2-1.0	413.98443	2.6520463164638053
+24930	0.1937424789410349	0	markov-multisize	0.2	1	1.0	0.2-1.0	markov-multisize-0.2	markov-multisize-1.0	markov-multisize-0.2-1.0	131.119109	1.5778472803850785
+38730	0.1944229279628195	0	markov-multisize	0.2	1	1.0	0.2-1.0	markov-multisize-0.2	markov-multisize-1.0	markov-multisize-0.2-1.0	261.595263	2.026299481022463
+45630	0.197896120973044	0	markov-multisize	0.2	1	1.0	0.2-1.0	markov-multisize-0.2	markov-multisize-1.0	markov-multisize-0.2-1.0	395.245127	2.598587291255753
+18930	0.1917591125198098	0	markov-multisize	0.2	1	1.0	0.2-1.0	markov-multisize-0.2	markov-multisize-1.0	markov-multisize-0.2-1.0	63.328837	1.0036265768621235
+41430	0.1962346125995655	0	markov-multisize	0.2	1	1.0	0.2-1.0	markov-multisize-0.2	markov-multisize-1.0	markov-multisize-0.2-1.0	279.890171	2.026721006517017
+13230	0.1836734693877551	0	markov-multisize	0.2	1	1.0	0.2-1.0	markov-multisize-0.2	markov-multisize-1.0	markov-multisize-0.2-1.0	37.287688	0.8455258049886621
+52830	0.1993185689948893	0	markov-multisize	0.2	1	1.0	0.2-1.0	markov-multisize-0.2	markov-multisize-1.0	markov-multisize-0.2-1.0	488.664125	2.774924048835889
+42630	0.1977480647431386	0	markov-multisize	0.2	1	1.0	0.2-1.0	markov-multisize-0.2	markov-multisize-1.0	markov-multisize-0.2-1.0	273.348256	1.9236330471498944
+59430	0.1973750630994447	0	markov-multisize	0.2	1	1.0	0.2-1.0	markov-multisize-0.2	markov-multisize-1.0	markov-multisize-0.2-1.0	601.573191	3.036714745078243
+71130	0.1986503584985238	0	markov-multisize	0.2	1	1.0	0.2-1.0	markov-multisize-0.2	markov-multisize-1.0	markov-multisize-0.2-1.0	793.072655	3.3448867777309155
+29130	0.1967044284243048	0	markov-multisize	0.2	1	1.0	0.2-1.0	markov-multisize-0.2	markov-multisize-1.0	markov-multisize-0.2-1.0	151.334729	1.5585450978372815
+33930	0.1954022988505747	0	markov-multisize	0.2	1	1.0	0.2-1.0	markov-multisize-0.2	markov-multisize-1.0	markov-multisize-0.2-1.0	223.523982	1.9763393633952255
+32130	0.1970121381886088	0	markov-multisize	0.2	1	1.0	0.2-1.0	markov-multisize-0.2	markov-multisize-1.0	markov-multisize-0.2-1.0	198.013916	1.8488694304388422
+63930	0.1975598310652276	0	markov-multisize	0.2	1	1.0	0.2-1.0	markov-multisize-0.2	markov-multisize-1.0	markov-multisize-0.2-1.0	660.203061	3.0980903847958707
+60330	0.199403281949279	0	markov-multisize	0.2	1	1.0	0.2-1.0	markov-multisize-0.2	markov-multisize-1.0	markov-multisize-0.2-1.0	558.435943	2.7769067279960216
+61830	0.1994177583697234	0	markov-multisize	0.2	1	1.0	0.2-1.0	markov-multisize-0.2	markov-multisize-1.0	markov-multisize-0.2-1.0	677.514717	3.287310611353712
+16230	0.1866913123844732	0	markov-multisize	0.2	1	1.0	0.2-1.0	markov-multisize-0.2	markov-multisize-1.0	markov-multisize-0.2-1.0	67.915219	1.25536449168207
+36930	0.1957757920389927	0	markov-multisize	0.2	1	1.0	0.2-1.0	markov-multisize-0.2	markov-multisize-1.0	markov-multisize-0.2-1.0	273.249564	2.2197365069049555
+49830	0.1992775436484046	0	markov-multisize	0.2	1	1.0	0.2-1.0	markov-multisize-0.2	markov-multisize-1.0	markov-multisize-0.2-1.0	410.125079	2.469145568934377
+53730	0.1959798994974874	0	markov-multisize	0.2	1	1.0	0.2-1.0	markov-multisize-0.2	markov-multisize-1.0	markov-multisize-0.2-1.0	453.442465	2.531783724176438
+13530	0.2017738359201774	1	markov-multisize	0.2	1	1.0	0.2-1.0	markov-multisize-0.2	markov-multisize-1.0	markov-multisize-0.2-1.0	47.953246	1.0632648780487806
+22230	0.1902834008097166	0	markov-multisize	0.2	1	1.0	0.2-1.0	markov-multisize-0.2	markov-multisize-1.0	markov-multisize-0.2-1.0	87.026915	1.1744522941970312
+23730	0.190897597977244	0	markov-multisize	0.2	1	1.0	0.2-1.0	markov-multisize-0.2	markov-multisize-1.0	markov-multisize-0.2-1.0	124.563371	1.5747581668773705
+44730	0.1951710261569416	0	markov-multisize	0.2	1	1.0	0.2-1.0	markov-multisize-0.2	markov-multisize-1.0	markov-multisize-0.2-1.0	368.701178	2.472844922870557
+17430	0.1910499139414802	0	markov-multisize	0.2	1	1.0	0.2-1.0	markov-multisize-0.2	markov-multisize-1.0	markov-multisize-0.2-1.0	73.782749	1.2699268330464715
+46230	0.1953277092796885	0	markov-multisize	0.2	1	1.0	0.2-1.0	markov-multisize-0.2	markov-multisize-1.0	markov-multisize-0.2-1.0	362.69954	2.3536634652822843
+45930	0.1966035271064664	0	markov-multisize	0.2	1	1.0	0.2-1.0	markov-multisize-0.2	markov-multisize-1.0	markov-multisize-0.2-1.0	318.98894	2.083533246244285
+53130	0.1981931112365895	0	markov-multisize	0.2	1	1.0	0.2-1.0	markov-multisize-0.2	markov-multisize-1.0	markov-multisize-0.2-1.0	440.007182	2.484512603049125
+60330	0.199403281949279	0	markov-multisize	0.2	1	1.0	0.2-1.0	markov-multisize-0.2	markov-multisize-1.0	markov-multisize-0.2-1.0	652.515208	3.2447300248632525
+48630	0.1980259099321407	0	markov-multisize	0.2	1	1.0	0.2-1.0	markov-multisize-0.2	markov-multisize-1.0	markov-multisize-0.2-1.0	489.774633	3.0214351202961134
+14730	0.1853360488798371	0	markov-multisize	0.2	1	1.0	0.2-1.0	markov-multisize-0.2	markov-multisize-1.0	markov-multisize-0.2-1.0	50.317489	1.0247961099796334
+44730	0.1951710261569416	0	markov-multisize	0.2	1	1.0	0.2-1.0	markov-multisize-0.2	markov-multisize-1.0	markov-multisize-0.2-1.0	388.669497	2.6067706036217304
+41430	0.1962346125995655	0	markov-multisize	0.2	1	1.0	0.2-1.0	markov-multisize-0.2	markov-multisize-1.0	markov-multisize-0.2-1.0	272.888587	1.9760216292541635
+77730	0.197221150135083	0	markov-multisize	0.2	1	1.0	0.2-1.0	markov-multisize-0.2	markov-multisize-1.0	markov-multisize-0.2-1.0	820.980983	3.168587352373601
+34830	0.1989664082687339	0	markov-multisize	0.2	1	1.0	0.2-1.0	markov-multisize-0.2	markov-multisize-1.0	markov-multisize-0.2-1.0	214.451892	1.8471308527131782
+44130	0.1978246091094494	0	markov-multisize	0.2	1	1.0	0.2-1.0	markov-multisize-0.2	markov-multisize-1.0	markov-multisize-0.2-1.0	279.821997	1.902256947654657
+54930	0.1971600218459858	0	markov-multisize	0.2	1	1.0	0.2-1.0	markov-multisize-0.2	markov-multisize-1.0	markov-multisize-0.2-1.0	616.899456	3.3691941889677772
+27930	0.1944146079484425	0	markov-multisize	0.2	1	1.0	0.2-1.0	markov-multisize-0.2	markov-multisize-1.0	markov-multisize-0.2-1.0	170.420736	1.830512738990333
+16830	0.1978609625668449	0	markov-multisize	0.2	1	1.0	0.2-1.0	markov-multisize-0.2	markov-multisize-1.0	markov-multisize-0.2-1.0	56.264002	1.002923386809269
+35730	0.1939546599496222	0	markov-multisize	0.2	1	1.0	0.2-1.0	markov-multisize-0.2	markov-multisize-1.0	markov-multisize-0.2-1.0	278.475555	2.338165869017632
+54930	0.1971600218459858	0	markov-multisize	0.2	1	1.0	0.2-1.0	markov-multisize-0.2	markov-multisize-1.0	markov-multisize-0.2-1.0	545.036132	2.976712900054615
+33330	0.1989198919891989	0	markov-multisize	0.2	1	1.0	0.2-1.0	markov-multisize-0.2	markov-multisize-1.0	markov-multisize-0.2-1.0	242.345175	2.1813247074707474
+26130	0.1963260619977038	0	markov-multisize	0.2	1	1.0	0.2-1.0	markov-multisize-0.2	markov-multisize-1.0	markov-multisize-0.2-1.0	120.982285	1.3890044202066592
+73230	0.1970503891847603	0	markov-multisize	0.2	1	1.0	0.2-1.0	markov-multisize-0.2	markov-multisize-1.0	markov-multisize-0.2-1.0	868.775277	3.5590957681278166
+39330	0.1990846681922197	0	markov-multisize	0.2	1	1.0	0.2-1.0	markov-multisize-0.2	markov-multisize-1.0	markov-multisize-0.2-1.0	268.67894	2.0494198321891686
+38430	0.1959406713505074	0	markov-multisize	0.2	1	1.0	0.2-1.0	markov-multisize-0.2	markov-multisize-1.0	markov-multisize-0.2-1.0	256.243268	2.000337767369243
+35730	0.1939546599496222	0	markov-multisize	0.2	1	1.0	0.2-1.0	markov-multisize-0.2	markov-multisize-1.0	markov-multisize-0.2-1.0	274.254272	2.3027226868178006
+39930	0.1960931630353118	0	markov-multisize	0.2	1	1.0	0.2-1.0	markov-multisize-0.2	markov-multisize-1.0	markov-multisize-0.2-1.0	260.812844	1.9595254996243425
+62430	0.197501201345507	0	markov-multisize	0.2	1	1.0	0.2-1.0	markov-multisize-0.2	markov-multisize-1.0	markov-multisize-0.2-1.0	684.132878	3.2875198366170113
+62430	0.197501201345507	0	markov-multisize	0.2	1	1.0	0.2-1.0	markov-multisize-0.2	markov-multisize-1.0	markov-multisize-0.2-1.0	555.153659	2.6677254156655454
+17730	0.1878172588832487	0	markov-multisize	0.2	1	1.0	0.2-1.0	markov-multisize-0.2	markov-multisize-1.0	markov-multisize-0.2-1.0	67.97998	1.1502534686971235
+21930	0.1928864569083447	0	markov-multisize	0.2	1	1.0	0.2-1.0	markov-multisize-0.2	markov-multisize-1.0	markov-multisize-0.2-1.0	96.574018	1.321121997264022
+37830	0.1990483743061063	0	markov-multisize	0.2	1	1.0	0.2-1.0	markov-multisize-0.2	markov-multisize-1.0	markov-multisize-0.2-1.0	229.418439	1.8193373433782714
+21930	0.1928864569083447	0	markov-multisize	0.2	1	1.0	0.2-1.0	markov-multisize-0.2	markov-multisize-1.0	markov-multisize-0.2-1.0	84.283679	1.152991504787962
+50730	0.1957421643997635	0	markov-multisize	0.2	1	1.0	0.2-1.0	markov-multisize-0.2	markov-multisize-1.0	markov-multisize-0.2-1.0	404.105611	2.389743412182141
+29730	0.1927346115035318	0	markov-multisize	0.2	1	1.0	0.2-1.0	markov-multisize-0.2	markov-multisize-1.0	markov-multisize-0.2-1.0	127.55621	1.2871464177598386
+33930	0.1954022988505747	0	markov-multisize	0.2	1	1.0	0.2-1.0	markov-multisize-0.2	markov-multisize-1.0	markov-multisize-0.2-1.0	275.825788	2.438777966401415
+50430	0.1969066032123736	0	markov-multisize	0.2	1	1.0	0.2-1.0	markov-multisize-0.2	markov-multisize-1.0	markov-multisize-0.2-1.0	459.692084	2.7346346460440216
+35130	0.2997438087105038	0	markov-multisize	0.3	1	1.0	0.3-1.0	markov-multisize-0.3	markov-multisize-1.0	markov-multisize-0.3-1.0	733.244044	6.2616912382578995
+86430	0.2190211732037487	0	markov-multisize	0.3	1	1.0	0.3-1.0	markov-multisize-0.3	markov-multisize-1.0	markov-multisize-0.3-1.0	1515.00592	5.258611315515446
+56430	0.2982456140350877	0	markov-multisize	0.3	1	1.0	0.3-1.0	markov-multisize-0.3	markov-multisize-1.0	markov-multisize-0.3-1.0	674.93974	3.5881963849016483
+46530	0.2972275950999355	0	markov-multisize	0.3	1	1.0	0.3-1.0	markov-multisize-0.3	markov-multisize-1.0	markov-multisize-0.3-1.0	357.393035	2.304274887169568
+86430	0.2155501561957654	0	markov-multisize	0.3	1	1.0	0.3-1.0	markov-multisize-0.3	markov-multisize-1.0	markov-multisize-0.3-1.0	1168.667916	4.056466213120444
+48630	0.296730413325108	0	markov-multisize	0.3	1	1.0	0.3-1.0	markov-multisize-0.3	markov-multisize-1.0	markov-multisize-0.3-1.0	404.56788	2.4957919802590993
+86430	0.2502603262755988	0	markov-multisize	0.3	1	1.0	0.3-1.0	markov-multisize-0.3	markov-multisize-1.0	markov-multisize-0.3-1.0	1181.193898	4.099944109684137
+86430	0.2155501561957654	0	markov-multisize	0.3	1	1.0	0.3-1.0	markov-multisize-0.3	markov-multisize-1.0	markov-multisize-0.3-1.0	1209.093971	4.196785737591114
+86430	0.2745574453314821	0	markov-multisize	0.3	1	1.0	0.3-1.0	markov-multisize-0.3	markov-multisize-1.0	markov-multisize-0.3-1.0	1203.528272	4.177467101700798
+86430	0.2537313432835821	0	markov-multisize	0.3	1	1.0	0.3-1.0	markov-multisize-0.3	markov-multisize-1.0	markov-multisize-0.3-1.0	1086.917869	3.772710409580007
+79530	0.2983779705771407	0	markov-multisize	0.3	1	1.0	0.3-1.0	markov-multisize-0.3	markov-multisize-1.0	markov-multisize-0.3-1.0	1048.237012	3.95411924556771
+86430	0.212079139187782	0	markov-multisize	0.3	1	1.0	0.3-1.0	markov-multisize-0.3	markov-multisize-1.0	markov-multisize-0.3-1.0	1111.934883	3.8595448906629635
+47430	0.2979127134724858	0	markov-multisize	0.3	1	1.0	0.3-1.0	markov-multisize-0.3	markov-multisize-1.0	markov-multisize-0.3-1.0	481.339052	3.0445227830487034
+30630	0.2948090107737512	0	markov-multisize	0.3	1	1.0	0.3-1.0	markov-multisize-0.3	markov-multisize-1.0	markov-multisize-0.3-1.0	188.852966	1.8496862487757102
+50730	0.296274393849793	0	markov-multisize	0.3	1	1.0	0.3-1.0	markov-multisize-0.3	markov-multisize-1.0	markov-multisize-0.3-1.0	545.918094	3.2283742992312243
+30330	0.2977250247279921	0	markov-multisize	0.3	1	1.0	0.3-1.0	markov-multisize-0.3	markov-multisize-1.0	markov-multisize-0.3-1.0	174.847318	1.729449238377844
+65430	0.2984869325997249	0	markov-multisize	0.3	1	1.0	0.3-1.0	markov-multisize-0.3	markov-multisize-1.0	markov-multisize-0.3-1.0	613.590742	2.813345905547914
+86430	0.2502603262755988	0	markov-multisize	0.3	1	1.0	0.3-1.0	markov-multisize-0.3	markov-multisize-1.0	markov-multisize-0.3-1.0	1000.482135	3.472690506768483
+36630	0.2956592956592957	0	markov-multisize	0.3	1	1.0	0.3-1.0	markov-multisize-0.3	markov-multisize-1.0	markov-multisize-0.3-1.0	243.469791	1.9940195823095823
+86430	0.222492190211732	0	markov-multisize	0.3	1	1.0	0.3-1.0	markov-multisize-0.3	markov-multisize-1.0	markov-multisize-0.3-1.0	1191.375433	4.135284390836515
+47730	0.2960402262727844	0	markov-multisize	0.3	1	1.0	0.3-1.0	markov-multisize-0.3	markov-multisize-1.0	markov-multisize-0.3-1.0	414.074819	2.602607284726587
+50130	0.2998204667863555	0	markov-multisize	0.3	1	1.0	0.3-1.0	markov-multisize-0.3	markov-multisize-1.0	markov-multisize-0.3-1.0	409.480936	2.450514278874925
+86430	0.2086081221797987	0	markov-multisize	0.3	1	1.0	0.3-1.0	markov-multisize-0.3	markov-multisize-1.0	markov-multisize-0.3-1.0	1055.171338	3.6625176605345366
+86430	0.2294342242276987	0	markov-multisize	0.3	1	1.0	0.3-1.0	markov-multisize-0.3	markov-multisize-1.0	markov-multisize-0.3-1.0	881.374478	3.0592658035404368
+86430	0.2294342242276987	0	markov-multisize	0.3	1	1.0	0.3-1.0	markov-multisize-0.3	markov-multisize-1.0	markov-multisize-0.3-1.0	1131.250071	3.9265882367233593
+86430	0.2294342242276987	0	markov-multisize	0.3	1	1.0	0.3-1.0	markov-multisize-0.3	markov-multisize-1.0	markov-multisize-0.3-1.0	1445.395797	5.016993394654633
+63330	0.2989104689720512	0	markov-multisize	0.3	1	1.0	0.3-1.0	markov-multisize-0.3	markov-multisize-1.0	markov-multisize-0.3-1.0	646.784425	3.0638769540502135
+86430	0.2259632072197154	0	markov-multisize	0.3	1	1.0	0.3-1.0	markov-multisize-0.3	markov-multisize-1.0	markov-multisize-0.3-1.0	1062.433314	3.6877241027421035
+33630	0.2952720785013381	0	markov-multisize	0.3	1	1.0	0.3-1.0	markov-multisize-0.3	markov-multisize-1.0	markov-multisize-0.3-1.0	221.436178	1.9753450312221232
+36630	0.2956592956592957	0	markov-multisize	0.3	1	1.0	0.3-1.0	markov-multisize-0.3	markov-multisize-1.0	markov-multisize-0.3-1.0	273.691653	2.2415368796068793
+86430	0.2572023602915654	0	markov-multisize	0.3	1	1.0	0.3-1.0	markov-multisize-0.3	markov-multisize-1.0	markov-multisize-0.3-1.0	1080.769166	3.7513681568899684
+52530	0.2975442604226156	0	markov-multisize	0.3	1	1.0	0.3-1.0	markov-multisize-0.3	markov-multisize-1.0	markov-multisize-0.3-1.0	454.795903	2.5973495316961737
+28230	0.2986184909670563	0	markov-multisize	0.3	1	1.0	0.3-1.0	markov-multisize-0.3	markov-multisize-1.0	markov-multisize-0.3-1.0	154.02293	1.636800531349628
+86430	0.2398472752516487	0	markov-multisize	0.3	1	1.0	0.3-1.0	markov-multisize-0.3	markov-multisize-1.0	markov-multisize-0.3-1.0	1089.411966	3.7813674626865663
+54330	0.2987299834345665	0	markov-multisize	0.3	1	1.0	0.3-1.0	markov-multisize-0.3	markov-multisize-1.0	markov-multisize-0.3-1.0	515.670743	2.8474364605190505
+50430	0.2980368828078525	0	markov-multisize	0.3	1	1.0	0.3-1.0	markov-multisize-0.3	markov-multisize-1.0	markov-multisize-0.3-1.0	496.085208	2.9511315169541943
+86430	0.2051371051718153	0	markov-multisize	0.3	1	1.0	0.3-1.0	markov-multisize-0.3	markov-multisize-1.0	markov-multisize-0.3-1.0	1339.659129	4.649979621659146
+27630	0.2942453854505972	0	markov-multisize	0.3	1	1.0	0.3-1.0	markov-multisize-0.3	markov-multisize-1.0	markov-multisize-0.3-1.0	137.855178	1.4967988925081435
+37230	0.2989524576954069	0	markov-multisize	0.3	1	1.0	0.3-1.0	markov-multisize-0.3	markov-multisize-1.0	markov-multisize-0.3-1.0	341.997952	2.7558255600322323
+86430	0.2051371051718153	0	markov-multisize	0.3	1	1.0	0.3-1.0	markov-multisize-0.3	markov-multisize-1.0	markov-multisize-0.3-1.0	1070.2146	3.714733078792086
+40530	0.2968171724648409	0	markov-multisize	0.3	1	1.0	0.3-1.0	markov-multisize-0.3	markov-multisize-1.0	markov-multisize-0.3-1.0	313.542118	2.320815085122132
+86430	0.2329052412356821	0	markov-multisize	0.3	1	1.0	0.3-1.0	markov-multisize-0.3	markov-multisize-1.0	markov-multisize-0.3-1.0	1301.900026	4.518917132939952
+86430	0.2259632072197154	0	markov-multisize	0.3	1	1.0	0.3-1.0	markov-multisize-0.3	markov-multisize-1.0	markov-multisize-0.3-1.0	1271.778456	4.41436465116279
+86430	0.2363762582436654	0	markov-multisize	0.3	1	1.0	0.3-1.0	markov-multisize-0.3	markov-multisize-1.0	markov-multisize-0.3-1.0	1121.137301	3.8914866400555357
+86430	0.2502603262755988	0	markov-multisize	0.3	1	1.0	0.3-1.0	markov-multisize-0.3	markov-multisize-1.0	markov-multisize-0.3-1.0	1259.335189	4.371173859770912
+86430	0.2502603262755988	0	markov-multisize	0.3	1	1.0	0.3-1.0	markov-multisize-0.3	markov-multisize-1.0	markov-multisize-0.3-1.0	926.331764	3.2153133078792084
+86430	0.222492190211732	0	markov-multisize	0.3	1	1.0	0.3-1.0	markov-multisize-0.3	markov-multisize-1.0	markov-multisize-0.3-1.0	1090.502016	3.7851510447761187
+25230	0.2984542211652794	0	markov-multisize	0.3	1	1.0	0.3-1.0	markov-multisize-0.3	markov-multisize-1.0	markov-multisize-0.3-1.0	120.944208	1.4380999762187874
+86430	0.212079139187782	0	markov-multisize	0.3	1	1.0	0.3-1.0	markov-multisize-0.3	markov-multisize-1.0	markov-multisize-0.3-1.0	1179.461598	4.093931266921208
+60630	0.29737753587333	0	markov-multisize	0.3	1	1.0	0.3-1.0	markov-multisize-0.3	markov-multisize-1.0	markov-multisize-0.3-1.0	479.12906	2.370752399802078
+86430	0.201666088163832	0	markov-multisize	0.3	1	1.0	0.3-1.0	markov-multisize-0.3	markov-multisize-1.0	markov-multisize-0.3-1.0	1192.810164	4.1402643665393954
+86430	0.2294342242276987	0	markov-multisize	0.3	1	1.0	0.3-1.0	markov-multisize-0.3	markov-multisize-1.0	markov-multisize-0.3-1.0	1118.398662	3.8819807775078097
+86430	0.2433182922596321	0	markov-multisize	0.3	1	1.0	0.3-1.0	markov-multisize-0.3	markov-multisize-1.0	markov-multisize-0.3-1.0	1072.653037	3.723196935091982
+56730	0.2966684294024326	0	markov-multisize	0.3	1	1.0	0.3-1.0	markov-multisize-0.3	markov-multisize-1.0	markov-multisize-0.3-1.0	558.545586	2.9537048439978846
+58530	0.2977960020502307	0	markov-multisize	0.3	1	1.0	0.3-1.0	markov-multisize-0.3	markov-multisize-1.0	markov-multisize-0.3-1.0	596.184098	3.0557872783188107
+86430	0.212079139187782	0	markov-multisize	0.3	1	1.0	0.3-1.0	markov-multisize-0.3	markov-multisize-1.0	markov-multisize-0.3-1.0	1129.733048	3.921322624088858
+86430	0.2745574453314821	0	markov-multisize	0.3	1	1.0	0.3-1.0	markov-multisize-0.3	markov-multisize-1.0	markov-multisize-0.3-1.0	1057.074215	3.669122578965637
+86430	0.2051371051718153	0	markov-multisize	0.3	1	1.0	0.3-1.0	markov-multisize-0.3	markov-multisize-1.0	markov-multisize-0.3-1.0	1243.785831	4.317201773689691
+86430	0.2329052412356821	0	markov-multisize	0.3	1	1.0	0.3-1.0	markov-multisize-0.3	markov-multisize-1.0	markov-multisize-0.3-1.0	1424.505678	4.944483436306838
+86430	0.2398472752516487	0	markov-multisize	0.3	1	1.0	0.3-1.0	markov-multisize-0.3	markov-multisize-1.0	markov-multisize-0.3-1.0	1259.740851	4.372581919472405
+86430	0.2051371051718153	0	markov-multisize	0.3	1	1.0	0.3-1.0	markov-multisize-0.3	markov-multisize-1.0	markov-multisize-0.3-1.0	1076.631511	3.7370062860118014
+86430	0.201666088163832	0	markov-multisize	0.3	1	1.0	0.3-1.0	markov-multisize-0.3	markov-multisize-1.0	markov-multisize-0.3-1.0	1051.486793	3.6497285421728565
+29730	0.2936427850655903	0	markov-multisize	0.3	1	1.0	0.3-1.0	markov-multisize-0.3	markov-multisize-1.0	markov-multisize-0.3-1.0	208.844559	2.107412300706357
+86430	0.2502603262755988	0	markov-multisize	0.3	1	1.0	0.3-1.0	markov-multisize-0.3	markov-multisize-1.0	markov-multisize-0.3-1.0	989.345182	3.4340339534883717
+32430	0.2969472710453284	0	markov-multisize	0.3	1	1.0	0.3-1.0	markov-multisize-0.3	markov-multisize-1.0	markov-multisize-0.3-1.0	203.26636	1.880354856614246
+86430	0.2710864283234988	0	markov-multisize	0.3	1	1.0	0.3-1.0	markov-multisize-0.3	markov-multisize-1.0	markov-multisize-0.3-1.0	1211.594109	4.205463759111419
+86430	0.2259632072197154	0	markov-multisize	0.3	1	1.0	0.3-1.0	markov-multisize-0.3	markov-multisize-1.0	markov-multisize-0.3-1.0	1367.970052	4.748247316903852
+59130	0.2998477929984779	0	markov-multisize	0.3	1	1.0	0.3-1.0	markov-multisize-0.3	markov-multisize-1.0	markov-multisize-0.3-1.0	554.275831	2.812155408422121
+86430	0.2329052412356821	0	markov-multisize	0.3	1	1.0	0.3-1.0	markov-multisize-0.3	markov-multisize-1.0	markov-multisize-0.3-1.0	963.164852	3.3431615827837553
+86430	0.2190211732037487	0	markov-multisize	0.3	1	1.0	0.3-1.0	markov-multisize-0.3	markov-multisize-1.0	markov-multisize-0.3-1.0	1026.030322	3.561368698368622
+83430	0.2988133764832794	0	markov-multisize	0.3	1	1.0	0.3-1.0	markov-multisize-0.3	markov-multisize-1.0	markov-multisize-0.3-1.0	1168.057189	4.200133725278676
+75630	0.2978976596588655	0	markov-multisize	0.3	1	1.0	0.3-1.0	markov-multisize-0.3	markov-multisize-1.0	markov-multisize-0.3-1.0	1079.714878	4.282883292344308
+86430	0.2537313432835821	0	markov-multisize	0.3	1	1.0	0.3-1.0	markov-multisize-0.3	markov-multisize-1.0	markov-multisize-0.3-1.0	1256.727231	4.3621215931968065
+68730	0.2972501091226539	0	markov-multisize	0.3	1	1.0	0.3-1.0	markov-multisize-0.3	markov-multisize-1.0	markov-multisize-0.3-1.0	820.593147	3.58181207769533
+62730	0.296987087517934	0	markov-multisize	0.3	1	1.0	0.3-1.0	markov-multisize-0.3	markov-multisize-1.0	markov-multisize-0.3-1.0	561.667011	2.686116743185079
+86430	0.201666088163832	0	markov-multisize	0.3	1	1.0	0.3-1.0	markov-multisize-0.3	markov-multisize-1.0	markov-multisize-0.3-1.0	981.025681	3.4051568240194374
+86430	0.2641443943075321	0	markov-multisize	0.3	1	1.0	0.3-1.0	markov-multisize-0.3	markov-multisize-1.0	markov-multisize-0.3-1.0	1068.839742	3.7099609232905233
+86430	0.212079139187782	0	markov-multisize	0.3	1	1.0	0.3-1.0	markov-multisize-0.3	markov-multisize-1.0	markov-multisize-0.3-1.0	892.751239	3.0987547344671986
+71730	0.2973651191969887	0	markov-multisize	0.3	1	1.0	0.3-1.0	markov-multisize-0.3	markov-multisize-1.0	markov-multisize-0.3-1.0	882.101505	3.68925765370138
+37230	0.2989524576954069	0	markov-multisize	0.3	1	1.0	0.3-1.0	markov-multisize-0.3	markov-multisize-1.0	markov-multisize-0.3-1.0	286.920488	2.312010378726833
+25230	0.2984542211652794	0	markov-multisize	0.3	1	1.0	0.3-1.0	markov-multisize-0.3	markov-multisize-1.0	markov-multisize-0.3-1.0	106.328903	1.2643151367419738
+86430	0.2502603262755988	0	markov-multisize	0.3	1	1.0	0.3-1.0	markov-multisize-0.3	markov-multisize-1.0	markov-multisize-0.3-1.0	1403.246181	4.870691360638666
+86430	0.222492190211732	0	markov-multisize	0.3	1	1.0	0.3-1.0	markov-multisize-0.3	markov-multisize-1.0	markov-multisize-0.3-1.0	1231.311903	4.273904557445332
+42630	0.2962702322308234	0	markov-multisize	0.3	1	1.0	0.3-1.0	markov-multisize-0.3	markov-multisize-1.0	markov-multisize-0.3-1.0	373.867711	2.6310183743842366
+35130	0.2997438087105038	0	markov-multisize	0.3	1	1.0	0.3-1.0	markov-multisize-0.3	markov-multisize-1.0	markov-multisize-0.3-1.0	202.385948	1.7283172331340737
+86430	0.2086081221797987	0	markov-multisize	0.3	1	1.0	0.3-1.0	markov-multisize-0.3	markov-multisize-1.0	markov-multisize-0.3-1.0	1165.83128	4.046620201318986
+49530	0.2973955178679588	0	markov-multisize	0.3	1	1.0	0.3-1.0	markov-multisize-0.3	markov-multisize-1.0	markov-multisize-0.3-1.0	403.799215	2.445785675348274
+86430	0.2433182922596321	0	markov-multisize	0.3	1	1.0	0.3-1.0	markov-multisize-0.3	markov-multisize-1.0	markov-multisize-0.3-1.0	1113.400352	3.8646315584866366
+86430	0.212079139187782	0	markov-multisize	0.3	1	1.0	0.3-1.0	markov-multisize-0.3	markov-multisize-1.0	markov-multisize-0.3-1.0	1392.242984	4.8324990767094755
+86430	0.2051371051718153	0	markov-multisize	0.3	1	1.0	0.3-1.0	markov-multisize-0.3	markov-multisize-1.0	markov-multisize-0.3-1.0	1037.23545	3.6002618882332516
+86430	0.2051371051718153	0	markov-multisize	0.3	1	1.0	0.3-1.0	markov-multisize-0.3	markov-multisize-1.0	markov-multisize-0.3-1.0	1238.768286	4.299785789656369
+86430	0.2259632072197154	0	markov-multisize	0.3	1	1.0	0.3-1.0	markov-multisize-0.3	markov-multisize-1.0	markov-multisize-0.3-1.0	1009.030477	3.502361947240541
+26130	0.2996555683122847	0	markov-multisize	0.3	1	1.0	0.3-1.0	markov-multisize-0.3	markov-multisize-1.0	markov-multisize-0.3-1.0	151.469212	1.7390265442020667
+32430	0.2969472710453284	0	markov-multisize	0.3	1	1.0	0.3-1.0	markov-multisize-0.3	markov-multisize-1.0	markov-multisize-0.3-1.0	204.14291	1.8884635522664202
+86430	0.2467893092676154	0	markov-multisize	0.3	1	1.0	0.3-1.0	markov-multisize-0.3	markov-multisize-1.0	markov-multisize-0.3-1.0	1007.290426	3.4963222006247827
+68430	0.2985532661113547	0	markov-multisize	0.3	1	1.0	0.3-1.0	markov-multisize-0.3	markov-multisize-1.0	markov-multisize-0.3-1.0	637.930132	2.796712547128452
+86430	0.2641443943075321	0	markov-multisize	0.3	1	1.0	0.3-1.0	markov-multisize-0.3	markov-multisize-1.0	markov-multisize-0.3-1.0	1037.893997	3.602547716070808
+61230	0.2993630573248408	0	markov-multisize	0.3	1	1.0	0.3-1.0	markov-multisize-0.3	markov-multisize-1.0	markov-multisize-0.3-1.0	452.840415	2.2187183488486037
+48330	0.2985723153320919	0	markov-multisize	0.3	1	1.0	0.3-1.0	markov-multisize-0.3	markov-multisize-1.0	markov-multisize-0.3-1.0	530.611325	3.2936767535692115
+86430	0.2953835473793822	0	markov-multisize	0.3	1	1.0	0.3-1.0	markov-multisize-0.3	markov-multisize-1.0	markov-multisize-0.3-1.0	1217.717878	4.22671946546338
+10830	0.1135734072022161	1	otf-limit	0.1	0		0.1-	otf-limit-0.1	otf-limit-	otf-limit-0.1-	91.341174	2.5302264265927974
+13530	0.1130820399113082	1	otf-limit	0.1	0		0.1-	otf-limit-0.1	otf-limit-	otf-limit-0.1-	40.126466	0.8897220842572062
+12930	0.1183294663573086	1	otf-limit	0.1	0		0.1-	otf-limit-0.1	otf-limit-	otf-limit-0.1-	39.128388	0.9078512296983758
+19830	0.1074130105900151	1	otf-limit	0.1	0		0.1-	otf-limit-0.1	otf-limit-	otf-limit-0.1-	69.832708	1.0564706202723146
+23730	0.1024020227560051	1	otf-limit	0.1	0		0.1-	otf-limit-0.1	otf-limit-	otf-limit-0.1-	92.935701	1.1749140455120102
+12930	0.1183294663573086	1	otf-limit	0.1	0		0.1-	otf-limit-0.1	otf-limit-	otf-limit-0.1-	28.698511	0.6658587238979118
+20730	0.1027496382054993	1	otf-limit	0.1	0		0.1-	otf-limit-0.1	otf-limit-	otf-limit-0.1-	154.58694	2.2371481910274964
+16530	0.1107078039927405	1	otf-limit	0.1	0		0.1-	otf-limit-0.1	otf-limit-	otf-limit-0.1-	32.878129	0.5966992558983666
+31530	0.1056137012369172	1	otf-limit	0.1	0		0.1-	otf-limit-0.1	otf-limit-	otf-limit-0.1-	113.264144	1.0776797716460516
+10830	0.1135734072022161	1	otf-limit	0.1	0		0.1-	otf-limit-0.1	otf-limit-	otf-limit-0.1-	12.410827	0.3437902216066482
+20130	0.1058122205663189	1	otf-limit	0.1	0		0.1-	otf-limit-0.1	otf-limit-	otf-limit-0.1-	46.063879	0.686495961251863
+11430	0.1076115485564304	1	otf-limit	0.1	0		0.1-	otf-limit-0.1	otf-limit-	otf-limit-0.1-	14.053521	0.3688588188976378
+10230	0.1202346041055718	1	otf-limit	0.1	0		0.1-	otf-limit-0.1	otf-limit-	otf-limit-0.1-	16.029576	0.47007554252199407
+11730	0.1048593350383632	1	otf-limit	0.1	0		0.1-	otf-limit-0.1	otf-limit-	otf-limit-0.1-	17.313029	0.44278846547314576
+11430	0.1076115485564304	1	otf-limit	0.1	0		0.1-	otf-limit-0.1	otf-limit-	otf-limit-0.1-	19.273069	0.5058548293963254
+18330	0.11620294599018	1	otf-limit	0.1	0		0.1-	otf-limit-0.1	otf-limit-	otf-limit-0.1-	37.480692	0.6134319476268412
+37830	0.1038858049167328	1	otf-limit	0.1	0		0.1-	otf-limit-0.1	otf-limit-	otf-limit-0.1-	141.071462	1.1187268992862807
+10530	0.1168091168091168	1	otf-limit	0.1	0		0.1-	otf-limit-0.1	otf-limit-	otf-limit-0.1-	10.50862	0.2993908831908832
+12930	0.1183294663573086	1	otf-limit	0.1	0		0.1-	otf-limit-0.1	otf-limit-	otf-limit-0.1-	19.128815	0.44382401392111365
+11730	0.1048593350383632	1	otf-limit	0.1	0		0.1-	otf-limit-0.1	otf-limit-	otf-limit-0.1-	18.308861	0.4682573145780051
+24930	0.1095066185318893	1	otf-limit	0.1	0		0.1-	otf-limit-0.1	otf-limit-	otf-limit-0.1-	72.552721	0.873077268351384
+22230	0.1093117408906883	1	otf-limit	0.1	0		0.1-	otf-limit-0.1	otf-limit-	otf-limit-0.1-	49.56618	0.6689093117408907
+13830	0.1106290672451193	1	otf-limit	0.1	0		0.1-	otf-limit-0.1	otf-limit-	otf-limit-0.1-	19.296865	0.41858709327548804
+17430	0.1049913941480207	1	otf-limit	0.1	0		0.1-	otf-limit-0.1	otf-limit-	otf-limit-0.1-	24.60896	0.42356213425129086
+17430	0.1049913941480207	1	otf-limit	0.1	0		0.1-	otf-limit-0.1	otf-limit-	otf-limit-0.1-	32.312667	0.5561560585197934
+19830	0.1074130105900151	1	otf-limit	0.1	0		0.1-	otf-limit-0.1	otf-limit-	otf-limit-0.1-	58.399015	0.8834949319213313
+35430	0.1024555461473328	1	otf-limit	0.1	0		0.1-	otf-limit-0.1	otf-limit-	otf-limit-0.1-	131.56447	1.1140090601185437
+13230	0.1156462585034014	1	otf-limit	0.1	0		0.1-	otf-limit-0.1	otf-limit-	otf-limit-0.1-	17.363037	0.3937196598639455
+18930	0.1125198098256735	1	otf-limit	0.1	0		0.1-	otf-limit-0.1	otf-limit-	otf-limit-0.1-	43.858218	0.6950589223454834
+14130	0.1082802547770701	1	otf-limit	0.1	0		0.1-	otf-limit-0.1	otf-limit-	otf-limit-0.1-	25.980675	0.5516066878980892
+13830	0.1106290672451193	1	otf-limit	0.1	0		0.1-	otf-limit-0.1	otf-limit-	otf-limit-0.1-	19.862269	0.43085182212581347
+13830	0.1106290672451193	1	otf-limit	0.1	0		0.1-	otf-limit-0.1	otf-limit-	otf-limit-0.1-	21.086127	0.45739971800433843
+11730	0.1048593350383632	1	otf-limit	0.1	0		0.1-	otf-limit-0.1	otf-limit-	otf-limit-0.1-	16.327918	0.417593810741688
+12930	0.1183294663573086	1	otf-limit	0.1	0		0.1-	otf-limit-0.1	otf-limit-	otf-limit-0.1-	17.520426	0.40650640371229696
+17130	0.106830122591944	1	otf-limit	0.1	0		0.1-	otf-limit-0.1	otf-limit-	otf-limit-0.1-	33.161186	0.5807563222416813
+10530	0.1168091168091168	1	otf-limit	0.1	0		0.1-	otf-limit-0.1	otf-limit-	otf-limit-0.1-	15.322294	0.4365325925925926
+20130	0.1058122205663189	1	otf-limit	0.1	0		0.1-	otf-limit-0.1	otf-limit-	otf-limit-0.1-	54.370287	0.810287436661699
+14130	0.1082802547770701	1	otf-limit	0.1	0		0.1-	otf-limit-0.1	otf-limit-	otf-limit-0.1-	18.977634	0.4029221656050955
+13230	0.1156462585034014	1	otf-limit	0.1	0		0.1-	otf-limit-0.1	otf-limit-	otf-limit-0.1-	28.735012	0.6515875736961452
+28530	0.1062039957939012	1	otf-limit	0.1	0		0.1-	otf-limit-0.1	otf-limit-	otf-limit-0.1-	79.346081	0.8343436487907466
+16830	0.1087344028520499	1	otf-limit	0.1	0		0.1-	otf-limit-0.1	otf-limit-	otf-limit-0.1-	32.849705	0.5855562388591801
+25230	0.10820451843044	1	otf-limit	0.1	0		0.1-	otf-limit-0.1	otf-limit-	otf-limit-0.1-	77.378595	0.9200784185493461
+13230	0.1156462585034014	1	otf-limit	0.1	0		0.1-	otf-limit-0.1	otf-limit-	otf-limit-0.1-	21.372867	0.4846455102040816
+17730	0.1032148900169205	1	otf-limit	0.1	0		0.1-	otf-limit-0.1	otf-limit-	otf-limit-0.1-	33.486986	0.566615668358714
+29430	0.1029561671763507	1	otf-limit	0.1	0		0.1-	otf-limit-0.1	otf-limit-	otf-limit-0.1-	115.326237	1.1755987461773703
+11730	0.1048593350383632	1	otf-limit	0.1	0		0.1-	otf-limit-0.1	otf-limit-	otf-limit-0.1-	13.918613	0.3559747570332481
+12930	0.1183294663573086	1	otf-limit	0.1	0		0.1-	otf-limit-0.1	otf-limit-	otf-limit-0.1-	17.584307	0.40798856148491874
+10830	0.1135734072022161	1	otf-limit	0.1	0		0.1-	otf-limit-0.1	otf-limit-	otf-limit-0.1-	14.578417	0.40383426592797783
+28530	0.1062039957939012	1	otf-limit	0.1	0		0.1-	otf-limit-0.1	otf-limit-	otf-limit-0.1-	100.941266	1.0614223554153523
+31230	0.106628242074928	1	otf-limit	0.1	0		0.1-	otf-limit-0.1	otf-limit-	otf-limit-0.1-	84.010406	0.8070163880883766
+32430	0.1026827012025902	1	otf-limit	0.1	0		0.1-	otf-limit-0.1	otf-limit-	otf-limit-0.1-	129.410492	1.1971368362627197
+28830	0.105098855359001	1	otf-limit	0.1	0		0.1-	otf-limit-0.1	otf-limit-	otf-limit-0.1-	98.075395	1.0205556191467222
+17130	0.106830122591944	1	otf-limit	0.1	0		0.1-	otf-limit-0.1	otf-limit-	otf-limit-0.1-	28.922626	0.5065258493870403
+11730	0.1048593350383632	1	otf-limit	0.1	0		0.1-	otf-limit-0.1	otf-limit-	otf-limit-0.1-	16.861537	0.43124135549872117
+17430	0.1049913941480207	1	otf-limit	0.1	0		0.1-	otf-limit-0.1	otf-limit-	otf-limit-0.1-	34.866314	0.6001086746987953
+31530	0.1056137012369172	1	otf-limit	0.1	0		0.1-	otf-limit-0.1	otf-limit-	otf-limit-0.1-	113.385859	1.0788378591817318
+35730	0.1015952980688497	1	otf-limit	0.1	0		0.1-	otf-limit-0.1	otf-limit-	otf-limit-0.1-	126.113545	1.0588878673383713
+23730	0.1024020227560051	1	otf-limit	0.1	0		0.1-	otf-limit-0.1	otf-limit-	otf-limit-0.1-	72.607244	0.9179171175726928
+9930	0.1238670694864048	1	otf-limit	0.1	0		0.1-	otf-limit-0.1	otf-limit-	otf-limit-0.1-	15.77436	0.4765667673716012
+10530	0.1168091168091168	1	otf-limit	0.1	0		0.1-	otf-limit-0.1	otf-limit-	otf-limit-0.1-	15.942022	0.45418866096866095
+30330	0.1097922848664688	1	otf-limit	0.1	0		0.1-	otf-limit-0.1	otf-limit-	otf-limit-0.1-	93.740536	0.9272060929772503
+34530	0.105125977410947	1	otf-limit	0.1	0		0.1-	otf-limit-0.1	otf-limit-	otf-limit-0.1-	115.363103	1.002285864465682
+11430	0.1076115485564304	1	otf-limit	0.1	0		0.1-	otf-limit-0.1	otf-limit-	otf-limit-0.1-	20.5548	0.5394960629921259
+14430	0.106029106029106	1	otf-limit	0.1	0		0.1-	otf-limit-0.1	otf-limit-	otf-limit-0.1-	18.859561	0.3920906652806653
+16830	0.1087344028520499	1	otf-limit	0.1	0		0.1-	otf-limit-0.1	otf-limit-	otf-limit-0.1-	33.673809	0.6002461497326202
+17130	0.106830122591944	1	otf-limit	0.1	0		0.1-	otf-limit-0.1	otf-limit-	otf-limit-0.1-	35.415637	0.6202388266199649
+11430	0.1076115485564304	1	otf-limit	0.1	0		0.1-	otf-limit-0.1	otf-limit-	otf-limit-0.1-	19.899966	0.5223088188976378
+23730	0.1024020227560051	1	otf-limit	0.1	0		0.1-	otf-limit-0.1	otf-limit-	otf-limit-0.1-	61.339127	0.7754630467762327
+27630	0.1096634093376764	1	otf-limit	0.1	0		0.1-	otf-limit-0.1	otf-limit-	otf-limit-0.1-	70.26584	0.7629298588490772
+34230	0.1060473269062226	1	otf-limit	0.1	0		0.1-	otf-limit-0.1	otf-limit-	otf-limit-0.1-	113.766002	0.9970727607361963
+11430	0.1076115485564304	1	otf-limit	0.1	0		0.1-	otf-limit-0.1	otf-limit-	otf-limit-0.1-	16.992472	0.44599664041994747
+12630	0.1211401425178147	1	otf-limit	0.1	0		0.1-	otf-limit-0.1	otf-limit-	otf-limit-0.1-	23.129639	0.5493976009501188
+11430	0.1076115485564304	1	otf-limit	0.1	0		0.1-	otf-limit-0.1	otf-limit-	otf-limit-0.1-	17.079499	0.4482808136482939
+16830	0.1087344028520499	1	otf-limit	0.1	0		0.1-	otf-limit-0.1	otf-limit-	otf-limit-0.1-	36.382726	0.648533440285205
+18630	0.1143317230273752	1	otf-limit	0.1	0		0.1-	otf-limit-0.1	otf-limit-	otf-limit-0.1-	33.96701	0.5469727858293076
+14430	0.106029106029106	1	otf-limit	0.1	0		0.1-	otf-limit-0.1	otf-limit-	otf-limit-0.1-	22.492935	0.4676285862785862
+11730	0.1048593350383632	1	otf-limit	0.1	0		0.1-	otf-limit-0.1	otf-limit-	otf-limit-0.1-	14.707836	0.3761594884910486
+11430	0.1076115485564304	1	otf-limit	0.1	0		0.1-	otf-limit-0.1	otf-limit-	otf-limit-0.1-	11.83597	0.3106553805774278
+34830	0.1042204995693368	1	otf-limit	0.1	0		0.1-	otf-limit-0.1	otf-limit-	otf-limit-0.1-	149.279631	1.2857849354005169
+19530	0.109062980030722	1	otf-limit	0.1	0		0.1-	otf-limit-0.1	otf-limit-	otf-limit-0.1-	52.946982	0.8133176958525347
+10830	0.1135734072022161	1	otf-limit	0.1	0		0.1-	otf-limit-0.1	otf-limit-	otf-limit-0.1-	11.261085	0.31194141274238224
+12630	0.1211401425178147	1	otf-limit	0.1	0		0.1-	otf-limit-0.1	otf-limit-	otf-limit-0.1-	23.519701	0.558662731591449
+29130	0.1040164778578785	1	otf-limit	0.1	0		0.1-	otf-limit-0.1	otf-limit-	otf-limit-0.1-	103.735252	1.0683342121524202
+13230	0.1156462585034014	1	otf-limit	0.1	0		0.1-	otf-limit-0.1	otf-limit-	otf-limit-0.1-	25.550817	0.5793836054421768
+19530	0.109062980030722	1	otf-limit	0.1	0		0.1-	otf-limit-0.1	otf-limit-	otf-limit-0.1-	38.3775	0.589516129032258
+35430	0.1024555461473328	1	otf-limit	0.1	0		0.1-	otf-limit-0.1	otf-limit-	otf-limit-0.1-	142.450698	1.2061871126164267
+11730	0.1048593350383632	1	otf-limit	0.1	0		0.1-	otf-limit-0.1	otf-limit-	otf-limit-0.1-	15.383451	0.3934386445012788
+28230	0.1073326248671626	1	otf-limit	0.1	0		0.1-	otf-limit-0.1	otf-limit-	otf-limit-0.1-	90.649174	0.9633280977683316
+19830	0.1074130105900151	1	otf-limit	0.1	0		0.1-	otf-limit-0.1	otf-limit-	otf-limit-0.1-	56.055226	0.8480367019667171
+13830	0.1106290672451193	1	otf-limit	0.1	0		0.1-	otf-limit-0.1	otf-limit-	otf-limit-0.1-	19.252288	0.4176201301518438
+37230	0.1055600322320709	1	otf-limit	0.1	0		0.1-	otf-limit-0.1	otf-limit-	otf-limit-0.1-	169.868643	1.3688045366639807
+21930	0.1108071135430917	1	otf-limit	0.1	0		0.1-	otf-limit-0.1	otf-limit-	otf-limit-0.1-	46.345533	0.6340018194254446
+15630	0.1170825335892514	1	otf-limit	0.1	0		0.1-	otf-limit-0.1	otf-limit-	otf-limit-0.1-	32.872644	0.6309528598848368
+14430	0.106029106029106	1	otf-limit	0.1	0		0.1-	otf-limit-0.1	otf-limit-	otf-limit-0.1-	26.279496	0.5463512681912682
+17430	0.1049913941480207	1	otf-limit	0.1	0		0.1-	otf-limit-0.1	otf-limit-	otf-limit-0.1-	30.923066	0.5322386574870912
+11430	0.1076115485564304	1	otf-limit	0.1	0		0.1-	otf-limit-0.1	otf-limit-	otf-limit-0.1-	13.036716	0.3421710236220472
+20430	0.1042584434654919	1	otf-limit	0.1	0		0.1-	otf-limit-0.1	otf-limit-	otf-limit-0.1-	44.913259	0.659519221732746
+12930	0.1183294663573086	1	otf-limit	0.1	0		0.1-	otf-limit-0.1	otf-limit-	otf-limit-0.1-	12.783386	0.296598283062645
+26130	0.1044776119402985	1	otf-limit	0.1	0		0.1-	otf-limit-0.1	otf-limit-	otf-limit-0.1-	123.237422	1.4148957749712974
+40530	0.1043671354552184	1	otf-limit	0.1	0		0.1-	otf-limit-0.1	otf-limit-	otf-limit-0.1-	199.335012	1.4754627091043673
+14130	0.2144373673036093	1	otf-limit	0.2	0		0.2-	otf-limit-0.2	otf-limit-	otf-limit-0.2-	104.00624	2.2082004246284503
+54630	0.2037342119714443	1	otf-limit	0.2	0		0.2-	otf-limit-0.2	otf-limit-	otf-limit-0.2-	498.935748	2.739899769357496
+18930	0.2076069730586371	1	otf-limit	0.2	0		0.2-	otf-limit-0.2	otf-limit-	otf-limit-0.2-	54.611548	0.8654761965134706
+32130	0.2063492063492063	1	otf-limit	0.2	0		0.2-	otf-limit-0.2	otf-limit-	otf-limit-0.2-	92.655478	0.8651305135387489
+51930	0.2027729636048527	1	otf-limit	0.2	0		0.2-	otf-limit-0.2	otf-limit-	otf-limit-0.2-	337.135558	1.9476346504910458
+38130	0.2053501180173092	1	otf-limit	0.2	0		0.2-	otf-limit-0.2	otf-limit-	otf-limit-0.2-	148.394338	1.1675400314712825
+47430	0.2030360531309298	1	otf-limit	0.2	0		0.2-	otf-limit-0.2	otf-limit-	otf-limit-0.2-	248.716954	1.5731622643896268
+61230	0.2013718765311122	1	otf-limit	0.2	0		0.2-	otf-limit-0.2	otf-limit-	otf-limit-0.2-	430.800387	2.1107319304262617
+51630	0.2039511911679256	1	otf-limit	0.2	0		0.2-	otf-limit-0.2	otf-limit-	otf-limit-0.2-	304.165938	1.7673790703079604
+56130	0.2036344200962052	1	otf-limit	0.2	0		0.2-	otf-limit-0.2	otf-limit-	otf-limit-0.2-	309.158544	1.652370625334046
+56130	0.2036344200962052	1	otf-limit	0.2	0		0.2-	otf-limit-0.2	otf-limit-	otf-limit-0.2-	356.406554	1.9048987386424374
+20430	0.2070484581497797	1	otf-limit	0.2	0		0.2-	otf-limit-0.2	otf-limit-	otf-limit-0.2-	43.100421	0.632898986784141
+36630	0.2055692055692056	1	otf-limit	0.2	0		0.2-	otf-limit-0.2	otf-limit-	otf-limit-0.2-	193.842244	1.5875695659295659
+19230	0.2043681747269891	1	otf-limit	0.2	0		0.2-	otf-limit-0.2	otf-limit-	otf-limit-0.2-	44.698272	0.6973209360374416
+36330	0.2072667217175888	1	otf-limit	0.2	0		0.2-	otf-limit-0.2	otf-limit-	otf-limit-0.2-	186.104611	1.5367845664739885
+26130	0.2078071182548794	1	otf-limit	0.2	0		0.2-	otf-limit-0.2	otf-limit-	otf-limit-0.2-	72.854021	0.836441113662457
+51630	0.2039511911679256	1	otf-limit	0.2	0		0.2-	otf-limit-0.2	otf-limit-	otf-limit-0.2-	237.635677	1.3807999825682742
+38430	0.2037470725995316	1	otf-limit	0.2	0		0.2-	otf-limit-0.2	otf-limit-	otf-limit-0.2-	134.833572	1.0525649648711946
+15930	0.2090395480225989	1	otf-limit	0.2	0		0.2-	otf-limit-0.2	otf-limit-	otf-limit-0.2-	28.416342	0.5351476836158192
+38130	0.2053501180173092	1	otf-limit	0.2	0		0.2-	otf-limit-0.2	otf-limit-	otf-limit-0.2-	163.778109	1.2885767820613692
+40230	0.2020879940343028	1	otf-limit	0.2	0		0.2-	otf-limit-0.2	otf-limit-	otf-limit-0.2-	186.538504	1.391040298284862
+35730	0.2023509655751469	1	otf-limit	0.2	0		0.2-	otf-limit-0.2	otf-limit-	otf-limit-0.2-	124.401117	1.044509798488665
+32130	0.2063492063492063	1	otf-limit	0.2	0		0.2-	otf-limit-0.2	otf-limit-	otf-limit-0.2-	98.272288	0.917575051353875
+33630	0.2060660124888492	1	otf-limit	0.2	0		0.2-	otf-limit-0.2	otf-limit-	otf-limit-0.2-	79.384896	0.7081614272970562
+54930	0.2026215182960131	1	otf-limit	0.2	0		0.2-	otf-limit-0.2	otf-limit-	otf-limit-0.2-	302.137218	1.6501213435281268
+37230	0.2022562449637389	1	otf-limit	0.2	0		0.2-	otf-limit-0.2	otf-limit-	otf-limit-0.2-	208.695481	1.6816718855761483
+42630	0.2047853624208304	1	otf-limit	0.2	0		0.2-	otf-limit-0.2	otf-limit-	otf-limit-0.2-	186.768952	1.3143487121745252
+27330	0.2096597145993414	1	otf-limit	0.2	0		0.2-	otf-limit-0.2	otf-limit-	otf-limit-0.2-	72.009283	0.7904421844127333
+26430	0.2054483541430193	1	otf-limit	0.2	0		0.2-	otf-limit-0.2	otf-limit-	otf-limit-0.2-	84.235698	0.9561373212258797
+27930	0.20515574650913	1	otf-limit	0.2	0		0.2-	otf-limit-0.2	otf-limit-	otf-limit-0.2-	97.562795	1.047935499462943
+49230	0.2017062766605728	1	otf-limit	0.2	0		0.2-	otf-limit-0.2	otf-limit-	otf-limit-0.2-	241.177683	1.4696994698354662
+32130	0.2063492063492063	1	otf-limit	0.2	0		0.2-	otf-limit-0.2	otf-limit-	otf-limit-0.2-	107.695857	1.0055635574229693
+16230	0.2051756007393715	1	otf-limit	0.2	0		0.2-	otf-limit-0.2	otf-limit-	otf-limit-0.2-	30.35652	0.5611186691312384
+53430	0.2026951151038742	1	otf-limit	0.2	0		0.2-	otf-limit-0.2	otf-limit-	otf-limit-0.2-	284.050337	1.594892403144301
+40230	0.2020879940343028	1	otf-limit	0.2	0		0.2-	otf-limit-0.2	otf-limit-	otf-limit-0.2-	177.516519	1.32376225950783
+15930	0.2090395480225989	1	otf-limit	0.2	0		0.2-	otf-limit-0.2	otf-limit-	otf-limit-0.2-	32.398847	0.6101477777777778
+67230	0.2012494422132976	1	otf-limit	0.2	0		0.2-	otf-limit-0.2	otf-limit-	otf-limit-0.2-	586.22279	2.6158982150825527
+21630	0.2094313453536755	1	otf-limit	0.2	0		0.2-	otf-limit-0.2	otf-limit-	otf-limit-0.2-	41.110782	0.5701911511789182
+21630	0.2094313453536755	1	otf-limit	0.2	0		0.2-	otf-limit-0.2	otf-limit-	otf-limit-0.2-	74.814548	1.0376497642163662
+42630	0.2047853624208304	1	otf-limit	0.2	0		0.2-	otf-limit-0.2	otf-limit-	otf-limit-0.2-	177.678991	1.2503799507389164
+31230	0.2026897214217099	1	otf-limit	0.2	0		0.2-	otf-limit-0.2	otf-limit-	otf-limit-0.2-	110.581178	1.0622591546589817
+48630	0.2041949413942011	1	otf-limit	0.2	0		0.2-	otf-limit-0.2	otf-limit-	otf-limit-0.2-	286.173631	1.7654141332510795
+34230	0.2024539877300613	1	otf-limit	0.2	0		0.2-	otf-limit-0.2	otf-limit-	otf-limit-0.2-	137.237768	1.202784995617879
+39330	0.2067124332570557	1	otf-limit	0.2	0		0.2-	otf-limit-0.2	otf-limit-	otf-limit-0.2-	155.913615	1.1892724256292906
+45930	0.2031352057478772	1	otf-limit	0.2	0		0.2-	otf-limit-0.2	otf-limit-	otf-limit-0.2-	257.1823	1.6798321358589159
+19230	0.2043681747269891	1	otf-limit	0.2	0		0.2-	otf-limit-0.2	otf-limit-	otf-limit-0.2-	30.622027	0.4777227301092044
+41730	0.2020129403306973	1	otf-limit	0.2	0		0.2-	otf-limit-0.2	otf-limit-	otf-limit-0.2-	160.625848	1.1547508842559309
+17130	0.2119089316987741	1	otf-limit	0.2	0		0.2-	otf-limit-0.2	otf-limit-	otf-limit-0.2-	31.017247	0.5432092294220665
+59130	0.2034500253678336	1	otf-limit	0.2	0		0.2-	otf-limit-0.2	otf-limit-	otf-limit-0.2-	392.89763	1.9933923389142567
+43230	0.2019430950728661	1	otf-limit	0.2	0		0.2-	otf-limit-0.2	otf-limit-	otf-limit-0.2-	145.285684	1.0082282026370577
+62130	0.2032834379526799	1	otf-limit	0.2	0		0.2-	otf-limit-0.2	otf-limit-	otf-limit-0.2-	437.195377	2.111035137614679
+71430	0.2020159596808064	1	otf-limit	0.2	0		0.2-	otf-limit-0.2	otf-limit-	otf-limit-0.2-	561.13561	2.3567224275514493
+29430	0.2048929663608563	1	otf-limit	0.2	0		0.2-	otf-limit-0.2	otf-limit-	otf-limit-0.2-	82.109251	0.8369954230377167
+38130	0.2053501180173092	1	otf-limit	0.2	0		0.2-	otf-limit-0.2	otf-limit-	otf-limit-0.2-	170.391689	1.3406112431156572
+34230	0.2024539877300613	1	otf-limit	0.2	0		0.2-	otf-limit-0.2	otf-limit-	otf-limit-0.2-	131.340254	1.1510977563540754
+64230	0.2013078000934143	1	otf-limit	0.2	0		0.2-	otf-limit-0.2	otf-limit-	otf-limit-0.2-	437.320828	2.0426007846800562
+60930	0.2023633677991137	1	otf-limit	0.2	0		0.2-	otf-limit-0.2	otf-limit-	otf-limit-0.2-	359.86471	1.7718597242737568
+65730	0.2012779552715655	1	otf-limit	0.2	0		0.2-	otf-limit-0.2	otf-limit-	otf-limit-0.2-	518.503617	2.3665158238247375
+17730	0.2047377326565144	1	otf-limit	0.2	0		0.2-	otf-limit-0.2	otf-limit-	otf-limit-0.2-	49.334796	0.8347681218274111
+42630	0.2047853624208304	1	otf-limit	0.2	0		0.2-	otf-limit-0.2	otf-limit-	otf-limit-0.2-	230.284575	1.6205811048557355
+52230	0.2016082711085583	1	otf-limit	0.2	0		0.2-	otf-limit-0.2	otf-limit-	otf-limit-0.2-	277.715085	1.5951469557725444
+56730	0.2014806980433633	1	otf-limit	0.2	0		0.2-	otf-limit-0.2	otf-limit-	otf-limit-0.2-	316.750885	1.6750443416181915
+15930	0.2090395480225989	1	otf-limit	0.2	0		0.2-	otf-limit-0.2	otf-limit-	otf-limit-0.2-	38.842738	0.7315016572504708
+26430	0.2054483541430193	1	otf-limit	0.2	0		0.2-	otf-limit-0.2	otf-limit-	otf-limit-0.2-	60.207028	0.6833941884222475
+24330	0.2108508014796547	1	otf-limit	0.2	0		0.2-	otf-limit-0.2	otf-limit-	otf-limit-0.2-	68.922799	0.8498495561035758
+45930	0.2031352057478772	1	otf-limit	0.2	0		0.2-	otf-limit-0.2	otf-limit-	otf-limit-0.2-	247.978881	1.6197183605486611
+19230	0.2043681747269891	1	otf-limit	0.2	0		0.2-	otf-limit-0.2	otf-limit-	otf-limit-0.2-	51.92949	0.810132449297972
+46830	0.2056374119154388	1	otf-limit	0.2	0		0.2-	otf-limit-0.2	otf-limit-	otf-limit-0.2-	227.456747	1.4571220179372197
+46830	0.2056374119154388	1	otf-limit	0.2	0		0.2-	otf-limit-0.2	otf-limit-	otf-limit-0.2-	186.898277	1.1972983792440743
+55830	0.2047286405158517	1	otf-limit	0.2	0		0.2-	otf-limit-0.2	otf-limit-	otf-limit-0.2-	295.844337	1.5897062708221386
+61830	0.2042697719553615	1	otf-limit	0.2	0		0.2-	otf-limit-0.2	otf-limit-	otf-limit-0.2-	468.681013	2.274046642406599
+48930	0.2029429797670141	1	otf-limit	0.2	0		0.2-	otf-limit-0.2	otf-limit-	otf-limit-0.2-	336.528769	2.063327829552422
+17730	0.2047377326565144	1	otf-limit	0.2	0		0.2-	otf-limit-0.2	otf-limit-	otf-limit-0.2-	42.26596	0.7151600676818951
+49230	0.2017062766605728	1	otf-limit	0.2	0		0.2-	otf-limit-0.2	otf-limit-	otf-limit-0.2-	305.598388	1.8622692748324192
+42330	0.2062367115520907	1	otf-limit	0.2	0		0.2-	otf-limit-0.2	otf-limit-	otf-limit-0.2-	162.942883	1.1548042735648476
+78930	0.201824401368301	1	otf-limit	0.2	0		0.2-	otf-limit-0.2	otf-limit-	otf-limit-0.2-	558.618005	2.1232155264158115
+35430	0.2040643522438611	1	otf-limit	0.2	0		0.2-	otf-limit-0.2	otf-limit-	otf-limit-0.2-	132.159013	1.1190432938187975
+49230	0.2017062766605728	1	otf-limit	0.2	0		0.2-	otf-limit-0.2	otf-limit-	otf-limit-0.2-	186.414977	1.1359840158439976
+55230	0.2015209125475285	1	otf-limit	0.2	0		0.2-	otf-limit-0.2	otf-limit-	otf-limit-0.2-	368.910474	2.00385917436176
+29730	0.2028254288597376	1	otf-limit	0.2	0		0.2-	otf-limit-0.2	otf-limit-	otf-limit-0.2-	117.004311	1.1806691321897074
+17130	0.2119089316987741	1	otf-limit	0.2	0		0.2-	otf-limit-0.2	otf-limit-	otf-limit-0.2-	26.561499	0.4651751138353765
+36630	0.2055692055692056	1	otf-limit	0.2	0		0.2-	otf-limit-0.2	otf-limit-	otf-limit-0.2-	192.493556	1.5765238001638004
+56730	0.2014806980433633	1	otf-limit	0.2	0		0.2-	otf-limit-0.2	otf-limit-	otf-limit-0.2-	388.359431	2.0537251771549445
+33630	0.2060660124888492	1	otf-limit	0.2	0		0.2-	otf-limit-0.2	otf-limit-	otf-limit-0.2-	157.063577	1.4011023818019628
+26430	0.2054483541430193	1	otf-limit	0.2	0		0.2-	otf-limit-0.2	otf-limit-	otf-limit-0.2-	66.317145	0.7527485244040862
+74730	0.2011240465676435	1	otf-limit	0.2	0		0.2-	otf-limit-0.2	otf-limit-	otf-limit-0.2-	627.16396	2.5177196306704133
+39630	0.2051476154428463	1	otf-limit	0.2	0		0.2-	otf-limit-0.2	otf-limit-	otf-limit-0.2-	163.329318	1.2364066464799395
+38730	0.2021688613477924	1	otf-limit	0.2	0		0.2-	otf-limit-0.2	otf-limit-	otf-limit-0.2-	157.768373	1.2220633075135554
+39330	0.2067124332570557	1	otf-limit	0.2	0		0.2-	otf-limit-0.2	otf-limit-	otf-limit-0.2-	214.575099	1.6367284439359269
+42630	0.2047853624208304	1	otf-limit	0.2	0		0.2-	otf-limit-0.2	otf-limit-	otf-limit-0.2-	174.817103	1.2302399929627024
+65130	0.2031321971441732	1	otf-limit	0.2	0		0.2-	otf-limit-0.2	otf-limit-	otf-limit-0.2-	514.051558	2.367810032243206
+63930	0.2022524636320976	1	otf-limit	0.2	0		0.2-	otf-limit-0.2	otf-limit-	otf-limit-0.2-	363.421191	1.705402116377288
+20130	0.2101341281669151	1	otf-limit	0.2	0		0.2-	otf-limit-0.2	otf-limit-	otf-limit-0.2-	49.926442	0.7440602384500746
+27330	0.2096597145993414	1	otf-limit	0.2	0		0.2-	otf-limit-0.2	otf-limit-	otf-limit-0.2-	83.126236	0.9124724039517016
+39930	0.2036063110443276	1	otf-limit	0.2	0		0.2-	otf-limit-0.2	otf-limit-	otf-limit-0.2-	146.028373	1.0971327798647632
+24930	0.2057761732851986	1	otf-limit	0.2	0		0.2-	otf-limit-0.2	otf-limit-	otf-limit-0.2-	54.973861	0.6615386401925392
+51930	0.2027729636048527	1	otf-limit	0.2	0		0.2-	otf-limit-0.2	otf-limit-	otf-limit-0.2-	261.452963	1.51041573079145
+30930	0.2046556741028128	1	otf-limit	0.2	0		0.2-	otf-limit-0.2	otf-limit-	otf-limit-0.2-	67.985441	0.6594126188166828
+34230	0.2024539877300613	1	otf-limit	0.2	0		0.2-	otf-limit-0.2	otf-limit-	otf-limit-0.2-	190.298067	1.667818290972831
+52230	0.2016082711085583	1	otf-limit	0.2	0		0.2-	otf-limit-0.2	otf-limit-	otf-limit-0.2-	323.381972	1.857449580700747
+35430	0.3056731583403895	1	otf-limit	0.3	0		0.3-	otf-limit-0.3	otf-limit-	otf-limit-0.3-	293.940245	2.488909779847587
+86430	0.2190211732037487	0	otf-limit	0.3	0		0.3-	otf-limit-0.3	otf-limit-	otf-limit-0.3-	961.450244	3.337210149253731
+56730	0.3019566367001586	1	otf-limit	0.3	0		0.3-	otf-limit-0.3	otf-limit-	otf-limit-0.3-	398.301859	2.1063027974616606
+47730	0.3023255813953488	1	otf-limit	0.3	0		0.3-	otf-limit-0.3	otf-limit-	otf-limit-0.3-	213.833576	1.3440199622878692
+86430	0.2155501561957654	0	otf-limit	0.3	0		0.3-	otf-limit-0.3	otf-limit-	otf-limit-0.3-	826.708384	2.869518861506421
+48930	0.3010423053341508	1	otf-limit	0.3	0		0.3-	otf-limit-0.3	otf-limit-	otf-limit-0.3-	253.886918	1.5566334641324342
+86430	0.2502603262755988	0	otf-limit	0.3	0		0.3-	otf-limit-0.3	otf-limit-	otf-limit-0.3-	868.519993	3.0146476674765705
+86430	0.2155501561957654	0	otf-limit	0.3	0		0.3-	otf-limit-0.3	otf-limit-	otf-limit-0.3-	889.202149	3.086435782714335
+86430	0.2745574453314821	0	otf-limit	0.3	0		0.3-	otf-limit-0.3	otf-limit-	otf-limit-0.3-	868.702537	3.015281280805276
+86430	0.2537313432835821	0	otf-limit	0.3	0		0.3-	otf-limit-0.3	otf-limit-	otf-limit-0.3-	755.846402	2.623555716765012
+81930	0.3006224826071036	1	otf-limit	0.3	0		0.3-	otf-limit-0.3	otf-limit-	otf-limit-0.3-	767.993391	2.812132519223727
+86430	0.212079139187782	0	otf-limit	0.3	0		0.3-	otf-limit-0.3	otf-limit-	otf-limit-0.3-	777.43501	2.698490142311697
+47730	0.3023255813953488	1	otf-limit	0.3	0		0.3-	otf-limit-0.3	otf-limit-	otf-limit-0.3-	345.126273	2.1692411879321183
+30930	0.3016488845780795	1	otf-limit	0.3	0		0.3-	otf-limit-0.3	otf-limit-	otf-limit-0.3-	122.358247	1.1867919204655675
+51330	0.304500292226768	1	otf-limit	0.3	0		0.3-	otf-limit-0.3	otf-limit-	otf-limit-0.3-	389.289459	2.27521600818235
+30630	0.3046033300685602	1	otf-limit	0.3	0		0.3-	otf-limit-0.3	otf-limit-	otf-limit-0.3-	108.078573	1.0585560528893243
+65730	0.3016887266088544	1	otf-limit	0.3	0		0.3-	otf-limit-0.3	otf-limit-	otf-limit-0.3-	390.489864	1.7822449292560476
+86430	0.2502603262755988	0	otf-limit	0.3	0		0.3-	otf-limit-0.3	otf-limit-	otf-limit-0.3-	673.026316	2.336085789656369
+37830	0.3021411578112609	1	otf-limit	0.3	0		0.3-	otf-limit-0.3	otf-limit-	otf-limit-0.3-	161.771244	1.282880602696273
+86430	0.222492190211732	0	otf-limit	0.3	0		0.3-	otf-limit-0.3	otf-limit-	otf-limit-0.3-	874.73331	3.036214196459562
+48330	0.3047796399751707	1	otf-limit	0.3	0		0.3-	otf-limit-0.3	otf-limit-	otf-limit-0.3-	277.151689	1.7203705090006207
+50430	0.3039857227840571	1	otf-limit	0.3	0		0.3-	otf-limit-0.3	otf-limit-	otf-limit-0.3-	257.933039	1.5344023735871506
+86430	0.2086081221797987	0	otf-limit	0.3	0		0.3-	otf-limit-0.3	otf-limit-	otf-limit-0.3-	738.385306	2.562947955570982
+86430	0.2294342242276987	0	otf-limit	0.3	0		0.3-	otf-limit-0.3	otf-limit-	otf-limit-0.3-	543.020323	1.8848327768136062
+86430	0.2294342242276987	0	otf-limit	0.3	0		0.3-	otf-limit-0.3	otf-limit-	otf-limit-0.3-	773.034688	2.6832165498090936
+86430	0.2294342242276987	0	otf-limit	0.3	0		0.3-	otf-limit-0.3	otf-limit-	otf-limit-0.3-	1131.301128	3.9267654564387366
+63930	0.3007977475363679	1	otf-limit	0.3	0		0.3-	otf-limit-0.3	otf-limit-	otf-limit-0.3-	432.439595	2.0292801267010794
+86430	0.2259632072197154	0	otf-limit	0.3	0		0.3-	otf-limit-0.3	otf-limit-	otf-limit-0.3-	724.185432	2.513659951405762
+35430	0.3056731583403895	1	otf-limit	0.3	0		0.3-	otf-limit-0.3	otf-limit-	otf-limit-0.3-	153.302879	1.2980768755292125
+36930	0.3013809910641755	1	otf-limit	0.3	0		0.3-	otf-limit-0.3	otf-limit-	otf-limit-0.3-	179.011128	1.4541927538586517
+86430	0.2572023602915654	0	otf-limit	0.3	0		0.3-	otf-limit-0.3	otf-limit-	otf-limit-0.3-	765.046018	2.655487740367928
+52830	0.3015332197614991	1	otf-limit	0.3	0		0.3-	otf-limit-0.3	otf-limit-	otf-limit-0.3-	304.567091	1.7295121578648496
+28530	0.305993690851735	1	otf-limit	0.3	0		0.3-	otf-limit-0.3	otf-limit-	otf-limit-0.3-	94.981206	0.9987508517350159
+86430	0.2398472752516487	0	otf-limit	0.3	0		0.3-	otf-limit-0.3	otf-limit-	otf-limit-0.3-	772.979713	2.6830257306490797
+54930	0.3009284543965046	1	otf-limit	0.3	0		0.3-	otf-limit-0.3	otf-limit-	otf-limit-0.3-	347.207562	1.8962728672856364
+50730	0.3021880544056771	1	otf-limit	0.3	0		0.3-	otf-limit-0.3	otf-limit-	otf-limit-0.3-	336.548419	1.9902331105854527
+86430	0.2051371051718153	0	otf-limit	0.3	0		0.3-	otf-limit-0.3	otf-limit-	otf-limit-0.3-	1010.019825	3.5057959909753555
+28530	0.305993690851735	1	otf-limit	0.3	0		0.3-	otf-limit-0.3	otf-limit-	otf-limit-0.3-	80.354354	0.8449458885383807
+37530	0.3045563549160671	1	otf-limit	0.3	0		0.3-	otf-limit-0.3	otf-limit-	otf-limit-0.3-	250.737678	2.004297985611511
+86430	0.2051371051718153	0	otf-limit	0.3	0		0.3-	otf-limit-0.3	otf-limit-	otf-limit-0.3-	725.493694	2.51820095105866
+40830	0.3019838354151359	1	otf-limit	0.3	0		0.3-	otf-limit-0.3	otf-limit-	otf-limit-0.3-	193.661379	1.4229344526083763
+86430	0.2329052412356821	0	otf-limit	0.3	0		0.3-	otf-limit-0.3	otf-limit-	otf-limit-0.3-	943.119721	3.2735845921555016
+86430	0.2259632072197154	0	otf-limit	0.3	0		0.3-	otf-limit-0.3	otf-limit-	otf-limit-0.3-	910.899419	3.1617473759111414
+86430	0.2363762582436654	0	otf-limit	0.3	0		0.3-	otf-limit-0.3	otf-limit-	otf-limit-0.3-	797.595099	2.7684661541131548
+86430	0.2502603262755988	0	otf-limit	0.3	0		0.3-	otf-limit-0.3	otf-limit-	otf-limit-0.3-	937.462868	3.2539495591808394
+86430	0.2502603262755988	0	otf-limit	0.3	0		0.3-	otf-limit-0.3	otf-limit-	otf-limit-0.3-	651.486739	2.261321551544602
+86430	0.222492190211732	0	otf-limit	0.3	0		0.3-	otf-limit-0.3	otf-limit-	otf-limit-0.3-	730.597987	2.53591803887539
+25530	0.3066980023501763	1	otf-limit	0.3	0		0.3-	otf-limit-0.3	otf-limit-	otf-limit-0.3-	69.583454	0.817666909518214
+86430	0.212079139187782	0	otf-limit	0.3	0		0.3-	otf-limit-0.3	otf-limit-	otf-limit-0.3-	867.687203	3.0117570392224917
+61530	0.302779132130668	1	otf-limit	0.3	0		0.3-	otf-limit-0.3	otf-limit-	otf-limit-0.3-	319.553635	1.5580382008776206
+86430	0.201666088163832	0	otf-limit	0.3	0		0.3-	otf-limit-0.3	otf-limit-	otf-limit-0.3-	890.228116	3.0899969316209646
+86430	0.2294342242276987	0	otf-limit	0.3	0		0.3-	otf-limit-0.3	otf-limit-	otf-limit-0.3-	812.725874	2.820985331482124
+86430	0.2433182922596321	0	otf-limit	0.3	0		0.3-	otf-limit-0.3	otf-limit-	otf-limit-0.3-	729.860968	2.533359833391183
+57930	0.3008803728638011	1	otf-limit	0.3	0		0.3-	otf-limit-0.3	otf-limit-	otf-limit-0.3-	402.619718	2.0850322009321594
+58830	0.3013768485466599	1	otf-limit	0.3	0		0.3-	otf-limit-0.3	otf-limit-	otf-limit-0.3-	400.124951	2.040412804691484
+86430	0.212079139187782	0	otf-limit	0.3	0		0.3-	otf-limit-0.3	otf-limit-	otf-limit-0.3-	812.816181	2.821298788615064
+86430	0.2745574453314821	0	otf-limit	0.3	0		0.3-	otf-limit-0.3	otf-limit-	otf-limit-0.3-	745.900336	2.5890327525164873
+86430	0.2051371051718153	0	otf-limit	0.3	0		0.3-	otf-limit-0.3	otf-limit-	otf-limit-0.3-	920.49545	3.195055362721277
+86430	0.2329052412356821	0	otf-limit	0.3	0		0.3-	otf-limit-0.3	otf-limit-	otf-limit-0.3-	1121.792314	3.8937602013189863
+86430	0.2398472752516487	0	otf-limit	0.3	0		0.3-	otf-limit-0.3	otf-limit-	otf-limit-0.3-	954.705987	3.3138007185005205
+86430	0.2051371051718153	0	otf-limit	0.3	0		0.3-	otf-limit-0.3	otf-limit-	otf-limit-0.3-	770.896754	2.675795744533148
+86430	0.201666088163832	0	otf-limit	0.3	0		0.3-	otf-limit-0.3	otf-limit-	otf-limit-0.3-	743.714879	2.581446994099271
+31830	0.3025447690857681	1	otf-limit	0.3	0		0.3-	otf-limit-0.3	otf-limit-	otf-limit-0.3-	154.243506	1.4537559472196042
+86430	0.2502603262755988	0	otf-limit	0.3	0		0.3-	otf-limit-0.3	otf-limit-	otf-limit-0.3-	662.528539	2.2996478271433527
+33930	0.3015030946065429	1	otf-limit	0.3	0		0.3-	otf-limit-0.3	otf-limit-	otf-limit-0.3-	136.136611	1.2036835632183907
+86430	0.2710864283234988	0	otf-limit	0.3	0		0.3-	otf-limit-0.3	otf-limit-	otf-limit-0.3-	866.70008	3.0083307185005204
+86430	0.2259632072197154	0	otf-limit	0.3	0		0.3-	otf-limit-0.3	otf-limit-	otf-limit-0.3-	1062.99062	3.6896585213467543
+59430	0.3033821302372539	1	otf-limit	0.3	0		0.3-	otf-limit-0.3	otf-limit-	otf-limit-0.3-	396.143577	1.999715179202423
+86430	0.2329052412356821	0	otf-limit	0.3	0		0.3-	otf-limit-0.3	otf-limit-	otf-limit-0.3-	683.799247	2.3734788163832
+86430	0.2190211732037487	0	otf-limit	0.3	0		0.3-	otf-limit-0.3	otf-limit-	otf-limit-0.3-	729.705149	2.5328189829920165
+83730	0.3013256897169473	1	otf-limit	0.3	0		0.3-	otf-limit-0.3	otf-limit-	otf-limit-0.3-	878.271487	3.1467985919025434
+86430	0.2849704963554321	0	otf-limit	0.3	0		0.3-	otf-limit-0.3	otf-limit-	otf-limit-0.3-	1065.699396	3.6990607289135715
+86430	0.2537313432835821	0	otf-limit	0.3	0		0.3-	otf-limit-0.3	otf-limit-	otf-limit-0.3-	943.544101	3.275057622353349
+69630	0.3020249892287807	1	otf-limit	0.3	0		0.3-	otf-limit-0.3	otf-limit-	otf-limit-0.3-	616.347871	2.6555272339508837
+63330	0.3036475603979157	1	otf-limit	0.3	0		0.3-	otf-limit-0.3	otf-limit-	otf-limit-0.3-	371.109494	1.7579796020843201
+86430	0.201666088163832	0	otf-limit	0.3	0		0.3-	otf-limit-0.3	otf-limit-	otf-limit-0.3-	672.564816	2.334483915307185
+86430	0.2641443943075321	0	otf-limit	0.3	0		0.3-	otf-limit-0.3	otf-limit-	otf-limit-0.3-	796.411602	2.764358215897258
+86430	0.212079139187782	0	otf-limit	0.3	0		0.3-	otf-limit-0.3	otf-limit-	otf-limit-0.3-	599.209756	2.0798672544255465
+77730	0.3014280200694712	1	otf-limit	0.3	0		0.3-	otf-limit-0.3	otf-limit-	otf-limit-0.3-	759.780449	2.932383052875337
+37530	0.3045563549160671	1	otf-limit	0.3	0		0.3-	otf-limit-0.3	otf-limit-	otf-limit-0.3-	193.493156	1.5467078816946442
+29430	0.3068297655453619	1	otf-limit	0.3	0		0.3-	otf-limit-0.3	otf-limit-	otf-limit-0.3-	82.181174	0.8377285830784914
+86430	0.2502603262755988	0	otf-limit	0.3	0		0.3-	otf-limit-0.3	otf-limit-	otf-limit-0.3-	1122.540798	3.8963582020131895
+86430	0.222492190211732	0	otf-limit	0.3	0		0.3-	otf-limit-0.3	otf-limit-	otf-limit-0.3-	942.20332	3.270403748698368
+42930	0.3011879804332635	1	otf-limit	0.3	0		0.3-	otf-limit-0.3	otf-limit-	otf-limit-0.3-	265.7978	1.8574269741439553
+35430	0.3056731583403895	1	otf-limit	0.3	0		0.3-	otf-limit-0.3	otf-limit-	otf-limit-0.3-	123.25859	1.043679847586791
+86430	0.2086081221797987	0	otf-limit	0.3	0		0.3-	otf-limit-0.3	otf-limit-	otf-limit-0.3-	878.031389	3.047661884762235
+49830	0.3016255267910897	1	otf-limit	0.3	0		0.3-	otf-limit-0.3	otf-limit-	otf-limit-0.3-	268.444896	1.6161643347381098
+86430	0.2433182922596321	0	otf-limit	0.3	0		0.3-	otf-limit-0.3	otf-limit-	otf-limit-0.3-	807.228207	2.8019028358208953
+86430	0.212079139187782	0	otf-limit	0.3	0		0.3-	otf-limit-0.3	otf-limit-	otf-limit-0.3-	1083.523353	3.760927986810135
+86430	0.2051371051718153	0	otf-limit	0.3	0		0.3-	otf-limit-0.3	otf-limit-	otf-limit-0.3-	736.072567	2.554920399166956
+86430	0.2051371051718153	0	otf-limit	0.3	0		0.3-	otf-limit-0.3	otf-limit-	otf-limit-0.3-	928.496173	3.2228260083304408
+86430	0.2259632072197154	0	otf-limit	0.3	0		0.3-	otf-limit-0.3	otf-limit-	otf-limit-0.3-	686.406713	2.3825293752169383
+26430	0.3076049943246311	1	otf-limit	0.3	0		0.3-	otf-limit-0.3	otf-limit-	otf-limit-0.3-	86.335057	0.9799665947786608
+32730	0.3033913840513291	1	otf-limit	0.3	0		0.3-	otf-limit-0.3	otf-limit-	otf-limit-0.3-	123.930171	1.135931906507791
+86430	0.2467893092676154	0	otf-limit	0.3	0		0.3-	otf-limit-0.3	otf-limit-	otf-limit-0.3-	703.436643	2.441640551891704
+68730	0.3016150152771715	1	otf-limit	0.3	0		0.3-	otf-limit-0.3	otf-limit-	otf-limit-0.3-	426.830962	1.8630770929725011
+86430	0.2641443943075321	0	otf-limit	0.3	0		0.3-	otf-limit-0.3	otf-limit-	otf-limit-0.3-	737.037648	2.558270211732037
+63930	0.3007977475363679	1	otf-limit	0.3	0		0.3-	otf-limit-0.3	otf-limit-	otf-limit-0.3-	293.757115	1.37849420459878
+48630	0.3028994447871684	1	otf-limit	0.3	0		0.3-	otf-limit-0.3	otf-limit-	otf-limit-0.3-	448.111478	2.764413806292412
+86430	0.2953835473793822	0	otf-limit	0.3	0		0.3-	otf-limit-0.3	otf-limit-	otf-limit-0.3-	957.487457	3.3234552481777158
+10830	0.1135734072022161	1	otf-limit-migration-time	0.1	0		0.1-	otf-limit-migration-time-0.1	otf-limit-migration-time-	otf-limit-migration-time-0.1-	92.242277	2.555187728531856
+13530	0.1130820399113082	1	otf-limit-migration-time	0.1	0		0.1-	otf-limit-migration-time-0.1	otf-limit-migration-time-	otf-limit-migration-time-0.1-	36.547715	0.8103706208425719
+12930	0.1183294663573086	1	otf-limit-migration-time	0.1	0		0.1-	otf-limit-migration-time-0.1	otf-limit-migration-time-	otf-limit-migration-time-0.1-	33.959975	0.7879344547563805
+19830	0.1074130105900151	1	otf-limit-migration-time	0.1	0		0.1-	otf-limit-migration-time-0.1	otf-limit-migration-time-	otf-limit-migration-time-0.1-	61.090578	0.9242144931921332
+23730	0.1024020227560051	1	otf-limit-migration-time	0.1	0		0.1-	otf-limit-migration-time-0.1	otf-limit-migration-time-	otf-limit-migration-time-0.1-	90.775889	1.1476092161820481
+12930	0.1183294663573086	1	otf-limit-migration-time	0.1	0		0.1-	otf-limit-migration-time-0.1	otf-limit-migration-time-	otf-limit-migration-time-0.1-	28.793212	0.6680559628770302
+20730	0.1027496382054993	1	otf-limit-migration-time	0.1	0		0.1-	otf-limit-migration-time-0.1	otf-limit-migration-time-	otf-limit-migration-time-0.1-	134.422026	1.945325991316932
+16530	0.1107078039927405	1	otf-limit-migration-time	0.1	0		0.1-	otf-limit-migration-time-0.1	otf-limit-migration-time-	otf-limit-migration-time-0.1-	32.52689	0.5903246823956443
+30030	0.1008991008991009	1	otf-limit-migration-time	0.1	0		0.1-	otf-limit-migration-time-0.1	otf-limit-migration-time-	otf-limit-migration-time-0.1-	102.105944	1.0200394005994007
+10830	0.1135734072022161	1	otf-limit-migration-time	0.1	0		0.1-	otf-limit-migration-time-0.1	otf-limit-migration-time-	otf-limit-migration-time-0.1-	12.317374	0.3412014958448753
+18030	0.1014975041597338	1	otf-limit-migration-time	0.1	0		0.1-	otf-limit-migration-time-0.1	otf-limit-migration-time-	otf-limit-migration-time-0.1-	36.691176	0.6105020965058235
+11430	0.1076115485564304	1	otf-limit-migration-time	0.1	0		0.1-	otf-limit-migration-time-0.1	otf-limit-migration-time-	otf-limit-migration-time-0.1-	13.915886	0.36524635170603675
+10230	0.1202346041055718	1	otf-limit-migration-time	0.1	0		0.1-	otf-limit-migration-time-0.1	otf-limit-migration-time-	otf-limit-migration-time-0.1-	16.059807	0.4709620821114369
+11730	0.1048593350383632	1	otf-limit-migration-time	0.1	0		0.1-	otf-limit-migration-time-0.1	otf-limit-migration-time-	otf-limit-migration-time-0.1-	17.23276	0.4407355498721227
+11430	0.1076115485564304	1	otf-limit-migration-time	0.1	0		0.1-	otf-limit-migration-time-0.1	otf-limit-migration-time-	otf-limit-migration-time-0.1-	19.128288	0.5020548031496063
+18030	0.1014975041597338	1	otf-limit-migration-time	0.1	0		0.1-	otf-limit-migration-time-0.1	otf-limit-migration-time-	otf-limit-migration-time-0.1-	35.870452	0.5968461231281198
+37830	0.1038858049167328	1	otf-limit-migration-time	0.1	0		0.1-	otf-limit-migration-time-0.1	otf-limit-migration-time-	otf-limit-migration-time-0.1-	141.682486	1.123572450436162
+10530	0.1168091168091168	1	otf-limit-migration-time	0.1	0		0.1-	otf-limit-migration-time-0.1	otf-limit-migration-time-	otf-limit-migration-time-0.1-	10.489757	0.2988534757834758
+12030	0.1022443890274314	1	otf-limit-migration-time	0.1	0		0.1-	otf-limit-migration-time-0.1	otf-limit-migration-time-	otf-limit-migration-time-0.1-	16.599311	0.4139479052369077
+11730	0.1048593350383632	1	otf-limit-migration-time	0.1	0		0.1-	otf-limit-migration-time-0.1	otf-limit-migration-time-	otf-limit-migration-time-0.1-	16.320694	0.4174090537084399
+24030	0.101123595505618	1	otf-limit-migration-time	0.1	0		0.1-	otf-limit-migration-time-0.1	otf-limit-migration-time-	otf-limit-migration-time-0.1-	66.72408	0.8330097378277154
+22230	0.1093117408906883	1	otf-limit-migration-time	0.1	0		0.1-	otf-limit-migration-time-0.1	otf-limit-migration-time-	otf-limit-migration-time-0.1-	48.843284	0.6591536302294198
+13830	0.1106290672451193	1	otf-limit-migration-time	0.1	0		0.1-	otf-limit-migration-time-0.1	otf-limit-migration-time-	otf-limit-migration-time-0.1-	20.263173	0.4395482212581344
+17430	0.1049913941480207	1	otf-limit-migration-time	0.1	0		0.1-	otf-limit-migration-time-0.1	otf-limit-migration-time-	otf-limit-migration-time-0.1-	22.331962	0.3843711187607573
+17430	0.1049913941480207	1	otf-limit-migration-time	0.1	0		0.1-	otf-limit-migration-time-0.1	otf-limit-migration-time-	otf-limit-migration-time-0.1-	31.050016	0.5344236833046472
+19830	0.1074130105900151	1	otf-limit-migration-time	0.1	0		0.1-	otf-limit-migration-time-0.1	otf-limit-migration-time-	otf-limit-migration-time-0.1-	58.088489	0.8787971104387293
+35430	0.1024555461473328	1	otf-limit-migration-time	0.1	0		0.1-	otf-limit-migration-time-0.1	otf-limit-migration-time-	otf-limit-migration-time-0.1-	130.485004	1.1048687891617275
+13230	0.1156462585034014	1	otf-limit-migration-time	0.1	0		0.1-	otf-limit-migration-time-0.1	otf-limit-migration-time-	otf-limit-migration-time-0.1-	17.31506	0.392631746031746
+18030	0.1014975041597338	1	otf-limit-migration-time	0.1	0		0.1-	otf-limit-migration-time-0.1	otf-limit-migration-time-	otf-limit-migration-time-0.1-	39.456957	0.6565217470881863
+12030	0.1022443890274314	1	otf-limit-migration-time	0.1	0		0.1-	otf-limit-migration-time-0.1	otf-limit-migration-time-	otf-limit-migration-time-0.1-	18.904712	0.47143920199501244
+13830	0.1106290672451193	1	otf-limit-migration-time	0.1	0		0.1-	otf-limit-migration-time-0.1	otf-limit-migration-time-	otf-limit-migration-time-0.1-	19.607108	0.4253168763557484
+13830	0.1106290672451193	1	otf-limit-migration-time	0.1	0		0.1-	otf-limit-migration-time-0.1	otf-limit-migration-time-	otf-limit-migration-time-0.1-	20.808223	0.45137143167028204
+11730	0.1048593350383632	1	otf-limit-migration-time	0.1	0		0.1-	otf-limit-migration-time-0.1	otf-limit-migration-time-	otf-limit-migration-time-0.1-	16.282911	0.41644273657289
+12930	0.1183294663573086	1	otf-limit-migration-time	0.1	0		0.1-	otf-limit-migration-time-0.1	otf-limit-migration-time-	otf-limit-migration-time-0.1-	17.523633	0.4065808120649652
+17130	0.106830122591944	1	otf-limit-migration-time	0.1	0		0.1-	otf-limit-migration-time-0.1	otf-limit-migration-time-	otf-limit-migration-time-0.1-	33.130601	0.5802206830122592
+10530	0.1168091168091168	1	otf-limit-migration-time	0.1	0		0.1-	otf-limit-migration-time-0.1	otf-limit-migration-time-	otf-limit-migration-time-0.1-	14.673648	0.41805264957264954
+18030	0.1014975041597338	1	otf-limit-migration-time	0.1	0		0.1-	otf-limit-migration-time-0.1	otf-limit-migration-time-	otf-limit-migration-time-0.1-	43.771521	0.7283114975041597
+14130	0.1082802547770701	1	otf-limit-migration-time	0.1	0		0.1-	otf-limit-migration-time-0.1	otf-limit-migration-time-	otf-limit-migration-time-0.1-	18.172215	0.385821974522293
+12030	0.1022443890274314	1	otf-limit-migration-time	0.1	0		0.1-	otf-limit-migration-time-0.1	otf-limit-migration-time-	otf-limit-migration-time-0.1-	23.850474	0.5947749127182044
+28530	0.1062039957939012	1	otf-limit-migration-time	0.1	0		0.1-	otf-limit-migration-time-0.1	otf-limit-migration-time-	otf-limit-migration-time-0.1-	76.949603	0.8091440904311251
+16830	0.1087344028520499	1	otf-limit-migration-time	0.1	0		0.1-	otf-limit-migration-time-0.1	otf-limit-migration-time-	otf-limit-migration-time-0.1-	32.504339	0.579399982174688
+25230	0.10820451843044	1	otf-limit-migration-time	0.1	0		0.1-	otf-limit-migration-time-0.1	otf-limit-migration-time-	otf-limit-migration-time-0.1-	77.20353	0.9179967895362664
+13230	0.1156462585034014	1	otf-limit-migration-time	0.1	0		0.1-	otf-limit-migration-time-0.1	otf-limit-migration-time-	otf-limit-migration-time-0.1-	21.262988	0.4821539229024943
+17730	0.1032148900169205	1	otf-limit-migration-time	0.1	0		0.1-	otf-limit-migration-time-0.1	otf-limit-migration-time-	otf-limit-migration-time-0.1-	32.691071	0.5531484094754653
+29430	0.1029561671763507	1	otf-limit-migration-time	0.1	0		0.1-	otf-limit-migration-time-0.1	otf-limit-migration-time-	otf-limit-migration-time-0.1-	104.960103	1.0699296941896026
+11730	0.1048593350383632	1	otf-limit-migration-time	0.1	0		0.1-	otf-limit-migration-time-0.1	otf-limit-migration-time-	otf-limit-migration-time-0.1-	11.892931	0.30416703324808186
+12030	0.1022443890274314	1	otf-limit-migration-time	0.1	0		0.1-	otf-limit-migration-time-0.1	otf-limit-migration-time-	otf-limit-migration-time-0.1-	14.263662	0.35570229426433914
+10830	0.1135734072022161	1	otf-limit-migration-time	0.1	0		0.1-	otf-limit-migration-time-0.1	otf-limit-migration-time-	otf-limit-migration-time-0.1-	13.200424	0.3656627146814404
+28530	0.1062039957939012	1	otf-limit-migration-time	0.1	0		0.1-	otf-limit-migration-time-0.1	otf-limit-migration-time-	otf-limit-migration-time-0.1-	92.434263	0.971969116719243
+31230	0.106628242074928	1	otf-limit-migration-time	0.1	0		0.1-	otf-limit-migration-time-0.1	otf-limit-migration-time-	otf-limit-migration-time-0.1-	76.401791	0.7339269068203651
+27030	0.1009988901220866	1	otf-limit-migration-time	0.1	0		0.1-	otf-limit-migration-time-0.1	otf-limit-migration-time-	otf-limit-migration-time-0.1-	82.088278	0.911079667036626
+28830	0.105098855359001	1	otf-limit-migration-time	0.1	0		0.1-	otf-limit-migration-time-0.1	otf-limit-migration-time-	otf-limit-migration-time-0.1-	87.718953	0.9127882726326744
+17130	0.106830122591944	1	otf-limit-migration-time	0.1	0		0.1-	otf-limit-migration-time-0.1	otf-limit-migration-time-	otf-limit-migration-time-0.1-	28.914777	0.5063883887915936
+11730	0.1048593350383632	1	otf-limit-migration-time	0.1	0		0.1-	otf-limit-migration-time-0.1	otf-limit-migration-time-	otf-limit-migration-time-0.1-	16.83203	0.4304867007672634
+17430	0.1049913941480207	1	otf-limit-migration-time	0.1	0		0.1-	otf-limit-migration-time-0.1	otf-limit-migration-time-	otf-limit-migration-time-0.1-	35.817533	0.616480774526678
+31530	0.1056137012369172	1	otf-limit-migration-time	0.1	0		0.1-	otf-limit-migration-time-0.1	otf-limit-migration-time-	otf-limit-migration-time-0.1-	105.39168	1.002775261655566
+35730	0.1015952980688497	1	otf-limit-migration-time	0.1	0		0.1-	otf-limit-migration-time-0.1	otf-limit-migration-time-	otf-limit-migration-time-0.1-	123.888209	1.0402032661628884
+23730	0.1024020227560051	1	otf-limit-migration-time	0.1	0		0.1-	otf-limit-migration-time-0.1	otf-limit-migration-time-	otf-limit-migration-time-0.1-	72.603228	0.917866346396966
+9930	0.1238670694864048	1	otf-limit-migration-time	0.1	0		0.1-	otf-limit-migration-time-0.1	otf-limit-migration-time-	otf-limit-migration-time-0.1-	15.121214	0.4568342598187311
+10530	0.1168091168091168	1	otf-limit-migration-time	0.1	0		0.1-	otf-limit-migration-time-0.1	otf-limit-migration-time-	otf-limit-migration-time-0.1-	14.633172	0.41689948717948716
+30030	0.1008991008991009	1	otf-limit-migration-time	0.1	0		0.1-	otf-limit-migration-time-0.1	otf-limit-migration-time-	otf-limit-migration-time-0.1-	92.757967	0.9266530169830169
+34530	0.105125977410947	1	otf-limit-migration-time	0.1	0		0.1-	otf-limit-migration-time-0.1	otf-limit-migration-time-	otf-limit-migration-time-0.1-	117.025287	1.016727080799305
+11430	0.1076115485564304	1	otf-limit-migration-time	0.1	0		0.1-	otf-limit-migration-time-0.1	otf-limit-migration-time-	otf-limit-migration-time-0.1-	20.737592	0.5442937532808398
+14430	0.106029106029106	1	otf-limit-migration-time	0.1	0		0.1-	otf-limit-migration-time-0.1	otf-limit-migration-time-	otf-limit-migration-time-0.1-	19.17355	0.39861850311850305
+16830	0.1087344028520499	1	otf-limit-migration-time	0.1	0		0.1-	otf-limit-migration-time-0.1	otf-limit-migration-time-	otf-limit-migration-time-0.1-	33.960602	0.6053583244206774
+17130	0.106830122591944	1	otf-limit-migration-time	0.1	0		0.1-	otf-limit-migration-time-0.1	otf-limit-migration-time-	otf-limit-migration-time-0.1-	35.379195	0.6196006129597198
+11430	0.1076115485564304	1	otf-limit-migration-time	0.1	0		0.1-	otf-limit-migration-time-0.1	otf-limit-migration-time-	otf-limit-migration-time-0.1-	19.77035	0.5189068241469816
+23730	0.1024020227560051	1	otf-limit-migration-time	0.1	0		0.1-	otf-limit-migration-time-0.1	otf-limit-migration-time-	otf-limit-migration-time-0.1-	61.339224	0.7754642730720608
+27030	0.1009988901220866	1	otf-limit-migration-time	0.1	0		0.1-	otf-limit-migration-time-0.1	otf-limit-migration-time-	otf-limit-migration-time-0.1-	68.999365	0.7658087125416204
+34230	0.1060473269062226	1	otf-limit-migration-time	0.1	0		0.1-	otf-limit-migration-time-0.1	otf-limit-migration-time-	otf-limit-migration-time-0.1-	112.743725	0.9881132778264681
+11430	0.1076115485564304	1	otf-limit-migration-time	0.1	0		0.1-	otf-limit-migration-time-0.1	otf-limit-migration-time-	otf-limit-migration-time-0.1-	16.897015	0.4434912073490813
+12030	0.1022443890274314	1	otf-limit-migration-time	0.1	0		0.1-	otf-limit-migration-time-0.1	otf-limit-migration-time-	otf-limit-migration-time-0.1-	21.246108	0.5298281296758104
+11430	0.1076115485564304	1	otf-limit-migration-time	0.1	0		0.1-	otf-limit-migration-time-0.1	otf-limit-migration-time-	otf-limit-migration-time-0.1-	17.097461	0.4487522572178477
+16830	0.1087344028520499	1	otf-limit-migration-time	0.1	0		0.1-	otf-limit-migration-time-0.1	otf-limit-migration-time-	otf-limit-migration-time-0.1-	35.882356	0.6396141889483066
+18630	0.1143317230273752	1	otf-limit-migration-time	0.1	0		0.1-	otf-limit-migration-time-0.1	otf-limit-migration-time-	otf-limit-migration-time-0.1-	32.150243	0.5177172785829308
+14430	0.106029106029106	1	otf-limit-migration-time	0.1	0		0.1-	otf-limit-migration-time-0.1	otf-limit-migration-time-	otf-limit-migration-time-0.1-	19.422227	0.4037885031185031
+11730	0.1048593350383632	1	otf-limit-migration-time	0.1	0		0.1-	otf-limit-migration-time-0.1	otf-limit-migration-time-	otf-limit-migration-time-0.1-	15.055014	0.38503872122762145
+11430	0.1076115485564304	1	otf-limit-migration-time	0.1	0		0.1-	otf-limit-migration-time-0.1	otf-limit-migration-time-	otf-limit-migration-time-0.1-	11.125257	0.2920014960629921
+33030	0.1008174386920981	1	otf-limit-migration-time	0.1	0		0.1-	otf-limit-migration-time-0.1	otf-limit-migration-time-	otf-limit-migration-time-0.1-	136.851461	1.2429742143505904
+19530	0.109062980030722	1	otf-limit-migration-time	0.1	0		0.1-	otf-limit-migration-time-0.1	otf-limit-migration-time-	otf-limit-migration-time-0.1-	52.742143	0.8101711674347158
+10830	0.1135734072022161	1	otf-limit-migration-time	0.1	0		0.1-	otf-limit-migration-time-0.1	otf-limit-migration-time-	otf-limit-migration-time-0.1-	14.731014	0.40806132963988917
+12630	0.1211401425178147	1	otf-limit-migration-time	0.1	0		0.1-	otf-limit-migration-time-0.1	otf-limit-migration-time-	otf-limit-migration-time-0.1-	23.733444	0.5637397624703088
+29130	0.1040164778578785	1	otf-limit-migration-time	0.1	0		0.1-	otf-limit-migration-time-0.1	otf-limit-migration-time-	otf-limit-migration-time-0.1-	104.522021	1.0764368795056642
+13230	0.1156462585034014	1	otf-limit-migration-time	0.1	0		0.1-	otf-limit-migration-time-0.1	otf-limit-migration-time-	otf-limit-migration-time-0.1-	25.822894	0.5855531519274376
+19530	0.109062980030722	1	otf-limit-migration-time	0.1	0		0.1-	otf-limit-migration-time-0.1	otf-limit-migration-time-	otf-limit-migration-time-0.1-	37.377153	0.5741498156682028
+35430	0.1024555461473328	1	otf-limit-migration-time	0.1	0		0.1-	otf-limit-migration-time-0.1	otf-limit-migration-time-	otf-limit-migration-time-0.1-	145.007121	1.2278333700254023
+11730	0.1048593350383632	1	otf-limit-migration-time	0.1	0		0.1-	otf-limit-migration-time-0.1	otf-limit-migration-time-	otf-limit-migration-time-0.1-	15.333483	0.39216069053708436
+27030	0.1009988901220866	1	otf-limit-migration-time	0.1	0		0.1-	otf-limit-migration-time-0.1	otf-limit-migration-time-	otf-limit-migration-time-0.1-	76.926522	0.8537904772475029
+19830	0.1074130105900151	1	otf-limit-migration-time	0.1	0		0.1-	otf-limit-migration-time-0.1	otf-limit-migration-time-	otf-limit-migration-time-0.1-	56.046691	0.8479075794251136
+13830	0.1106290672451193	1	otf-limit-migration-time	0.1	0		0.1-	otf-limit-migration-time-0.1	otf-limit-migration-time-	otf-limit-migration-time-0.1-	19.156557	0.415543535791757
+37230	0.1055600322320709	1	otf-limit-migration-time	0.1	0		0.1-	otf-limit-migration-time-0.1	otf-limit-migration-time-	otf-limit-migration-time-0.1-	168.841162	1.3605250765511685
+21030	0.101283880171184	1	otf-limit-migration-time	0.1	0		0.1-	otf-limit-migration-time-0.1	otf-limit-migration-time-	otf-limit-migration-time-0.1-	41.51225	0.5921861626248217
+15030	0.1017964071856287	1	otf-limit-migration-time	0.1	0		0.1-	otf-limit-migration-time-0.1	otf-limit-migration-time-	otf-limit-migration-time-0.1-	28.316449	0.5651985828343313
+14430	0.106029106029106	1	otf-limit-migration-time	0.1	0		0.1-	otf-limit-migration-time-0.1	otf-limit-migration-time-	otf-limit-migration-time-0.1-	24.293505	0.505062474012474
+17430	0.1049913941480207	1	otf-limit-migration-time	0.1	0		0.1-	otf-limit-migration-time-0.1	otf-limit-migration-time-	otf-limit-migration-time-0.1-	28.823253	0.4960972977624785
+11430	0.1076115485564304	1	otf-limit-migration-time	0.1	0		0.1-	otf-limit-migration-time-0.1	otf-limit-migration-time-	otf-limit-migration-time-0.1-	12.198789	0.32017818897637795
+20430	0.1042584434654919	1	otf-limit-migration-time	0.1	0		0.1-	otf-limit-migration-time-0.1	otf-limit-migration-time-	otf-limit-migration-time-0.1-	40.768839	0.5986613656387666
+12930	0.1183294663573086	1	otf-limit-migration-time	0.1	0		0.1-	otf-limit-migration-time-0.1	otf-limit-migration-time-	otf-limit-migration-time-0.1-	12.277693	0.28486526682134566
+26130	0.1044776119402985	1	otf-limit-migration-time	0.1	0		0.1-	otf-limit-migration-time-0.1	otf-limit-migration-time-	otf-limit-migration-time-0.1-	111.637732	1.2817190815154995
+40530	0.1043671354552184	1	otf-limit-migration-time	0.1	0		0.1-	otf-limit-migration-time-0.1	otf-limit-migration-time-	otf-limit-migration-time-0.1-	197.741027	1.4636641524796448
+13530	0.2017738359201774	1	otf-limit-migration-time	0.2	0		0.2-	otf-limit-migration-time-0.2	otf-limit-migration-time-	otf-limit-migration-time-0.2-	107.595453	2.385708492239468
+52530	0.2004568817818389	1	otf-limit-migration-time	0.2	0		0.2-	otf-limit-migration-time-0.2	otf-limit-migration-time-	otf-limit-migration-time-0.2-	431.246287	2.462857150199886
+18930	0.2076069730586371	1	otf-limit-migration-time	0.2	0		0.2-	otf-limit-migration-time-0.2	otf-limit-migration-time-	otf-limit-migration-time-0.2-	49.456562	0.7837806973058636
+32130	0.2063492063492063	1	otf-limit-migration-time	0.2	0		0.2-	otf-limit-migration-time-0.2	otf-limit-migration-time-	otf-limit-migration-time-0.2-	92.495517	0.8636369467787116
+51030	0.2004703115814227	1	otf-limit-migration-time	0.2	0		0.2-	otf-limit-migration-time-0.2	otf-limit-migration-time-	otf-limit-migration-time-0.2-	296.733646	1.744465878894768
+37530	0.2006394884092726	1	otf-limit-migration-time	0.2	0		0.2-	otf-limit-migration-time-0.2	otf-limit-migration-time-	otf-limit-migration-time-0.2-	145.562595	1.1635699040767387
+47430	0.2030360531309298	1	otf-limit-migration-time	0.2	0		0.2-	otf-limit-migration-time-0.2	otf-limit-migration-time-	otf-limit-migration-time-0.2-	252.839291	1.5992365022137889
+61230	0.2013718765311122	1	otf-limit-migration-time	0.2	0		0.2-	otf-limit-migration-time-0.2	otf-limit-migration-time-	otf-limit-migration-time-0.2-	438.566551	2.148782709456149
+51630	0.2039511911679256	1	otf-limit-migration-time	0.2	0		0.2-	otf-limit-migration-time-0.2	otf-limit-migration-time-	otf-limit-migration-time-0.2-	299.275166	1.7389608715862872
+56130	0.2036344200962052	1	otf-limit-migration-time	0.2	0		0.2-	otf-limit-migration-time-0.2	otf-limit-migration-time-	otf-limit-migration-time-0.2-	310.929191	1.6618342650988778
+56130	0.2036344200962052	1	otf-limit-migration-time	0.2	0		0.2-	otf-limit-migration-time-0.2	otf-limit-migration-time-	otf-limit-migration-time-0.2-	366.103446	1.9567260609299841
+20430	0.2070484581497797	1	otf-limit-migration-time	0.2	0		0.2-	otf-limit-migration-time-0.2	otf-limit-migration-time-	otf-limit-migration-time-0.2-	45.414164	0.6668746549192365
+36030	0.2006661115736886	1	otf-limit-migration-time	0.2	0		0.2-	otf-limit-migration-time-0.2	otf-limit-migration-time-	otf-limit-migration-time-0.2-	219.22019	1.8253138218151541
+19230	0.2043681747269891	1	otf-limit-migration-time	0.2	0		0.2-	otf-limit-migration-time-0.2	otf-limit-migration-time-	otf-limit-migration-time-0.2-	69.9119	1.090669266770671
+36030	0.2006661115736886	1	otf-limit-migration-time	0.2	0		0.2-	otf-limit-migration-time-0.2	otf-limit-migration-time-	otf-limit-migration-time-0.2-	192.286129	1.601050199833472
+26130	0.2078071182548794	1	otf-limit-migration-time	0.2	0		0.2-	otf-limit-migration-time-0.2	otf-limit-migration-time-	otf-limit-migration-time-0.2-	79.249307	0.909865752009185
+51630	0.2039511911679256	1	otf-limit-migration-time	0.2	0		0.2-	otf-limit-migration-time-0.2	otf-limit-migration-time-	otf-limit-migration-time-0.2-	238.885147	1.38806012202208
+38430	0.2037470725995316	1	otf-limit-migration-time	0.2	0		0.2-	otf-limit-migration-time-0.2	otf-limit-migration-time-	otf-limit-migration-time-0.2-	138.159512	1.078528587041374
+15930	0.2090395480225989	1	otf-limit-migration-time	0.2	0		0.2-	otf-limit-migration-time-0.2	otf-limit-migration-time-	otf-limit-migration-time-0.2-	28.845538	0.5432304708097928
+38130	0.2053501180173092	1	otf-limit-migration-time	0.2	0		0.2-	otf-limit-migration-time-0.2	otf-limit-migration-time-	otf-limit-migration-time-0.2-	175.009564	1.376943855232101
+40230	0.2020879940343028	1	otf-limit-migration-time	0.2	0		0.2-	otf-limit-migration-time-0.2	otf-limit-migration-time-	otf-limit-migration-time-0.2-	197.012735	1.4691479120059656
+34530	0.2006950477845352	1	otf-limit-migration-time	0.2	0		0.2-	otf-limit-migration-time-0.2	otf-limit-migration-time-	otf-limit-migration-time-0.2-	115.709837	1.00529832319722
+32130	0.2063492063492063	1	otf-limit-migration-time	0.2	0		0.2-	otf-limit-migration-time-0.2	otf-limit-migration-time-	otf-limit-migration-time-0.2-	97.905715	0.9141523342670402
+33030	0.2007266121707539	1	otf-limit-migration-time	0.2	0		0.2-	otf-limit-migration-time-0.2	otf-limit-migration-time-	otf-limit-migration-time-0.2-	75.646264	0.6870687011807448
+54930	0.2026215182960131	1	otf-limit-migration-time	0.2	0		0.2-	otf-limit-migration-time-0.2	otf-limit-migration-time-	otf-limit-migration-time-0.2-	298.904524	1.632465996723102
+37230	0.2022562449637389	1	otf-limit-migration-time	0.2	0		0.2-	otf-limit-migration-time-0.2	otf-limit-migration-time-	otf-limit-migration-time-0.2-	203.496652	1.6397796293311846
+42630	0.2047853624208304	1	otf-limit-migration-time	0.2	0		0.2-	otf-limit-migration-time-0.2	otf-limit-migration-time-	otf-limit-migration-time-0.2-	185.14626	1.302929345531316
+27030	0.2008879023307436	1	otf-limit-migration-time	0.2	0		0.2-	otf-limit-migration-time-0.2	otf-limit-migration-time-	otf-limit-migration-time-0.2-	67.839192	0.7529322086570477
+26430	0.2054483541430193	1	otf-limit-migration-time	0.2	0		0.2-	otf-limit-migration-time-0.2	otf-limit-migration-time-	otf-limit-migration-time-0.2-	83.848121	0.9517380363223611
+27030	0.2008879023307436	1	otf-limit-migration-time	0.2	0		0.2-	otf-limit-migration-time-0.2	otf-limit-migration-time-	otf-limit-migration-time-0.2-	91.641578	1.0171096337402885
+49230	0.2017062766605728	1	otf-limit-migration-time	0.2	0		0.2-	otf-limit-migration-time-0.2	otf-limit-migration-time-	otf-limit-migration-time-0.2-	236.934743	1.4438436502132845
+32130	0.2063492063492063	1	otf-limit-migration-time	0.2	0		0.2-	otf-limit-migration-time-0.2	otf-limit-migration-time-	otf-limit-migration-time-0.2-	108.431761	1.0124347432306255
+16230	0.2051756007393715	1	otf-limit-migration-time	0.2	0		0.2-	otf-limit-migration-time-0.2	otf-limit-migration-time-	otf-limit-migration-time-0.2-	30.490462	0.5635944916820702
+53430	0.2026951151038742	1	otf-limit-migration-time	0.2	0		0.2-	otf-limit-migration-time-0.2	otf-limit-migration-time-	otf-limit-migration-time-0.2-	283.497565	1.591788686131387
+40230	0.2020879940343028	1	otf-limit-migration-time	0.2	0		0.2-	otf-limit-migration-time-0.2	otf-limit-migration-time-	otf-limit-migration-time-0.2-	183.047009	1.3650037956748695
+15930	0.2090395480225989	1	otf-limit-migration-time	0.2	0		0.2-	otf-limit-migration-time-0.2	otf-limit-migration-time-	otf-limit-migration-time-0.2-	36.233306	0.6823598116760828
+63030	0.2003807710613993	1	otf-limit-migration-time	0.2	0		0.2-	otf-limit-migration-time-0.2	otf-limit-migration-time-	otf-limit-migration-time-0.2-	516.570405	2.458688267491671
+21630	0.2094313453536755	1	otf-limit-migration-time	0.2	0		0.2-	otf-limit-migration-time-0.2	otf-limit-migration-time-	otf-limit-migration-time-0.2-	40.65702	0.5638976421636617
+21630	0.2094313453536755	1	otf-limit-migration-time	0.2	0		0.2-	otf-limit-migration-time-0.2	otf-limit-migration-time-	otf-limit-migration-time-0.2-	77.517826	1.0751432177531208
+42030	0.2005710206995004	1	otf-limit-migration-time	0.2	0		0.2-	otf-limit-migration-time-0.2	otf-limit-migration-time-	otf-limit-migration-time-0.2-	164.146837	1.1716405210563883
+30030	0.2007992007992008	1	otf-limit-migration-time	0.2	0		0.2-	otf-limit-migration-time-0.2	otf-limit-migration-time-	otf-limit-migration-time-0.2-	101.149793	1.0104874425574426
+48630	0.2041949413942011	1	otf-limit-migration-time	0.2	0		0.2-	otf-limit-migration-time-0.2	otf-limit-migration-time-	otf-limit-migration-time-0.2-	285.852507	1.763433109191857
+34230	0.2024539877300613	1	otf-limit-migration-time	0.2	0		0.2-	otf-limit-migration-time-0.2	otf-limit-migration-time-	otf-limit-migration-time-0.2-	135.864079	1.1907456529360212
+39030	0.2006149116064566	1	otf-limit-migration-time	0.2	0		0.2-	otf-limit-migration-time-0.2	otf-limit-migration-time-	otf-limit-migration-time-0.2-	153.372683	1.178883036126057
+45930	0.2031352057478772	1	otf-limit-migration-time	0.2	0		0.2-	otf-limit-migration-time-0.2	otf-limit-migration-time-	otf-limit-migration-time-0.2-	252.230632	1.6474894317439583
+19230	0.2043681747269891	1	otf-limit-migration-time	0.2	0		0.2-	otf-limit-migration-time-0.2	otf-limit-migration-time-	otf-limit-migration-time-0.2-	30.152773	0.47040207488299535
+41730	0.2020129403306973	1	otf-limit-migration-time	0.2	0		0.2-	otf-limit-migration-time-0.2	otf-limit-migration-time-	otf-limit-migration-time-0.2-	161.169621	1.1586601078360892
+16530	0.2014519056261343	1	otf-limit-migration-time	0.2	0		0.2-	otf-limit-migration-time-0.2	otf-limit-migration-time-	otf-limit-migration-time-0.2-	28.875423	0.5240548638838476
+59130	0.2034500253678336	1	otf-limit-migration-time	0.2	0		0.2-	otf-limit-migration-time-0.2	otf-limit-migration-time-	otf-limit-migration-time-0.2-	390.213875	1.9797761288685944
+43230	0.2019430950728661	1	otf-limit-migration-time	0.2	0		0.2-	otf-limit-migration-time-0.2	otf-limit-migration-time-	otf-limit-migration-time-0.2-	143.16081	0.993482373351839
+62130	0.2032834379526799	1	otf-limit-migration-time	0.2	0		0.2-	otf-limit-migration-time-0.2	otf-limit-migration-time-	otf-limit-migration-time-0.2-	429.377364	2.073285195557702
+71430	0.2020159596808064	1	otf-limit-migration-time	0.2	0		0.2-	otf-limit-migration-time-0.2	otf-limit-migration-time-	otf-limit-migration-time-0.2-	537.01394	2.2554134397312056
+29430	0.2048929663608563	1	otf-limit-migration-time	0.2	0		0.2-	otf-limit-migration-time-0.2	otf-limit-migration-time-	otf-limit-migration-time-0.2-	81.279666	0.828538899082569
+37530	0.2006394884092726	1	otf-limit-migration-time	0.2	0		0.2-	otf-limit-migration-time-0.2	otf-limit-migration-time-	otf-limit-migration-time-0.2-	161.533801	1.2912374180655477
+33030	0.2007266121707539	1	otf-limit-migration-time	0.2	0		0.2-	otf-limit-migration-time-0.2	otf-limit-migration-time-	otf-limit-migration-time-0.2-	120.640662	1.0957371662125341
+64230	0.2013078000934143	1	otf-limit-migration-time	0.2	0		0.2-	otf-limit-migration-time-0.2	otf-limit-migration-time-	otf-limit-migration-time-0.2-	432.394222	2.019590014012144
+60930	0.2023633677991137	1	otf-limit-migration-time	0.2	0		0.2-	otf-limit-migration-time-0.2	otf-limit-migration-time-	otf-limit-migration-time-0.2-	355.386911	1.7498124618414574
+65730	0.2012779552715655	1	otf-limit-migration-time	0.2	0		0.2-	otf-limit-migration-time-0.2	otf-limit-migration-time-	otf-limit-migration-time-0.2-	521.388803	2.379684176175263
+17730	0.2047377326565144	1	otf-limit-migration-time	0.2	0		0.2-	otf-limit-migration-time-0.2	otf-limit-migration-time-	otf-limit-migration-time-0.2-	45.956653	0.7776083417935703
+42630	0.2047853624208304	1	otf-limit-migration-time	0.2	0		0.2-	otf-limit-migration-time-0.2	otf-limit-migration-time-	otf-limit-migration-time-0.2-	225.647515	1.5879487332864182
+52230	0.2016082711085583	1	otf-limit-migration-time	0.2	0		0.2-	otf-limit-migration-time-0.2	otf-limit-migration-time-	otf-limit-migration-time-0.2-	273.295956	1.569764250430787
+55530	0.2004321988114533	1	otf-limit-migration-time	0.2	0		0.2-	otf-limit-migration-time-0.2	otf-limit-migration-time-	otf-limit-migration-time-0.2-	297.127128	1.60522489465154
+13530	0.2017738359201774	1	otf-limit-migration-time	0.2	0		0.2-	otf-limit-migration-time-0.2	otf-limit-migration-time-	otf-limit-migration-time-0.2-	28.041649	0.6217660532150776
+26430	0.2054483541430193	1	otf-limit-migration-time	0.2	0		0.2-	otf-limit-migration-time-0.2	otf-limit-migration-time-	otf-limit-migration-time-0.2-	59.836219	0.6791852326901249
+24030	0.2009987515605493	1	otf-limit-migration-time	0.2	0		0.2-	otf-limit-migration-time-0.2	otf-limit-migration-time-	otf-limit-migration-time-0.2-	65.859418	0.8222149563046194
+45930	0.2031352057478772	1	otf-limit-migration-time	0.2	0		0.2-	otf-limit-migration-time-0.2	otf-limit-migration-time-	otf-limit-migration-time-0.2-	243.304537	1.5891870476812542
+18030	0.2013311148086522	1	otf-limit-migration-time	0.2	0		0.2-	otf-limit-migration-time-0.2	otf-limit-migration-time-	otf-limit-migration-time-0.2-	45.510303	0.7572429783693844
+46530	0.2005157962604771	1	otf-limit-migration-time	0.2	0		0.2-	otf-limit-migration-time-0.2	otf-limit-migration-time-	otf-limit-migration-time-0.2-	220.793509	1.4235558284977434
+46530	0.2005157962604771	1	otf-limit-migration-time	0.2	0		0.2-	otf-limit-migration-time-0.2	otf-limit-migration-time-	otf-limit-migration-time-0.2-	183.887671	1.1856071631205676
+55530	0.2004321988114533	1	otf-limit-migration-time	0.2	0		0.2-	otf-limit-migration-time-0.2	otf-limit-migration-time-	otf-limit-migration-time-0.2-	288.23477	1.5571840626688278
+61530	0.2003900536323745	1	otf-limit-migration-time	0.2	0		0.2-	otf-limit-migration-time-0.2	otf-limit-migration-time-	otf-limit-migration-time-0.2-	460.434856	2.244928600682594
+48930	0.2029429797670141	1	otf-limit-migration-time	0.2	0		0.2-	otf-limit-migration-time-0.2	otf-limit-migration-time-	otf-limit-migration-time-0.2-	331.005256	2.02946202329859
+15030	0.2015968063872255	1	otf-limit-migration-time	0.2	0		0.2-	otf-limit-migration-time-0.2	otf-limit-migration-time-	otf-limit-migration-time-0.2-	28.649699	0.5718502794411177
+49230	0.2017062766605728	1	otf-limit-migration-time	0.2	0		0.2-	otf-limit-migration-time-0.2	otf-limit-migration-time-	otf-limit-migration-time-0.2-	299.410627	1.8245620170627666
+42030	0.2005710206995004	1	otf-limit-migration-time	0.2	0		0.2-	otf-limit-migration-time-0.2	otf-limit-migration-time-	otf-limit-migration-time-0.2-	157.965773	1.1275215774446825
+78930	0.201824401368301	1	otf-limit-migration-time	0.2	0		0.2-	otf-limit-migration-time-0.2	otf-limit-migration-time-	otf-limit-migration-time-0.2-	564.563069	2.1458117407829724
+35430	0.2040643522438611	1	otf-limit-migration-time	0.2	0		0.2-	otf-limit-migration-time-0.2	otf-limit-migration-time-	otf-limit-migration-time-0.2-	130.567851	1.1055702878916172
+49230	0.2017062766605728	1	otf-limit-migration-time	0.2	0		0.2-	otf-limit-migration-time-0.2	otf-limit-migration-time-	otf-limit-migration-time-0.2-	182.876202	1.114419268738574
+55230	0.2015209125475285	1	otf-limit-migration-time	0.2	0		0.2-	otf-limit-migration-time-0.2	otf-limit-migration-time-	otf-limit-migration-time-0.2-	366.478289	1.990647957631722
+29730	0.2028254288597376	1	otf-limit-migration-time	0.2	0		0.2-	otf-limit-migration-time-0.2	otf-limit-migration-time-	otf-limit-migration-time-0.2-	117.530603	1.1859798486377398
+17130	0.2119089316987741	1	otf-limit-migration-time	0.2	0		0.2-	otf-limit-migration-time-0.2	otf-limit-migration-time-	otf-limit-migration-time-0.2-	26.557837	0.4651109807355516
+36030	0.2006661115736886	1	otf-limit-migration-time	0.2	0		0.2-	otf-limit-migration-time-0.2	otf-limit-migration-time-	otf-limit-migration-time-0.2-	182.935671	1.5231945961698585
+56730	0.2014806980433633	1	otf-limit-migration-time	0.2	0		0.2-	otf-limit-migration-time-0.2	otf-limit-migration-time-	otf-limit-migration-time-0.2-	385.843216	2.0404189106292967
+33630	0.2060660124888492	1	otf-limit-migration-time	0.2	0		0.2-	otf-limit-migration-time-0.2	otf-limit-migration-time-	otf-limit-migration-time-0.2-	157.879458	1.408380535236396
+26430	0.2054483541430193	1	otf-limit-migration-time	0.2	0		0.2-	otf-limit-migration-time-0.2	otf-limit-migration-time-	otf-limit-migration-time-0.2-	66.130022	0.7506245402951192
+74730	0.2011240465676435	1	otf-limit-migration-time	0.2	0		0.2-	otf-limit-migration-time-0.2	otf-limit-migration-time-	otf-limit-migration-time-0.2-	625.219451	2.509913492573264
+39630	0.2051476154428463	1	otf-limit-migration-time	0.2	0		0.2-	otf-limit-migration-time-0.2	otf-limit-migration-time-	otf-limit-migration-time-0.2-	164.173875	1.2427999621498866
+38730	0.2021688613477924	1	otf-limit-migration-time	0.2	0		0.2-	otf-limit-migration-time-0.2	otf-limit-migration-time-	otf-limit-migration-time-0.2-	153.752314	1.1909551820294346
+39030	0.2006149116064566	1	otf-limit-migration-time	0.2	0		0.2-	otf-limit-migration-time-0.2	otf-limit-migration-time-	otf-limit-migration-time-0.2-	211.859417	1.6284351806302846
+42630	0.2047853624208304	1	otf-limit-migration-time	0.2	0		0.2-	otf-limit-migration-time-0.2	otf-limit-migration-time-	otf-limit-migration-time-0.2-	171.590913	1.20753633356791
+65130	0.2031321971441732	1	otf-limit-migration-time	0.2	0		0.2-	otf-limit-migration-time-0.2	otf-limit-migration-time-	otf-limit-migration-time-0.2-	509.640598	2.3474923906034086
+63030	0.2003807710613993	1	otf-limit-migration-time	0.2	0		0.2-	otf-limit-migration-time-0.2	otf-limit-migration-time-	otf-limit-migration-time-0.2-	350.609567	1.668774712041885
+20130	0.2101341281669151	1	otf-limit-migration-time	0.2	0		0.2-	otf-limit-migration-time-0.2	otf-limit-migration-time-	otf-limit-migration-time-0.2-	48.890235	0.7286175111773473
+27030	0.2008879023307436	1	otf-limit-migration-time	0.2	0		0.2-	otf-limit-migration-time-0.2	otf-limit-migration-time-	otf-limit-migration-time-0.2-	82.078155	0.9109673140954495
+39930	0.2036063110443276	1	otf-limit-migration-time	0.2	0		0.2-	otf-limit-migration-time-0.2	otf-limit-migration-time-	otf-limit-migration-time-0.2-	145.925442	1.0963594440270474
+24930	0.2057761732851986	1	otf-limit-migration-time	0.2	0		0.2-	otf-limit-migration-time-0.2	otf-limit-migration-time-	otf-limit-migration-time-0.2-	53.520694	0.6440516726835138
+51930	0.2027729636048527	1	otf-limit-migration-time	0.2	0		0.2-	otf-limit-migration-time-0.2	otf-limit-migration-time-	otf-limit-migration-time-0.2-	256.314888	1.4807330329289428
+30030	0.2007992007992008	1	otf-limit-migration-time	0.2	0		0.2-	otf-limit-migration-time-0.2	otf-limit-migration-time-	otf-limit-migration-time-0.2-	60.580962	0.6052044155844156
+34230	0.2024539877300613	1	otf-limit-migration-time	0.2	0		0.2-	otf-limit-migration-time-0.2	otf-limit-migration-time-	otf-limit-migration-time-0.2-	186.943618	1.638419088518843
+51030	0.2004703115814227	1	otf-limit-migration-time	0.2	0		0.2-	otf-limit-migration-time-0.2	otf-limit-migration-time-	otf-limit-migration-time-0.2-	306.009562	1.7989980129335688
+35430	0.3056731583403895	1	otf-limit-migration-time	0.3	0		0.3-	otf-limit-migration-time-0.3	otf-limit-migration-time-	otf-limit-migration-time-0.3-	307.290731	2.6019536917866217
+86430	0.2190211732037487	0	otf-limit-migration-time	0.3	0		0.3-	otf-limit-migration-time-0.3	otf-limit-migration-time-	otf-limit-migration-time-0.3-	885.513103	3.0736310413051022
+56730	0.3019566367001586	1	otf-limit-migration-time	0.3	0		0.3-	otf-limit-migration-time-0.3	otf-limit-migration-time-	otf-limit-migration-time-0.3-	383.607538	2.028596181914331
+47730	0.3023255813953488	1	otf-limit-migration-time	0.3	0		0.3-	otf-limit-migration-time-0.3	otf-limit-migration-time-	otf-limit-migration-time-0.3-	206.873661	1.3002744248900062
+86430	0.2155501561957654	0	otf-limit-migration-time	0.3	0		0.3-	otf-limit-migration-time-0.3	otf-limit-migration-time-	otf-limit-migration-time-0.3-	793.045581	2.7526746997570286
+48930	0.3010423053341508	1	otf-limit-migration-time	0.3	0		0.3-	otf-limit-migration-time-0.3	otf-limit-migration-time-	otf-limit-migration-time-0.3-	244.609434	1.4997512814224403
+86430	0.2502603262755988	0	otf-limit-migration-time	0.3	0		0.3-	otf-limit-migration-time-0.3	otf-limit-migration-time-	otf-limit-migration-time-0.3-	826.544933	2.8689515203054494
+86430	0.2155501561957654	0	otf-limit-migration-time	0.3	0		0.3-	otf-limit-migration-time-0.3	otf-limit-migration-time-	otf-limit-migration-time-0.3-	856.635775	2.9733973446719886
+86430	0.2745574453314821	0	otf-limit-migration-time	0.3	0		0.3-	otf-limit-migration-time-0.3	otf-limit-migration-time-	otf-limit-migration-time-0.3-	839.168488	2.9127680944116623
+86430	0.2537313432835821	0	otf-limit-migration-time	0.3	0		0.3-	otf-limit-migration-time-0.3	otf-limit-migration-time-	otf-limit-migration-time-0.3-	730.20733	2.5345620617841025
+81930	0.3006224826071036	1	otf-limit-migration-time	0.3	0		0.3-	otf-limit-migration-time-0.3	otf-limit-migration-time-	otf-limit-migration-time-0.3-	747.265518	2.7362340461369463
+86430	0.212079139187782	0	otf-limit-migration-time	0.3	0		0.3-	otf-limit-migration-time-0.3	otf-limit-migration-time-	otf-limit-migration-time-0.3-	745.398137	2.587289611246095
+47730	0.3023255813953488	1	otf-limit-migration-time	0.3	0		0.3-	otf-limit-migration-time-0.3	otf-limit-migration-time-	otf-limit-migration-time-0.3-	329.652663	2.071984054054054
+30930	0.3016488845780795	1	otf-limit-migration-time	0.3	0		0.3-	otf-limit-migration-time-0.3	otf-limit-migration-time-	otf-limit-migration-time-0.3-	114.802991	1.1135110669253154
+51030	0.3004115226337449	1	otf-limit-migration-time	0.3	0		0.3-	otf-limit-migration-time-0.3	otf-limit-migration-time-	otf-limit-migration-time-0.3-	366.150993	2.1525631569664907
+30630	0.3046033300685602	1	otf-limit-migration-time	0.3	0		0.3-	otf-limit-migration-time-0.3	otf-limit-migration-time-	otf-limit-migration-time-0.3-	102.284686	1.001808873653281
+65730	0.3016887266088544	1	otf-limit-migration-time	0.3	0		0.3-	otf-limit-migration-time-0.3	otf-limit-migration-time-	otf-limit-migration-time-0.3-	377.995658	1.7252197991784572
+86430	0.2502603262755988	0	otf-limit-migration-time	0.3	0		0.3-	otf-limit-migration-time-0.3	otf-limit-migration-time-	otf-limit-migration-time-0.3-	653.485513	2.2682593300937173
+37830	0.3021411578112609	1	otf-limit-migration-time	0.3	0		0.3-	otf-limit-migration-time-0.3	otf-limit-migration-time-	otf-limit-migration-time-0.3-	155.635433	1.2342223076923078
+86430	0.222492190211732	0	otf-limit-migration-time	0.3	0		0.3-	otf-limit-migration-time-0.3	otf-limit-migration-time-	otf-limit-migration-time-0.3-	839.775261	2.9148742138146475
+48030	0.3004372267332917	1	otf-limit-migration-time	0.3	0		0.3-	otf-limit-migration-time-0.3	otf-limit-migration-time-	otf-limit-migration-time-0.3-	263.969494	1.6487788507183012
+50430	0.3039857227840571	1	otf-limit-migration-time	0.3	0		0.3-	otf-limit-migration-time-0.3	otf-limit-migration-time-	otf-limit-migration-time-0.3-	248.338012	1.4773230933967876
+86430	0.2086081221797987	0	otf-limit-migration-time	0.3	0		0.3-	otf-limit-migration-time-0.3	otf-limit-migration-time-	otf-limit-migration-time-0.3-	712.10972	2.4717449496702533
+86430	0.2294342242276987	0	otf-limit-migration-time	0.3	0		0.3-	otf-limit-migration-time-0.3	otf-limit-migration-time-	otf-limit-migration-time-0.3-	518.951844	1.8012906768483166
+86430	0.2294342242276987	0	otf-limit-migration-time	0.3	0		0.3-	otf-limit-migration-time-0.3	otf-limit-migration-time-	otf-limit-migration-time-0.3-	745.043963	2.586060267268309
+86430	0.2294342242276987	0	otf-limit-migration-time	0.3	0		0.3-	otf-limit-migration-time-0.3	otf-limit-migration-time-	otf-limit-migration-time-0.3-	1090.813293	3.786231492537313
+63930	0.3007977475363679	1	otf-limit-migration-time	0.3	0		0.3-	otf-limit-migration-time-0.3	otf-limit-migration-time-	otf-limit-migration-time-0.3-	414.276969	1.9440495964335993
+86430	0.2259632072197154	0	otf-limit-migration-time	0.3	0		0.3-	otf-limit-migration-time-0.3	otf-limit-migration-time-	otf-limit-migration-time-0.3-	694.240081	2.409719128774731
+35430	0.3056731583403895	1	otf-limit-migration-time	0.3	0		0.3-	otf-limit-migration-time-0.3	otf-limit-migration-time-	otf-limit-migration-time-0.3-	148.531388	1.257674750211685
+36930	0.3013809910641755	1	otf-limit-migration-time	0.3	0		0.3-	otf-limit-migration-time-0.3	otf-limit-migration-time-	otf-limit-migration-time-0.3-	170.723866	1.3868713728675872
+86430	0.2572023602915654	0	otf-limit-migration-time	0.3	0		0.3-	otf-limit-migration-time-0.3	otf-limit-migration-time-	otf-limit-migration-time-0.3-	725.49484	2.518204928844151
+52830	0.3015332197614991	1	otf-limit-migration-time	0.3	0		0.3-	otf-limit-migration-time-0.3	otf-limit-migration-time-	otf-limit-migration-time-0.3-	288.871993	1.6403861044860875
+28530	0.305993690851735	1	otf-limit-migration-time	0.3	0		0.3-	otf-limit-migration-time-0.3	otf-limit-migration-time-	otf-limit-migration-time-0.3-	94.372044	0.9923453627760254
+86430	0.2398472752516487	0	otf-limit-migration-time	0.3	0		0.3-	otf-limit-migration-time-0.3	otf-limit-migration-time-	otf-limit-migration-time-0.3-	741.043969	2.572176220062478
+54930	0.3009284543965046	1	otf-limit-migration-time	0.3	0		0.3-	otf-limit-migration-time-0.3	otf-limit-migration-time-	otf-limit-migration-time-0.3-	330.10652	1.8028755871108684
+50730	0.3021880544056771	1	otf-limit-migration-time	0.3	0		0.3-	otf-limit-migration-time-0.3	otf-limit-migration-time-	otf-limit-migration-time-0.3-	320.109271	1.8930175694855114
+86430	0.2051371051718153	0	otf-limit-migration-time	0.3	0		0.3-	otf-limit-migration-time-0.3	otf-limit-migration-time-	otf-limit-migration-time-0.3-	957.010603	3.3218000798333907
+28530	0.305993690851735	1	otf-limit-migration-time	0.3	0		0.3-	otf-limit-migration-time-0.3	otf-limit-migration-time-	otf-limit-migration-time-0.3-	69.807204	0.73404
+37530	0.3045563549160671	1	otf-limit-migration-time	0.3	0		0.3-	otf-limit-migration-time-0.3	otf-limit-migration-time-	otf-limit-migration-time-0.3-	224.310564	1.793050071942446
+86430	0.2051371051718153	0	otf-limit-migration-time	0.3	0		0.3-	otf-limit-migration-time-0.3	otf-limit-migration-time-	otf-limit-migration-time-0.3-	688.470836	2.389693981256508
+40830	0.3019838354151359	1	otf-limit-migration-time	0.3	0		0.3-	otf-limit-migration-time-0.3	otf-limit-migration-time-	otf-limit-migration-time-0.3-	186.36642	1.369334459955915
+86430	0.2329052412356821	0	otf-limit-migration-time	0.3	0		0.3-	otf-limit-migration-time-0.3	otf-limit-migration-time-	otf-limit-migration-time-0.3-	893.001436	3.099623172509545
+86430	0.2259632072197154	0	otf-limit-migration-time	0.3	0		0.3-	otf-limit-migration-time-0.3	otf-limit-migration-time-	otf-limit-migration-time-0.3-	862.190159	2.9926767060048594
+86430	0.2363762582436654	0	otf-limit-migration-time	0.3	0		0.3-	otf-limit-migration-time-0.3	otf-limit-migration-time-	otf-limit-migration-time-0.3-	752.771175	2.612881551544602
+86430	0.2502603262755988	0	otf-limit-migration-time	0.3	0		0.3-	otf-limit-migration-time-0.3	otf-limit-migration-time-	otf-limit-migration-time-0.3-	893.524732	3.1014395418257545
+86430	0.2502603262755988	0	otf-limit-migration-time	0.3	0		0.3-	otf-limit-migration-time-0.3	otf-limit-migration-time-	otf-limit-migration-time-0.3-	597.83404	2.0750921207913917
+86430	0.222492190211732	0	otf-limit-migration-time	0.3	0		0.3-	otf-limit-migration-time-0.3	otf-limit-migration-time-	otf-limit-migration-time-0.3-	688.01666	2.38811752863589
+25530	0.3066980023501763	1	otf-limit-migration-time	0.3	0		0.3-	otf-limit-migration-time-0.3	otf-limit-migration-time-	otf-limit-migration-time-0.3-	66.65773	0.7832870740305523
+86430	0.212079139187782	0	otf-limit-migration-time	0.3	0		0.3-	otf-limit-migration-time-0.3	otf-limit-migration-time-	otf-limit-migration-time-0.3-	827.433522	2.872035827837556
+61530	0.302779132130668	1	otf-limit-migration-time	0.3	0		0.3-	otf-limit-migration-time-0.3	otf-limit-migration-time-	otf-limit-migration-time-0.3-	290.423159	1.416007601170161
+86430	0.201666088163832	0	otf-limit-migration-time	0.3	0		0.3-	otf-limit-migration-time-0.3	otf-limit-migration-time-	otf-limit-migration-time-0.3-	823.876516	2.8596893995140573
+86430	0.2294342242276987	0	otf-limit-migration-time	0.3	0		0.3-	otf-limit-migration-time-0.3	otf-limit-migration-time-	otf-limit-migration-time-0.3-	779.1645	2.704493231516834
+86430	0.2433182922596321	0	otf-limit-migration-time	0.3	0		0.3-	otf-limit-migration-time-0.3	otf-limit-migration-time-	otf-limit-migration-time-0.3-	698.549195	2.42467613675807
+57930	0.3008803728638011	1	otf-limit-migration-time	0.3	0		0.3-	otf-limit-migration-time-0.3	otf-limit-migration-time-	otf-limit-migration-time-0.3-	383.004641	1.9834523096841015
+58830	0.3013768485466599	1	otf-limit-migration-time	0.3	0		0.3-	otf-limit-migration-time-0.3	otf-limit-migration-time-	otf-limit-migration-time-0.3-	379.755679	1.9365409433962264
+86430	0.212079139187782	0	otf-limit-migration-time	0.3	0		0.3-	otf-limit-migration-time-0.3	otf-limit-migration-time-	otf-limit-migration-time-0.3-	775.090709	2.6903530336688646
+86430	0.2745574453314821	0	otf-limit-migration-time	0.3	0		0.3-	otf-limit-migration-time-0.3	otf-limit-migration-time-	otf-limit-migration-time-0.3-	711.403666	2.4692942242276987
+86430	0.2051371051718153	0	otf-limit-migration-time	0.3	0		0.3-	otf-limit-migration-time-0.3	otf-limit-migration-time-	otf-limit-migration-time-0.3-	884.239779	3.0692113120444287
+86430	0.2329052412356821	0	otf-limit-migration-time	0.3	0		0.3-	otf-limit-migration-time-0.3	otf-limit-migration-time-	otf-limit-migration-time-0.3-	1094.14841	3.7978077403679276
+86430	0.2398472752516487	0	otf-limit-migration-time	0.3	0		0.3-	otf-limit-migration-time-0.3	otf-limit-migration-time-	otf-limit-migration-time-0.3-	914.322025	3.1736272995487678
+86430	0.2051371051718153	0	otf-limit-migration-time	0.3	0		0.3-	otf-limit-migration-time-0.3	otf-limit-migration-time-	otf-limit-migration-time-0.3-	742.89192	2.578590489413398
+86430	0.201666088163832	0	otf-limit-migration-time	0.3	0		0.3-	otf-limit-migration-time-0.3	otf-limit-migration-time-	otf-limit-migration-time-0.3-	708.742599	2.4600576154113156
+30030	0.3006993006993007	1	otf-limit-migration-time	0.3	0		0.3-	otf-limit-migration-time-0.3	otf-limit-migration-time-	otf-limit-migration-time-0.3-	132.095382	1.3196341858141858
+86430	0.2502603262755988	0	otf-limit-migration-time	0.3	0		0.3-	otf-limit-migration-time-0.3	otf-limit-migration-time-	otf-limit-migration-time-0.3-	626.680193	2.1752176084692816
+33030	0.3006357856494096	1	otf-limit-migration-time	0.3	0		0.3-	otf-limit-migration-time-0.3	otf-limit-migration-time-	otf-limit-migration-time-0.3-	123.690909	1.1234414986376022
+86430	0.2710864283234988	0	otf-limit-migration-time	0.3	0		0.3-	otf-limit-migration-time-0.3	otf-limit-migration-time-	otf-limit-migration-time-0.3-	838.179015	2.909333616799722
+86430	0.2259632072197154	0	otf-limit-migration-time	0.3	0		0.3-	otf-limit-migration-time-0.3	otf-limit-migration-time-	otf-limit-migration-time-0.3-	1018.70667	3.5359481777160706
+59430	0.3033821302372539	1	otf-limit-migration-time	0.3	0		0.3-	otf-limit-migration-time-0.3	otf-limit-migration-time-	otf-limit-migration-time-0.3-	355.069777	1.7923764613831399
+86430	0.2329052412356821	0	otf-limit-migration-time	0.3	0		0.3-	otf-limit-migration-time-0.3	otf-limit-migration-time-	otf-limit-migration-time-0.3-	630.531084	2.188584116626171
+86430	0.2190211732037487	0	otf-limit-migration-time	0.3	0		0.3-	otf-limit-migration-time-0.3	otf-limit-migration-time-	otf-limit-migration-time-0.3-	689.846329	2.39446834085387
+83730	0.3013256897169473	1	otf-limit-migration-time	0.3	0		0.3-	otf-limit-migration-time-0.3	otf-limit-migration-time-	otf-limit-migration-time-0.3-	837.634957	3.0012001325689712
+86430	0.2849704963554321	0	otf-limit-migration-time	0.3	0		0.3-	otf-limit-migration-time-0.3	otf-limit-migration-time-	otf-limit-migration-time-0.3-	1023.352137	3.552072672683096
+86430	0.2537313432835821	0	otf-limit-migration-time	0.3	0		0.3-	otf-limit-migration-time-0.3	otf-limit-migration-time-	otf-limit-migration-time-0.3-	910.0216	3.1587004512322108
+69030	0.3003042155584528	1	otf-limit-migration-time	0.3	0		0.3-	otf-limit-migration-time-0.3	otf-limit-migration-time-	otf-limit-migration-time-0.3-	579.888068	2.520156749239461
+63030	0.3003331746787244	1	otf-limit-migration-time	0.3	0		0.3-	otf-limit-migration-time-0.3	otf-limit-migration-time-	otf-limit-migration-time-0.3-	349.445098	1.6632322608281769
+86430	0.201666088163832	0	otf-limit-migration-time	0.3	0		0.3-	otf-limit-migration-time-0.3	otf-limit-migration-time-	otf-limit-migration-time-0.3-	642.536211	2.2302541166261713
+86430	0.2641443943075321	0	otf-limit-migration-time	0.3	0		0.3-	otf-limit-migration-time-0.3	otf-limit-migration-time-	otf-limit-migration-time-0.3-	738.413556	2.5630460118014575
+86430	0.212079139187782	0	otf-limit-migration-time	0.3	0		0.3-	otf-limit-migration-time-0.3	otf-limit-migration-time-	otf-limit-migration-time-0.3-	564.751662	1.9602626240888579
+72030	0.3002915451895044	1	otf-limit-migration-time	0.3	0		0.3-	otf-limit-migration-time-0.3	otf-limit-migration-time-	otf-limit-migration-time-0.3-	621.215018	2.587317859225323
+37530	0.3045563549160671	1	otf-limit-migration-time	0.3	0		0.3-	otf-limit-migration-time-0.3	otf-limit-migration-time-	otf-limit-migration-time-0.3-	185.40225	1.4820323741007195
+29430	0.3068297655453619	1	otf-limit-migration-time	0.3	0		0.3-	otf-limit-migration-time-0.3	otf-limit-migration-time-	otf-limit-migration-time-0.3-	76.079738	0.7755324974515801
+86430	0.2502603262755988	0	otf-limit-migration-time	0.3	0		0.3-	otf-limit-migration-time-0.3	otf-limit-migration-time-	otf-limit-migration-time-0.3-	1050.786546	3.6472979729260673
+86430	0.222492190211732	0	otf-limit-migration-time	0.3	0		0.3-	otf-limit-migration-time-0.3	otf-limit-migration-time-	otf-limit-migration-time-0.3-	893.864802	3.10261993057966
+42930	0.3011879804332635	1	otf-limit-migration-time	0.3	0		0.3-	otf-limit-migration-time-0.3	otf-limit-migration-time-	otf-limit-migration-time-0.3-	258.238081	1.8045987491264852
+35430	0.3056731583403895	1	otf-limit-migration-time	0.3	0		0.3-	otf-limit-migration-time-0.3	otf-limit-migration-time-	otf-limit-migration-time-0.3-	119.138654	1.008794699407282
+86430	0.2086081221797987	0	otf-limit-migration-time	0.3	0		0.3-	otf-limit-migration-time-0.3	otf-limit-migration-time-	otf-limit-migration-time-0.3-	834.842701	2.8977532141617495
+49830	0.3016255267910897	1	otf-limit-migration-time	0.3	0		0.3-	otf-limit-migration-time-0.3	otf-limit-migration-time-	otf-limit-migration-time-0.3-	256.147923	1.5421307826610475
+86430	0.2433182922596321	0	otf-limit-migration-time	0.3	0		0.3-	otf-limit-migration-time-0.3	otf-limit-migration-time-	otf-limit-migration-time-0.3-	774.63821	2.688782401943769
+86430	0.212079139187782	0	otf-limit-migration-time	0.3	0		0.3-	otf-limit-migration-time-0.3	otf-limit-migration-time-	otf-limit-migration-time-0.3-	1033.969418	3.588925435612634
+86430	0.2051371051718153	0	otf-limit-migration-time	0.3	0		0.3-	otf-limit-migration-time-0.3	otf-limit-migration-time-	otf-limit-migration-time-0.3-	708.117645	2.457888389448108
+86430	0.2051371051718153	0	otf-limit-migration-time	0.3	0		0.3-	otf-limit-migration-time-0.3	otf-limit-migration-time-	otf-limit-migration-time-0.3-	896.284729	3.1110195383547374
+86430	0.2259632072197154	0	otf-limit-migration-time	0.3	0		0.3-	otf-limit-migration-time-0.3	otf-limit-migration-time-	otf-limit-migration-time-0.3-	663.511308	2.3030590350572715
+26430	0.3076049943246311	1	otf-limit-migration-time	0.3	0		0.3-	otf-limit-migration-time-0.3	otf-limit-migration-time-	otf-limit-migration-time-0.3-	83.135894	0.9436537343927355
+32730	0.3033913840513291	1	otf-limit-migration-time	0.3	0		0.3-	otf-limit-migration-time-0.3	otf-limit-migration-time-	otf-limit-migration-time-0.3-	118.399869	1.0852416956920257
+86430	0.2467893092676154	0	otf-limit-migration-time	0.3	0		0.3-	otf-limit-migration-time-0.3	otf-limit-migration-time-	otf-limit-migration-time-0.3-	676.401587	2.3478014127039217
+68730	0.3016150152771715	1	otf-limit-migration-time	0.3	0		0.3-	otf-limit-migration-time-0.3	otf-limit-migration-time-	otf-limit-migration-time-0.3-	405.522942	1.7700695853339155
+86430	0.2641443943075321	0	otf-limit-migration-time	0.3	0		0.3-	otf-limit-migration-time-0.3	otf-limit-migration-time-	otf-limit-migration-time-0.3-	707.915464	2.4571866157584172
+63930	0.3007977475363679	1	otf-limit-migration-time	0.3	0		0.3-	otf-limit-migration-time-0.3	otf-limit-migration-time-	otf-limit-migration-time-0.3-	274.723619	1.2891770014077897
+48630	0.3028994447871684	1	otf-limit-migration-time	0.3	0		0.3-	otf-limit-migration-time-0.3	otf-limit-migration-time-	otf-limit-migration-time-0.3-	383.11798	2.3634668723010486
+86430	0.2953835473793822	0	otf-limit-migration-time	0.3	0		0.3-	otf-limit-migration-time-0.3	otf-limit-migration-time-	otf-limit-migration-time-0.3-	879.263439	3.0519383512669207
