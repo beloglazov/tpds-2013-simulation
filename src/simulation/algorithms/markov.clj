@@ -73,13 +73,9 @@
   {:pre [(coll? state-config)
          (coll? utilization)]
    :post [(coll? %)]}
-  (do
-    
-;    (prn (last utilization))
-;    (prn (utilization-to-state state-config (last utilization)))
-    (let [state (utilization-to-state state-config (last utilization))]
+  (let [state (utilization-to-state state-config (last utilization))]
     (map #(if (= state %) 1 0) 
-         (range (inc (count state-config)))))))
+         (range (inc (count state-config))))))
 
 (defn build-q
   "Returns an infinisemal transition rate matrix corresponding to the utilization history"
@@ -243,7 +239,6 @@
             state-history (utilization-to-states state-config utilization)
             time-in-states total-time
             time-in-state-n (time-in-state-n state-config state-history)
-            ;time-in-state-n (time-in-state-n state-config (take time-in-states (reverse state-history)))
             p (:transitions (get-workload workloads (dec total-time)))
             ls (if (= 1 (count state-config))
                  l-probabilities-2/ls
@@ -252,16 +247,8 @@
           false
           (let [policy (bruteforce/optimize step 1.0 otf (/ migration-time time-step) ls p state-vector
                                             time-in-states time-in-state-n)
-                ;command (issue-command policy state-vector step)
-                command (issue-command-deterministic policy)
-                ]
-            (do 
-;              (println "--------")
-;              (println "State vector: " state-vector)
-;              (println "Time: " time-in-state-n " / " total-time)
-;              (println "Probabilities: " p)
-;              (println "Policy: " policy)
-              command))))
+                command (issue-command-deterministic policy)]
+            command)))
       false)))
 
 (def state-previous-state (atom 0))
@@ -321,13 +308,11 @@
       (swap! state-best-estimate-history multisize-estimation/update-best-estimate-history p)
       (swap! state-time-history conj total-time)
         
-      (;if (>= total-time min-window-size)
-        if (>= total-time 30)
+      (if (>= total-time 30)
         (let [
               state-history (utilization-to-states state-config utilization)
               time-in-states total-time
               time-in-state-n (time-in-state-n state-config state-history)
-              ;time-in-state-n (time-in-state-n state-config (take time-in-states (reverse state-history)))
               
               ls (if (= 1 (count state-config))
                    l-probabilities-2/ls
@@ -336,25 +321,9 @@
             false
             (let [policy (bruteforce/optimize step 1.0 otf (/ migration-time time-step) ls p state-vector 
                                               time-in-states time-in-state-n)
-                  ;command (issue-command policy state-vector step)
-                  command (issue-command-deterministic policy)
-                  ]
-              (do
-                ;                (println "--------")
-                ;                (println @state-request-windows)
-                ;                (println selected-windows)
-                ;                (println "State vector: " state-vector)
-                ;                (println "Time: " time-in-state-n " / " total-time)
-                ;                (println "Best estimates: " p)
-                ;                (println "Policy: " policy)
-                command))))
+                  command (issue-command-deterministic policy)]
+              command)))
         false))))
-
-; What happens if a window for a particular state is not completely filled up?
-; - zero probabilities
-; Check probability estimation
-; Check optimization
-; Implement optimal time calculation by going backwards through the trace
 
 (defn markov-single-window-bruteforce [otf state-config step time-step migration-time host vms]
   {:pre [(posnum? otf)
@@ -381,16 +350,8 @@
                 p (c-to-p c solution)
                 policy (p-to-policy p)
                 command (issue-command policy state-vector step)]
-            (do
-;              (println "++++++++")
-;              (pprint time-in-states)
-;              (pprint c)
-;              (pprint p)
-;              (pprint policy)
-;              (println "--------")
-              command))))
+            command)))
       false)))
-
 
 (defn markov-single-window-genetic [otf state-config max-generations time-step migration-time host vms]
   {:pre [(posnum? otf)
@@ -419,15 +380,5 @@
                 command (issue-command policy state-vector 0.1)]
             command)))
       false)))
-
-
-
-
-
-
-
-
-
-
 
 

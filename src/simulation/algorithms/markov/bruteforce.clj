@@ -21,22 +21,15 @@
             state2
             (recur 
               (try
-                (do 
-;                  (println x y)
-;                  (println (objective x y))
-;                  (println ((first constraint) x y))
-                  (let [objective-result (objective x y)] 
+                (let [objective-result (objective x y)] 
                   (if (and 
                         (> objective-result (:objective state2))
                         ((second constraint) 
                           ((first constraint) x y)
                           (last constraint)))
-                    (do 
-;                      (pprint {:objective objective-result
-;                               :solution [x y]})
-                      {:objective objective-result
-                       :solution [x y]})
-                    state2)))
+                    {:objective objective-result
+                     :solution [x y]}
+                    state2))
                 (catch ArithmeticException e
                   state2))
               (+ y step))))

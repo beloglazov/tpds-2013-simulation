@@ -95,6 +95,3 @@
                                         :state-config state-config) 
                                 results))
           (prn))))))
-
-; OTFT fails (violates) because it does not contain a prediction part compared to the markov algorithm
-

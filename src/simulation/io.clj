@@ -101,3 +101,35 @@
 (defn spit-results [output-path data] 
   (doall (map (partial spit-json output-path) data)))
 
+(defn workload-to-csv [workloads output]
+  (let [data (first (concat (map read-pregenerated-workload workloads)))] 
+    (do      
+      (spit output "\"Simulation ID\",\"VM ID\",\"Time Frame\",\"CPU Frequency\",\"Utilization\"\n")
+      (doall
+        (map (fn [i vms] 
+               (do
+                 (prn i) 
+                 (doall (map (fn [j vm]
+                        (doall (map (fn [k utilization] 
+                               (spit output (str
+                                              i ","
+                                              j ","
+                                              k ","
+                                              (:mips vm) ","
+                                              (double utilization) "\n")
+                                     :append true))
+                             (range (count (:utilization vm)))
+                             (:utilization vm))))
+                      (range (count vms))
+                      vms))))
+             (range (count data))
+             data))
+      (prn "done"))))
+
+
+
+
+
+
+
+
