@@ -122,10 +122,10 @@
          (map? host)
          (coll? vms)]
    :post [(boolean? %)]}
-  (let [length 10 ; we use 10 to make the regression responsive enough to latest values
-        utilization-history (reverse (take length (host-utilization-history host vms)))]
-    (if (> (count utilization-history) length)
-      (let [[estimate1 estimate2 & other] (estimate-params utilization-history)
+  (let [length 30
+        utilization-history (host-utilization-history host vms)]
+    (if (>= (count utilization-history) length)
+      (let [[estimate1 estimate2 & other] (estimate-params (take-last length utilization-history))
             migration-intervals (ceil (/ migration-time time-step))
             prediction (+ estimate1 (* estimate2 (+ length migration-intervals)))]
         (>= (* param prediction) 1))
