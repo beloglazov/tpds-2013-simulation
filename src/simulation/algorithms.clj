@@ -1,5 +1,5 @@
 (ns simulation.algorithms
-  (:use simulation.core 
+  (:use simulation.core
         clj-predicates.core
         clojure.math.numeric-tower)
   (:require [simulation.math :as math])
@@ -24,7 +24,7 @@
          (coll? vms)]
    :post [(boolean? %)]}
   (let [utilization-history (host-utilization-history host vms)
-        cnt (count utilization-history) 
+        cnt (count utilization-history)
         overloading-steps (count (filter #(>= % 1) utilization-history))]
     (and
       (>= cnt 30)
@@ -39,12 +39,12 @@
    :post [(boolean? %)]}
   (let [utilization-history (host-utilization-history host vms)
         overloading-steps (count (filter #(>= % 1) utilization-history))]
-    (> (/ (+ migration-time 
-             (* time-step 
-                overloading-steps)) 
-          (+ migration-time 
-             (* time-step 
-                (count utilization-history)))) 
+    (> (/ (+ migration-time
+             (* time-step
+                overloading-steps))
+          (+ migration-time
+             (* time-step
+                (count utilization-history))))
        param)))
 
 (defn otf-limit-migration-time [param time-step migration-time host vms]
@@ -57,13 +57,13 @@
   (let [utilization-history (host-utilization-history host vms)
         cnt (count utilization-history)
         overloading-steps (count (filter #(>= % 1) utilization-history))]
-    (and (>= cnt 30) 
-         (> (/ (+ migration-time 
-                  (* time-step 
-                     overloading-steps)) 
-               (+ migration-time 
-                  (* time-step 
-                     cnt))) 
+    (and (>= cnt 30)
+         (> (/ (+ migration-time
+                  (* time-step
+                     overloading-steps))
+               (+ migration-time
+                  (* time-step
+                     cnt)))
             param))))
 
 (defn no-migrations [time-step migration-time host vms]
@@ -89,8 +89,8 @@
          (map? host)
          (coll? vms)]
    :post [(boolean? %)]}
-  (let [utilization-history (host-utilization-history host vms)] 
-    (if (> (count utilization-history) 29) ; 12 has been suggested as a safe value 
+  (let [utilization-history (host-utilization-history host vms)]
+    (if (> (count utilization-history) 29) ; 12 has been suggested as a safe value
       (thr (f utilization-history) 1 1 host vms)
       false)))
 
@@ -101,7 +101,7 @@
          (map? host)
          (coll? vms)]
    :post [(boolean? %)]}
-  (host-utilization-history-thr 
+  (host-utilization-history-thr
     #(- 1 (* param (math/mad %))) host vms))
 
 (defn iqr [param time-step migration-time host vms]
@@ -111,7 +111,7 @@
          (map? host)
          (coll? vms)]
    :post [(boolean? %)]}
-  (host-utilization-history-thr 
+  (host-utilization-history-thr
     #(- 1 (* param (math/iqr %))) host vms))
 
  (defn loess-abstract [estimate-params param time-step migration-time host vms]
@@ -123,8 +123,8 @@
          (coll? vms)]
    :post [(boolean? %)]}
   (let [length 10 ; we use 10 to make the regression responsive enough to latest values
-        utilization-history (host-utilization-history host vms)] 
-    (if (> (count utilization-history) length) 
+        utilization-history (reverse (take length (host-utilization-history host vms)))]
+    (if (> (count utilization-history) length)
       (let [[estimate1 estimate2 & other] (estimate-params utilization-history)
             migration-intervals (ceil (/ migration-time time-step))
             prediction (+ estimate1 (* estimate2 (+ length migration-intervals)))]
@@ -148,32 +148,3 @@
          (coll? vms)]
    :post [(boolean? %)]}
   (loess-abstract math/loess-robust-parameter-estimates param time-step migration-time host vms))
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
